@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"C:/Users/richa/OneDrive/Documents/GitHub/hamradiosite/.claude/worktrees/adoring-raman/backend/requirements.txt\":*)",
+      "Bash(__NEW_LINE_01e4f8fc93f2d67a__ cat:*)",
+      "Bash(\"C:/Users/richa/OneDrive/Documents/GitHub/hamradiosite/.claude/worktrees/adoring-raman/backend/requirements-dev.txt\":*)"
+    ]
+  }
+}

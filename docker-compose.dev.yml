@@ -1,0 +1,26 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      target: deps
+    command: npm run dev
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000/api
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./backend
+    command: flask run --host=0.0.0.0 --port=5000 --reload
+    volumes:
+      - ./backend:/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - JWT_SECRET_KEY=dev-secret-key
+      - DATA_DIR=/app/data
+    ports:
+      - "5000:5000"
