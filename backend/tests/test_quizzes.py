@@ -6,7 +6,7 @@ def test_start_mock_exam(client, auth_headers):
     data = response.get_json()
     assert data['quiz_type'] == 'mock'
     assert data['total'] == 26
-    assert data['time_limit'] == 2700
+    assert data['time_limit'] == 3300
     assert len(data['questions']) == 26
     for q in data['questions']:
         assert 'correct_option_id' not in q

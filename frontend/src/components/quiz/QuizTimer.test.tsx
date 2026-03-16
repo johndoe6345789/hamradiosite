@@ -12,8 +12,8 @@ afterEach(() => {
 
 describe('QuizTimer', () => {
   it('renders formatted time', () => {
-    renderWithProviders(<QuizTimer timeRemaining={2700} onTimeUp={() => {}} />);
-    expect(screen.getByText('45:00')).toBeInTheDocument();
+    renderWithProviders(<QuizTimer timeRemaining={3300} onTimeUp={() => {}} />);
+    expect(screen.getByText('55:00')).toBeInTheDocument();
   });
 
   it('counts down every second', () => {

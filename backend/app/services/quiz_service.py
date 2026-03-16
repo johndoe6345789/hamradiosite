@@ -6,7 +6,7 @@ from app.utils.db import get_db
 
 MOCK_EXAM_QUESTION_COUNT = 26
 TOPIC_QUIZ_QUESTION_COUNT = 10
-MOCK_EXAM_TIME_LIMIT = 2700  # 45 minutes in seconds
+MOCK_EXAM_TIME_LIMIT = 3300  # 55 minutes in seconds
 PASS_PERCENTAGE = 73
 
 

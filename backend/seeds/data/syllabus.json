@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "title": "Foundation Licence Now!",
+    "author": "Alan Betts, G0HIQ",
+    "publisher": "RSGB",
+    "edition": "5th",
+    "isbn": "9781-8723-0980-4",
+    "exam": {
+      "questions": 26,
+      "pass_mark": 19,
+      "duration_minutes": 55,
+      "format": "multiple choice, 4 options",
+      "provided_in_exam": ["band plan", "frequency/wavelength chart", "licence schedule Table A"]
+    },
+    "question_breakdown": [
+      {"topic": "Amateur radio and licensing", "questions": 6},
+      {"topic": "Technical basics", "questions": 4},
+      {"topic": "Transmitters and receivers", "questions": 3},
+      {"topic": "Feeders and antennas", "questions": 3},
+      {"topic": "Propagation", "questions": 2},
+      {"topic": "EMC", "questions": 3},
+      {"topic": "Operating practices and procedures", "questions": 3},
+      {"topic": "Safety", "questions": 2}
+    ]
+  },
+  "licence": {
+    "tiers": [
+      {
+        "name": "Foundation",
+        "prefixes": ["M3", "M6"],
+        "suffix_length": 3,
+        "max_power_watts": 10,
+        "equipment": "Commercial or commercially-supplied kit only — no home design",
+        "international": false,
+        "notes": "Legacy M3 prefix; new callsigns issued as M6"
+      },
+      {
+        "name": "Intermediate",
+        "prefixes": ["2E0", "2E1"],
+        "suffix_length": 3,
+        "max_power_watts": 50,
+        "equipment": "May build from published designs or magazine articles",
+        "international": false
+      },
+      {
+        "name": "Full",
+        "prefixes": ["M0", "M1"],
+        "legacy_prefix": "G",
+        "suffix_length": 3,
+        "max_power_watts": 400,
+        "equipment": "Full freedom to design, build and modify",
+        "international": true
+      }
+    ],
+    "regional_locators": [
+      {"letter": "D", "region": "Isle of Man"},
+      {"letter": "I", "region": "Northern Ireland"},
+      {"letter": "J", "region": "Jersey"},
+      {"letter": "M", "region": "Scotland"},
+      {"letter": "U", "region": "Guernsey"},
+      {"letter": "W", "region": "Wales"},
+      {"letter": null, "region": "England — no locator"}
+    ],
+    "suffixes": [
+      {"suffix": "/M", "meaning": "Mobile — vehicle, pedestrian, or inland waterway boat"},
+      {"suffix": "/A", "meaning": "Building or location with postal address different from licence address"},
+      {"suffix": "/P", "meaning": "Portable — fixed location without postal address"}
+    ],
+    "conditions": {
+      "purpose": "Self-training in radio communications; leisure activity; non-commercial only",
+      "id_requirement": "As frequently as practicable; traditionally at least every 15 minutes",
+      "id_format": "Voice or appropriate mode format consistent with mode of operation",
+      "messages_to": "Other UK licensed amateurs only",
+      "encryption": "Not permitted",
+      "broadcasting": "Not permitted — CQ calls excepted",
+      "unattended_tx": "Not permitted at Foundation level",
+      "supervised_operation": "Another UK licensed amateur may operate under direct supervision using licensee's callsign",
+      "change_of_address": "Must notify Ofcom immediately, online or by post",
+      "ofcom_inspection": "Must permit access at any reasonable time; Ofcom may require modification or shutdown",
+      "overseas": "Foundation licence not recognised internationally — do not operate abroad"
+    },
+    "applying": {
+      "online": "Free — log on to Ofcom licensing system using result letter details",
+      "postal": "£20 fee (waived if 75 or over)",
+      "renewal": "Log on every 5 years minimum to confirm details",
+      "callsign_choice": "Applicant may choose last 3 letters from available combinations"
+    }
+  },
+  "licence_schedule_table_a": [
+    {"band_MHz": "0.1357-0.1378", "amateur_status": "Secondary — non-interference inside and outside UK", "satellite_status": "Not allocated", "max_power": "1W e.r.p."},
+    {"band_MHz": "1.810-1.830", "amateur_status": "Primary — non-interference outside UK", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "1.830-1.850", "amateur_status": "Primary", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "1.850-2.000", "amateur_status": "Secondary — non-interference inside and outside UK", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "3.500-3.800", "amateur_status": "Primary, shared with other services", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "7.000-7.100", "amateur_status": "Primary", "satellite_status": "Primary", "max_power": "10W"},
+    {"band_MHz": "7.100-7.200", "amateur_status": "Primary", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "10.100-10.150", "amateur_status": "Secondary", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "14.000-14.250", "amateur_status": "Primary", "satellite_status": "Primary", "max_power": "10W"},
+    {"band_MHz": "14.250-14.350", "amateur_status": "Primary", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "18.068-18.168", "amateur_status": "Primary", "satellite_status": "Primary", "max_power": "10W"},
+    {"band_MHz": "21.000-21.450", "amateur_status": "Primary", "satellite_status": "Primary", "max_power": "10W"},
+    {"band_MHz": "24.890-24.990", "amateur_status": "Primary", "satellite_status": "Primary", "max_power": "10W"},
+    {"band_MHz": "28.000-29.700", "amateur_status": "Primary", "satellite_status": "Primary", "max_power": "10W"},
+    {"band_MHz": "50.00-51.00", "amateur_status": "Primary — non-interference to other services outside UK", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "51.00-52.00", "amateur_status": "Secondary — non-interference inside and outside UK", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "70.00-70.50", "amateur_status": "Secondary — non-interference inside and outside UK", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "144.0-146.0", "amateur_status": "Primary", "satellite_status": "Primary", "max_power": "10W"},
+    {"band_MHz": "430.0-431.0", "amateur_status": "Secondary", "satellite_status": "Not allocated", "max_power": "10W e.r.p."},
+    {"band_MHz": "431.0-432.0", "amateur_status": "Secondary — not available within 100km radius of Charing Cross London", "satellite_status": "Not allocated", "max_power": "10W e.r.p."},
+    {"band_MHz": "432.0-435.0", "amateur_status": "Secondary", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "435.0-438.0", "amateur_status": "Secondary", "satellite_status": "Secondary", "max_power": "10W"},
+    {"band_MHz": "438.0-440.0", "amateur_status": "Secondary", "satellite_status": "Not allocated", "max_power": "10W"},
+    {"band_MHz": "10000-10125", "amateur_status": "Secondary", "satellite_status": "Not allocated", "max_power": "1W"},
+    {"band_MHz": "10225-10450", "amateur_status": "Secondary", "satellite_status": "Not allocated", "max_power": "1W"},
+    {"band_MHz": "10450-10475", "amateur_status": "Secondary", "satellite_status": "Secondary", "max_power": "1W"},
+    {"band_MHz": "10475-10500", "amateur_status": "Not allocated", "satellite_status": "Secondary", "max_power": "1W"}
+  ],
+  "band_plans": {
+    "notes": "Band plans are not licence obligations — they are IARU gentlemen's agreements. Copies provided during exam.",
+    "repeater_offsets": [
+      {"band": "2m (144MHz)", "offset_MHz": -0.6, "note": "Input = output − 600kHz; channels RV48–RV63 in 12.5kHz steps"},
+      {"band": "70cm (430MHz)", "offset_MHz": 1.6, "note": "Input = output + 1.6MHz"}
+    ]
+  },
+  "technical": {
+    "units": [
+      {"symbol": "V", "quantity": "Potential Difference / Voltage", "unit": "Volt"},
+      {"symbol": "I", "quantity": "Current", "unit": "Ampere (Amp, A)"},
+      {"symbol": "R", "quantity": "Resistance", "unit": "Ohm (Ω)"},
+      {"symbol": "P", "quantity": "Power", "unit": "Watt (W)"},
+      {"symbol": "f", "quantity": "Frequency", "unit": "Hertz (Hz)"},
+      {"symbol": "λ", "quantity": "Wavelength", "unit": "Metre (m)"}
+    ],
+    "prefixes": [
+      {"prefix": "milli", "symbol": "m", "multiplier": 0.001},
+      {"prefix": "kilo", "symbol": "k", "multiplier": 1000},
+      {"prefix": "Mega", "symbol": "M", "multiplier": 1000000}
+    ],
+    "ohms_law": {
+      "formulae": [
+        {"formula": "V = I × R", "solves_for": "Voltage"},
+        {"formula": "I = V / R", "solves_for": "Current"},
+        {"formula": "R = V / I", "solves_for": "Resistance"},
+        {"formula": "P = V × I", "solves_for": "Power"},
+        {"formula": "P = I² × R", "solves_for": "Power"},
+        {"formula": "P = V² / R", "solves_for": "Power"}
+      ]
+    },
+    "frequency_bands": [
+      {"name": "MF", "full_name": "Medium Frequency", "range_MHz": "0.3–3"},
+      {"name": "HF", "full_name": "High Frequency", "range_MHz": "3–30"},
+      {"name": "VHF", "full_name": "Very High Frequency", "range_MHz": "30–300"},
+      {"name": "UHF", "full_name": "Ultra High Frequency", "range_MHz": "300–3000"}
+    ],
+    "wavelength": {
+      "formula": "λ(m) = 300 / f(MHz)",
+      "inverse": "f(MHz) = 300 / λ(m)"
+    },
+    "decibels": {
+      "table": [
+        {"dB": 3, "power_ratio": 2},
+        {"dB": 6, "power_ratio": 4},
+        {"dB": 10, "power_ratio": 10},
+        {"dB": -3, "power_ratio": 0.5},
+        {"dB": -10, "power_ratio": 0.1}
+      ]
+    },
+    "series_parallel": {
+      "resistors": {"series": "R = R1 + R2 + R3", "parallel": "1/R = 1/R1 + 1/R2 + 1/R3"},
+      "capacitors": {"series": "1/C = 1/C1 + 1/C2 (opposite to resistors)", "parallel": "C = C1 + C2 + C3"},
+      "inductors": {"series": "L = L1 + L2 (same as resistors)", "parallel": "1/L = 1/L1 + 1/L2"}
+    },
+    "components": [
+      {"name": "Resistor", "unit": "Ohm (Ω)", "function": "Limits current flow"},
+      {"name": "Capacitor", "unit": "Farad (F)", "function": "Stores charge; blocks DC, passes AC"},
+      {"name": "Inductor", "unit": "Henry (H)", "function": "Stores energy in magnetic field; opposes change in current"},
+      {"name": "Diode", "function": "Allows current in one direction only; used in rectification"},
+      {"name": "Transistor", "function": "Semiconductor switch or amplifier"},
+      {"name": "Transformer", "function": "Changes AC voltage and current levels; only works with AC"},
+      {"name": "Fuse", "function": "Safety device that melts if current exceeds rated value"},
+      {"name": "LED", "function": "Light Emitting Diode — emits light when forward biased"}
+    ],
+    "ac_waveform": {
+      "mains_uk": {"voltage_V": 230, "frequency_Hz": 50},
+      "audio_speech_range_Hz": "300–3000"
+    },
+    "conductors": ["All metals", "Water (surface of insulators when wet)"],
+    "insulators": ["Plastic", "Rubber", "Wood", "Glass", "Ceramics"]
+  },
+  "transmitter": {
+    "block_diagram": [
+      {"block": 1, "name": "Audio stage", "function": "Amplifies the weak microphone signal"},
+      {"block": 2, "name": "Modulator", "function": "Combines audio signal with carrier to produce modulated RF"},
+      {"block": 3, "name": "Frequency generator (oscillator)", "function": "Generates the carrier frequency"},
+      {"block": 4, "name": "RF power amplifier", "function": "Amplifies modulated signal to required transmission power"}
+    ],
+    "modulation_types": [
+      {"name": "AM", "description": "Amplitude varies with audio; constant frequency", "emc_risk": "High"},
+      {"name": "FM", "description": "Frequency varies with audio; constant amplitude", "emc_risk": "Low"},
+      {"name": "SSB", "description": "One sideband only; USB above 10MHz, LSB below", "emc_risk": "Highest"},
+      {"name": "CW", "description": "Carrier switched on/off in Morse patterns", "emc_risk": "Moderate"},
+      {"name": "Data", "description": "Digital modes (RTTY, PSK31, FT8 etc)", "emc_risk": "Low"}
+    ]
+  },
+  "receiver": {
+    "block_diagram": [
+      {"block": 1, "name": "Tuning and RF amplifier", "function": "Selects and amplifies wanted signal"},
+      {"block": 2, "name": "Detector (demodulator)", "function": "Extracts original audio from modulated signal"},
+      {"block": 3, "name": "Audio amplifier", "function": "Amplifies audio to drive loudspeaker"},
+      {"block": 4, "name": "Loudspeaker", "function": "Converts audio electrical signal to sound"}
+    ]
+  },
+  "feeders_and_antennas": {
+    "antennas": [
+      {"name": "Half-wave dipole", "length": "½ wavelength total", "pattern": "Bidirectional", "balun_required": true},
+      {"name": "Quarter-wave ground plane", "length": "¼ wavelength", "pattern": "Omnidirectional", "balun_required": false},
+      {"name": "Yagi", "pattern": "Directional — toward directors", "balun_required": true},
+      {"name": "5/8-wave ground plane", "pattern": "Omnidirectional; better toward horizon", "balun_required": false},
+      {"name": "End-fed wire", "pattern": "Variable", "atu_required": true}
+    ],
+    "polarisation": {
+      "vhf_uhf_fm": "Vertical",
+      "vhf_uhf_ssb": "Horizontal",
+      "rule": "TX and RX must use same polarisation"
+    }
+  },
+  "propagation": {
+    "modes": [
+      {"name": "Ground wave", "frequencies": "MF and lower HF", "range": "Short to medium"},
+      {"name": "Sky wave", "frequencies": "HF (3–30MHz)", "range": "Up to 4000km per hop; worldwide"},
+      {"name": "Line of sight", "frequencies": "VHF and UHF", "range": "10–80km"}
+    ],
+    "ionosphere_layers": [
+      {"name": "D layer", "present": "Daytime only", "effect": "Absorbs lower HF"},
+      {"name": "E layer", "present": "Mainly daytime", "effect": "Reflects MF and lower HF"},
+      {"name": "F layer", "present": "Day and night", "effect": "Long-distance HF DX propagation"}
+    ],
+    "MUF": {
+      "daytime": "Up to 30MHz or more",
+      "night": "Can drop to ~3MHz",
+      "strategy": "Choose frequency slightly below MUF"
+    }
+  },
+  "operating": {
+    "phonetic_alphabet": [
+      "Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel",
+      "India", "Juliet", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa",
+      "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whisky",
+      "X-ray", "Yankee", "Zulu"
+    ],
+    "q_codes": [
+      {"code": "QRG", "meaning": "Exact frequency"},
+      {"code": "QRM", "meaning": "Man-made interference"},
+      {"code": "QRN", "meaning": "Natural interference (static)"},
+      {"code": "QRO", "meaning": "Increase transmitter power"},
+      {"code": "QRP", "meaning": "Decrease power / low power operation"},
+      {"code": "QRS", "meaning": "Send more slowly"},
+      {"code": "QRT", "meaning": "Stop transmitting / close station"},
+      {"code": "QRX", "meaning": "Wait / standby"},
+      {"code": "QRZ", "meaning": "Who is calling me?"},
+      {"code": "QSB", "meaning": "Signal strength varying (fading)"},
+      {"code": "QSL", "meaning": "I confirm receipt / QSL card"},
+      {"code": "QSO", "meaning": "Communication with another station"},
+      {"code": "QSY", "meaning": "Change frequency"},
+      {"code": "QTH", "meaning": "My location / address"}
+    ],
+    "calling_channels": {
+      "2m_FM": "145.500 MHz",
+      "2m_SSB": "144.300 MHz",
+      "70cm_FM": "433.500 MHz"
+    },
+    "rst_system": {
+      "R": "Readability 1-5",
+      "S": "Strength 1-9",
+      "T": "Tone 1-9 (CW only)"
+    }
+  },
+  "morse_code": {
+    "alphabet": {
+      "A": ".-", "B": "-...", "C": "-.-.", "D": "-..", "E": ".", "F": "..-.",
+      "G": "--.", "H": "....", "I": "..", "J": ".---", "K": "-.-", "L": ".-..",
+      "M": "--", "N": "-.", "O": "---", "P": ".--.", "Q": "--.-", "R": ".-.",
+      "S": "...", "T": "-", "U": "..-", "V": "...-", "W": ".--", "X": "-..-",
+      "Y": "-.--", "Z": "--..",
+      "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-",
+      "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----."
+    }
+  },
+  "emc": {
+    "modes_risk_order": ["FM", "Data (constant level)", "CW", "AM", "SSB"],
+    "ferrite_filter": {
+      "turns_recommended": 20,
+      "alternative": "4 rings × 5 turns"
+    }
+  },
+  "safety": {
+    "mains_voltage_V": 230,
+    "mains_plug_wiring": {
+      "brown": "Live (L)",
+      "blue": "Neutral (N)",
+      "yellow_green": "Earth (E)"
+    },
+    "first_action_shock": "Cut off the power before touching a casualty"
+  }
+}

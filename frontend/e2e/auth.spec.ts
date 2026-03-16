@@ -17,7 +17,7 @@ test.describe('Authentication flow', () => {
 
   test('login page has link to register', async ({ page }) => {
     await page.goto('/login');
-    await expect(page.getByText(/register/i)).toBeVisible();
+    await expect(page.getByRole('main').getByRole('link', { name: /register/i })).toBeVisible();
   });
 
   test('register page renders correctly', async ({ page }) => {
@@ -42,7 +42,7 @@ test.describe('Authentication flow', () => {
 
   test('register page has link to login', async ({ page }) => {
     await page.goto('/register');
-    await expect(page.getByText(/log in/i)).toBeVisible();
+    await expect(page.getByRole('main').getByRole('link', { name: /log in/i })).toBeVisible();
   });
 
   test('protected route redirects to login', async ({ page }) => {

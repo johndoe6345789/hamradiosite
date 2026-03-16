@@ -6,10 +6,12 @@ An interactive web application to help you prepare for and pass the **UK Foundat
 
 - **Comprehensive Study Material** — All 8 syllabus topics covered with detailed, exam-focused content
 - **Interactive Quiz System** — 120+ exam-style multiple choice questions with explanations
-- **Mock Exams** — Realistic mock exams matching the real format (26 questions, 45 minutes, 73% pass mark)
+- **Mock Exams** — Realistic mock exams matching the real format (26 questions, 55 minutes, 73% pass mark)
 - **Progress Tracking** — Dashboard showing scores, streaks, and weak areas
 - **Dark/Light Mode** — Full Material UI theming with persistent preference
-- **Internationalisation** — English and Welsh (Cymraeg) language support
+- **Internationalisation** — 6 languages: English, Welsh (Cymraeg), Scottish Gaelic (Gàidhlig), Irish (Gaeilge), Cornish (Kernewek), and Pirate
+- **Bookmarks Directory** — Curated links across 8 categories with glossary tooltips for acronyms and jargon
+- **Harvard Referencing** — Inline citations and reference lists throughout study content and the about page
 - **User Accounts** — Register and login to track your progress across sessions
 - **Responsive Design** — Works on desktop, tablet, and mobile
 
@@ -55,12 +57,15 @@ An interactive web application to help you prepare for and pass the **UK Foundat
 git clone https://github.com/yourusername/hamradiosite.git
 cd hamradiosite
 
-# Start all services
+# Start all services (auto-seeds the database on first run)
 docker compose up -d
 
 # The app will be available at:
 # Frontend: http://localhost:3000
 # Backend API: http://localhost:5000/api
+
+# Use custom ports if 3000/5000 are in use:
+FRONTEND_PORT=3001 BACKEND_PORT=5001 docker compose up -d
 ```
 
 ### Development Setup
@@ -154,7 +159,7 @@ hamradiosite/
 │   │   ├── store/         # Redux store and slices
 │   │   ├── theme/         # MUI theme configuration
 │   │   ├── i18n/          # Internationalisation config
-│   │   ├── messages/      # Translation files (en, cy)
+│   │   ├── messages/      # Translation files (en, cy, gd, ga, kw, pirate)
 │   │   ├── lib/           # API client, validators
 │   │   └── types/         # TypeScript type definitions
 │   ├── e2e/               # Playwright E2E tests
@@ -175,7 +180,7 @@ hamradiosite/
 
 The **UK Foundation Amateur Radio Licence** exam consists of:
 - **26 multiple choice questions**
-- **45 minutes** to complete
+- **55 minutes** to complete
 - **Pass mark: 19/26 (73%)**
 - Administered by the **RSGB** (Radio Society of Great Britain)
 - Licence issued by **Ofcom** (free of charge)

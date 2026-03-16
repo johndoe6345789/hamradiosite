@@ -16,12 +16,20 @@ const initialState: AuthState = {
   error: null,
 };
 
+function mapAuthResponse(data: Record<string, unknown>): AuthResponse {
+  return {
+    user: (data.user ?? {}) as AuthResponse['user'],
+    accessToken: ((data.access_token ?? data.accessToken) || '') as string,
+    refreshToken: ((data.refresh_token ?? data.refreshToken) || '') as string,
+  };
+}
+
 export const loginUser = createAsyncThunk<AuthResponse, LoginCredentials>(
   'auth/login',
   async (credentials, { rejectWithValue }) => {
     try {
       const response = await authApi.login(credentials);
-      const data = response.data;
+      const data = mapAuthResponse(response.data as unknown as Record<string, unknown>);
       if (typeof window !== 'undefined') {
         localStorage.setItem('accessToken', data.accessToken);
         localStorage.setItem('refreshToken', data.refreshToken);
@@ -41,7 +49,7 @@ export const registerUser = createAsyncThunk<AuthResponse, RegisterCredentials>(
   async (credentials, { rejectWithValue }) => {
     try {
       const response = await authApi.register(credentials);
-      const data = response.data;
+      const data = mapAuthResponse(response.data as unknown as Record<string, unknown>);
       if (typeof window !== 'undefined') {
         localStorage.setItem('accessToken', data.accessToken);
         localStorage.setItem('refreshToken', data.refreshToken);
@@ -79,7 +87,7 @@ export const refreshAccessToken = createAsyncThunk<AuthResponse, string>(
   async (refreshToken, { rejectWithValue }) => {
     try {
       const response = await authApi.refresh(refreshToken);
-      const data = response.data;
+      const data = mapAuthResponse(response.data as unknown as Record<string, unknown>);
       if (typeof window !== 'undefined') {
         localStorage.setItem('accessToken', data.accessToken);
         localStorage.setItem('refreshToken', data.refreshToken);

@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "backend",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "flask", "run", "--port", "5000"],
+      "port": 5000,
+      "cwd": "backend",
+      "env": {
+        "FLASK_APP": "app",
+        "FLASK_ENV": "development"
+      }
+    },
+    {
+      "name": "frontend",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "npm", "run", "dev"],
+      "port": 3000,
+      "autoPort": true,
+      "cwd": "frontend"
+    }
+  ]
+}

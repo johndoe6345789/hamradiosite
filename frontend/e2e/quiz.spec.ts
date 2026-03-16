@@ -4,16 +4,18 @@ test.describe('Quiz flow', () => {
   test('quiz selection page displays mock exam card', async ({ page }) => {
     await page.goto('/quiz');
     await expect(page.getByText(/mock examination/i)).toBeVisible();
-    await expect(page.getByText(/26 questions/i)).toBeVisible();
-    await expect(page.getByText(/45 minutes/i)).toBeVisible();
+    await expect(page.getByText('26 questions', { exact: true })).toBeVisible();
+    await expect(page.getByText(/55 minutes/i)).toBeVisible();
     await expect(page.getByText(/pass mark: 73%/i)).toBeVisible();
   });
 
   test('quiz selection page displays topic quizzes', async ({ page }) => {
     await page.goto('/quiz');
-    await expect(page.getByText(/licensing conditions/i)).toBeVisible();
-    await expect(page.getByText(/technical basics/i)).toBeVisible();
-    await expect(page.getByText(/safety/i)).toBeVisible();
+    // Wait for topics to load from API
+    await page.waitForSelector('text=/licensing conditions/i', { timeout: 10000 });
+    await expect(page.getByText(/licensing conditions/i).first()).toBeVisible();
+    await expect(page.getByText(/technical basics/i).first()).toBeVisible();
+    await expect(page.getByText(/safety/i).first()).toBeVisible();
   });
 
   test('clicking start exam navigates to quiz page', async ({ page }) => {
@@ -24,6 +26,8 @@ test.describe('Quiz flow', () => {
 
   test('clicking start quiz navigates to topic quiz', async ({ page }) => {
     await page.goto('/quiz');
+    // Wait for topics to load from API
+    await page.waitForSelector('text=/licensing conditions/i', { timeout: 10000 });
     const startButtons = page.getByRole('link', { name: /start quiz/i });
     await startButtons.first().click();
     await expect(page).toHaveURL(/\/quiz\//);
@@ -36,11 +40,8 @@ test.describe('Quiz flow', () => {
     ).toBeVisible();
   });
 
-  test('quiz page displays buttons', async ({ page }) => {
+  test('quiz page displays start button before quiz begins', async ({ page }) => {
     await page.goto('/quiz/mock-exam');
-    // The page starts with a start button before the quiz begins
-    const buttons = page.getByRole('button');
-    const count = await buttons.count();
-    expect(count).toBeGreaterThan(0);
+    await expect(page.getByRole('button', { name: /start mock exam/i })).toBeVisible();
   });
 });

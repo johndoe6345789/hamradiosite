@@ -13,8 +13,9 @@ COPY --from=builder /install /usr/local
 
 COPY . .
 
-RUN mkdir -p /app/data
+RUN mkdir -p /app/data && chmod +x /app/entrypoint.sh
 
 EXPOSE 5000
 
+ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "app:create_app()"]

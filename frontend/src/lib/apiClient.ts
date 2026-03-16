@@ -79,20 +79,23 @@ apiClient.interceptors.response.use(
           throw new Error('No refresh token available');
         }
 
-        const { data } = await axios.post<AuthResponse>(
+        const { data } = await axios.post<Record<string, unknown>>(
           `${apiClient.defaults.baseURL}/auth/refresh`,
           { refreshToken }
         );
 
+        const newAccessToken = (data.access_token ?? data.accessToken ?? '') as string;
+        const newRefreshToken = (data.refresh_token ?? data.refreshToken ?? refreshToken) as string;
+
         if (typeof window !== 'undefined') {
-          localStorage.setItem('accessToken', data.accessToken);
-          localStorage.setItem('refreshToken', data.refreshToken);
+          localStorage.setItem('accessToken', newAccessToken);
+          localStorage.setItem('refreshToken', newRefreshToken);
         }
 
-        processQueue(null, data.accessToken);
+        processQueue(null, newAccessToken);
 
         if (originalRequest.headers) {
-          originalRequest.headers.Authorization = `Bearer ${data.accessToken}`;
+          originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
         }
 
         return apiClient(originalRequest);
@@ -128,7 +131,7 @@ export const authApi = {
 };
 
 export const topicsApi = {
-  getAll: () => apiClient.get<Topic[]>('/topics'),
+  getAll: () => apiClient.get<Topic[]>('/topics/'),
 
   getBySlug: (slug: string) =>
     apiClient.get<TopicWithContent>(`/topics/${slug}`),
@@ -141,17 +144,17 @@ export const questionsApi = {
 
 export const quizzesApi = {
   start: (config: QuizConfig) =>
-    apiClient.post<ActiveQuiz>('/quizzes/start', config),
+    apiClient.post<ActiveQuiz>('/quizzes/start', { type: config.type, topic_slug: config.topicSlug }),
 
   submit: (quizId: string, answers: Record<string, string>) =>
     apiClient.post<QuizResult>(`/quizzes/${quizId}/submit`, { answers }),
 
   getResult: (quizId: string) =>
-    apiClient.get<QuizResult>(`/quizzes/${quizId}/result`),
+    apiClient.get<QuizResult>(`/quizzes/${quizId}/results`),
 };
 
 export const progressApi = {
-  getOverall: () => apiClient.get<OverallProgress>('/progress/overall'),
+  getOverall: () => apiClient.get<OverallProgress>('/progress/'),
 
   getTopicBreakdown: () =>
     apiClient.get<TopicProgress[]>('/progress/topics'),

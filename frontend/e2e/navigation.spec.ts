@@ -37,15 +37,15 @@ test.describe('Navigation', () => {
 
   test('theme toggle changes mode', async ({ page }) => {
     await page.goto('/');
-    const themeButton = page.getByLabelText(/switch to dark mode/i);
+    const themeButton = page.getByLabel(/switch to dark mode/i);
     await expect(themeButton).toBeVisible();
     await themeButton.click();
-    await expect(page.getByLabelText(/switch to light mode/i)).toBeVisible();
+    await expect(page.getByLabel(/switch to light mode/i)).toBeVisible();
   });
 
   test('language switcher opens menu', async ({ page }) => {
     await page.goto('/');
-    await page.getByLabelText(/switch language/i).click();
+    await page.getByLabel(/switch language/i).click();
     await expect(page.getByText('English')).toBeVisible();
     await expect(page.getByText('Cymraeg')).toBeVisible();
   });
@@ -57,8 +57,10 @@ test.describe('Navigation', () => {
 
   test('learn topic detail page navigable', async ({ page }) => {
     await page.goto('/learn');
-    await page.getByText(/licensing conditions/i).click();
-    await expect(page).toHaveURL(/\/learn\/licensing-conditions/);
+    // Wait for topics to load from API
+    await page.waitForSelector('text=/licensing conditions/i', { timeout: 10000 });
+    await page.getByText(/licensing conditions/i).first().click();
+    await expect(page).toHaveURL(/\/learn\/licensing-conditions/, { timeout: 10000 });
   });
 
   test('mobile responsive: hamburger menu visible at small viewport', async ({
@@ -66,8 +68,8 @@ test.describe('Navigation', () => {
   }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
-    await expect(page.getByLabelText(/open menu/i)).toBeVisible();
-    await page.getByLabelText(/open menu/i).click();
+    await expect(page.getByLabel(/open menu/i)).toBeVisible();
+    await page.getByLabel(/open menu/i).click();
     // Check the drawer opened with nav items
     await expect(page.getByRole('presentation').getByText('Learn')).toBeVisible();
   });

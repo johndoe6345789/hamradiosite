@@ -8,6 +8,12 @@ import MuiLink from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { Link } from '@/i18n/navigation';
 
+const FOOTER_LINKS = [
+  { key: 'learn' as const, href: '/learn' },
+  { key: 'quiz' as const, href: '/quiz' },
+  { key: 'about' as const, href: '/about' },
+];
+
 export default function Footer() {
   const t = useTranslations('common');
   const tn = useTranslations('nav');
@@ -16,33 +22,15 @@ export default function Footer() {
     <Box component="footer" sx={{ bgcolor: 'background.paper', mt: 'auto' }}>
       <Divider />
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: 2,
-          }}
-        >
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 2 }}>
           <Box>
-            <Typography variant="body2" color="text.secondary">
-              &copy; {new Date().getFullYear()} {t('copyright')}
-            </Typography>
-            <Typography variant="caption" color="text.secondary">
-              {t('builtFor')}
-            </Typography>
+            <Typography variant="body2" color="text.secondary">&copy; {new Date().getFullYear()} {t('copyright')}</Typography>
+            <Typography variant="caption" color="text.secondary">{t('builtFor')}</Typography>
           </Box>
           <Box sx={{ display: 'flex', gap: 3 }}>
-            <MuiLink component={Link} href="/learn" color="text.secondary" underline="hover" variant="body2">
-              {tn('learn')}
-            </MuiLink>
-            <MuiLink component={Link} href="/quiz" color="text.secondary" underline="hover" variant="body2">
-              {tn('quiz')}
-            </MuiLink>
-            <MuiLink component={Link} href="/about" color="text.secondary" underline="hover" variant="body2">
-              {tn('about')}
-            </MuiLink>
+            {FOOTER_LINKS.map(({ key, href }) => (
+              <MuiLink key={key} component={Link} href={href} color="text.secondary" underline="hover" variant="body2">{tn(key)}</MuiLink>
+            ))}
           </Box>
         </Box>
       </Container>
