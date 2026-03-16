@@ -1,0 +1,1318 @@
+[
+  {
+    "topic_slug": "licensing-conditions",
+    "questions": [
+      {
+        "text": "What is the callsign prefix allocated to new UK Foundation licence holders?",
+        "options": [
+          {"id": "a", "text": "M0"},
+          {"id": "b", "text": "M6"},
+          {"id": "c", "text": "2E0"},
+          {"id": "d", "text": "G0"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "New Foundation licence holders are allocated callsigns with the prefix M6. The legacy Foundation prefix is M3. M0 is for Full licence holders and 2E0 is for Intermediate licence holders."
+      },
+      {
+        "text": "What is the maximum transmitter power permitted for a Foundation licence holder?",
+        "options": [
+          {"id": "a", "text": "5 Watts"},
+          {"id": "b", "text": "50 Watts"},
+          {"id": "c", "text": "10 Watts"},
+          {"id": "d", "text": "25 Watts"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The maximum transmitter power for a Foundation licence holder is 10 Watts. Intermediate licence holders may use up to 50 Watts and Full licence holders up to 400 Watts."
+      },
+      {
+        "text": "Which body is responsible for regulating amateur radio in the UK?",
+        "options": [
+          {"id": "a", "text": "The RSGB"},
+          {"id": "b", "text": "The BBC"},
+          {"id": "c", "text": "Ofcom"},
+          {"id": "d", "text": "The Home Office"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Ofcom (the Office of Communications) is the UK regulator responsible for issuing amateur radio licences and managing the radio spectrum."
+      },
+      {
+        "text": "How often must a UK amateur radio licence be renewed?",
+        "options": [
+          {"id": "a", "text": "Every year"},
+          {"id": "b", "text": "Every 3 years"},
+          {"id": "c", "text": "Every 5 years"},
+          {"id": "d", "text": "Every 10 years"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "A UK amateur radio licence must be renewed every 5 years. The licence can be obtained free online or for a postal fee of 20 pounds (waived for those aged 75 and over)."
+      },
+      {
+        "text": "What does the suffix /P added to a callsign indicate?",
+        "options": [
+          {"id": "a", "text": "Operating from a permanent address"},
+          {"id": "b", "text": "Operating from a portable location"},
+          {"id": "c", "text": "Operating from a mobile station"},
+          {"id": "d", "text": "Operating with reduced power"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The suffix /P indicates portable operation, meaning the station is being operated from a temporary location. /M indicates mobile operation and /A indicates operation from an alternate address."
+      },
+      {
+        "text": "How many questions are in the UK Foundation amateur radio exam?",
+        "options": [
+          {"id": "a", "text": "20 questions"},
+          {"id": "b", "text": "30 questions"},
+          {"id": "c", "text": "26 questions"},
+          {"id": "d", "text": "50 questions"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The Foundation exam consists of 26 multiple-choice questions to be completed in 55 minutes. You need to get at least 19 correct (73%) to pass."
+      },
+      {
+        "text": "What regional secondary locator is used when operating from Wales?",
+        "options": [
+          {"id": "a", "text": "M"},
+          {"id": "b", "text": "I"},
+          {"id": "c", "text": "W"},
+          {"id": "d", "text": "D"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The regional secondary locator W is used when operating from Wales. M is for Scotland, I is for Northern Ireland, and D is for the Isle of Man. No additional letter is used for England."
+      },
+      {
+        "text": "Which of the following is NOT a permitted purpose of amateur radio?",
+        "options": [
+          {"id": "a", "text": "Self-training in radio communications"},
+          {"id": "b", "text": "Leisure and recreation"},
+          {"id": "c", "text": "Commercial broadcasting"},
+          {"id": "d", "text": "Technical experimentation"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Amateur radio must not be used for commercial purposes or broadcasting. Its permitted purposes are self-training in radio communications, leisure, and non-commercial experimentation."
+      },
+      {
+        "text": "How frequently should a Foundation licence holder identify their station with their callsign?",
+        "options": [
+          {"id": "a", "text": "Every 5 minutes"},
+          {"id": "b", "text": "Every 30 minutes"},
+          {"id": "c", "text": "Every 15 minutes"},
+          {"id": "d", "text": "Only at the start and end of a contact"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Licence holders should give their callsign every 15 minutes, or as frequently as is practicable during a transmission."
+      },
+      {
+        "text": "Can a Foundation licence holder operate their station from overseas?",
+        "options": [
+          {"id": "a", "text": "Yes, in any country"},
+          {"id": "b", "text": "Yes, but only in EU countries"},
+          {"id": "c", "text": "Yes, but only in CEPT member countries"},
+          {"id": "d", "text": "No, the Foundation licence is not recognised internationally"}
+        ],
+        "correct_option_id": "d",
+        "explanation": "The Foundation licence is not recognised internationally, so Foundation licence holders cannot operate their station overseas. International operation requires at least a Full licence under CEPT arrangements."
+      },
+      {
+        "text": "Is the use of encryption permitted under a UK amateur radio licence?",
+        "options": [
+          {"id": "a", "text": "Yes, for all licence levels"},
+          {"id": "b", "text": "Yes, but only for Full licence holders"},
+          {"id": "c", "text": "No, encryption is not permitted"},
+          {"id": "d", "text": "Yes, but only for digital modes"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The use of encryption is not permitted under any level of UK amateur radio licence. All transmissions must be made in plain language or using recognised codes."
+      },
+      {
+        "text": "What is the callsign prefix for a UK Intermediate licence holder?",
+        "options": [
+          {"id": "a", "text": "M6"},
+          {"id": "b", "text": "M0"},
+          {"id": "c", "text": "2E0 or 2E1"},
+          {"id": "d", "text": "G3"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Intermediate licence holders use the prefix 2E0 or 2E1. M6 (or legacy M3) is for Foundation, and M0 or M1 is for Full licence holders."
+      },
+      {
+        "text": "Is unattended transmitting permitted under a Foundation licence?",
+        "options": [
+          {"id": "a", "text": "Yes, at any time"},
+          {"id": "b", "text": "Yes, but only on VHF"},
+          {"id": "c", "text": "No, it is not permitted at Foundation level"},
+          {"id": "d", "text": "Yes, but only with a beacon"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Unattended transmitting is not permitted at Foundation level. The operator must be present and in control of the station at all times during transmission."
+      },
+      {
+        "text": "What regional secondary locator is used when operating from Scotland?",
+        "options": [
+          {"id": "a", "text": "S"},
+          {"id": "b", "text": "W"},
+          {"id": "c", "text": "M"},
+          {"id": "d", "text": "I"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The regional secondary locator M is used when operating from Scotland. W is for Wales, I is for Northern Ireland, and D is for the Isle of Man."
+      },
+      {
+        "text": "What is the maximum transmitter power permitted for a Full UK amateur radio licence holder?",
+        "options": [
+          {"id": "a", "text": "100 Watts"},
+          {"id": "b", "text": "200 Watts"},
+          {"id": "c", "text": "400 Watts"},
+          {"id": "d", "text": "1000 Watts"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The maximum transmitter power for a Full licence holder is 400 Watts. Foundation is limited to 10 Watts and Intermediate to 50 Watts."
+      }
+    ]
+  },
+  {
+    "topic_slug": "technical-basics",
+    "questions": [
+      {
+        "text": "A resistor has 12 Volts across it and 2 Amps flowing through it. What is its resistance?",
+        "options": [
+          {"id": "a", "text": "24 Ohms"},
+          {"id": "b", "text": "6 Ohms"},
+          {"id": "c", "text": "14 Ohms"},
+          {"id": "d", "text": "10 Ohms"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Using Ohm's Law, V = IR, so R = V/I = 12/2 = 6 Ohms."
+      },
+      {
+        "text": "What is the wavelength of a signal at 145 MHz?",
+        "options": [
+          {"id": "a", "text": "Approximately 1.45 metres"},
+          {"id": "b", "text": "Approximately 2.07 metres"},
+          {"id": "c", "text": "Approximately 14.5 metres"},
+          {"id": "d", "text": "Approximately 0.48 metres"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Wavelength in metres = 300 / frequency in MHz. So 300 / 145 = approximately 2.07 metres. This is the 2-metre amateur band."
+      },
+      {
+        "text": "What does a gain of +3 dB represent in terms of power?",
+        "options": [
+          {"id": "a", "text": "Three times the power"},
+          {"id": "b", "text": "Ten times the power"},
+          {"id": "c", "text": "Double the power"},
+          {"id": "d", "text": "Half the power"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "A gain of +3 dB represents a doubling of power. +6 dB is four times the power and +10 dB is ten times the power."
+      },
+      {
+        "text": "Which frequency range defines the VHF band?",
+        "options": [
+          {"id": "a", "text": "3 to 30 MHz"},
+          {"id": "b", "text": "30 to 300 MHz"},
+          {"id": "c", "text": "300 to 3000 MHz"},
+          {"id": "d", "text": "0.3 to 3 MHz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "VHF (Very High Frequency) covers 30 to 300 MHz. HF is 3-30 MHz, UHF is 300-3000 MHz, and MF is 0.3-3 MHz."
+      },
+      {
+        "text": "What is the voltage and frequency of UK mains electricity?",
+        "options": [
+          {"id": "a", "text": "110V AC at 60 Hz"},
+          {"id": "b", "text": "230V DC at 50 Hz"},
+          {"id": "c", "text": "230V AC at 50 Hz"},
+          {"id": "d", "text": "240V AC at 60 Hz"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "UK mains electricity is nominally 230 Volts AC at a frequency of 50 Hz."
+      },
+      {
+        "text": "What is the total resistance when two 100-Ohm resistors are connected in series?",
+        "options": [
+          {"id": "a", "text": "50 Ohms"},
+          {"id": "b", "text": "100 Ohms"},
+          {"id": "c", "text": "200 Ohms"},
+          {"id": "d", "text": "10000 Ohms"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Resistors in series simply add together. So 100 + 100 = 200 Ohms."
+      },
+      {
+        "text": "What is the total capacitance when two 100 pF capacitors are connected in parallel?",
+        "options": [
+          {"id": "a", "text": "50 pF"},
+          {"id": "b", "text": "100 pF"},
+          {"id": "c", "text": "200 pF"},
+          {"id": "d", "text": "10000 pF"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Capacitors combine in the opposite way to resistors. In parallel, capacitors add together: 100 + 100 = 200 pF. In series, they follow the reciprocal rule."
+      },
+      {
+        "text": "A loss of -10 dB means the output power is what fraction of the input power?",
+        "options": [
+          {"id": "a", "text": "One half"},
+          {"id": "b", "text": "One quarter"},
+          {"id": "c", "text": "One tenth"},
+          {"id": "d", "text": "One hundredth"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "A change of -10 dB means the power is reduced to one tenth (0.1) of its original value. -3 dB is one half, and -20 dB would be one hundredth."
+      },
+      {
+        "text": "What is the power dissipated by a resistor with 5 Volts across it and 2 Amps flowing through it?",
+        "options": [
+          {"id": "a", "text": "2.5 Watts"},
+          {"id": "b", "text": "7 Watts"},
+          {"id": "c", "text": "10 Watts"},
+          {"id": "d", "text": "3 Watts"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Power = Voltage x Current (P = V x I). So P = 5 x 2 = 10 Watts."
+      },
+      {
+        "text": "What frequency range does the HF band cover?",
+        "options": [
+          {"id": "a", "text": "0.3 to 3 MHz"},
+          {"id": "b", "text": "3 to 30 MHz"},
+          {"id": "c", "text": "30 to 300 MHz"},
+          {"id": "d", "text": "300 to 3000 MHz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "HF (High Frequency) covers 3 to 30 MHz. MF is 0.3-3 MHz, VHF is 30-300 MHz, and UHF is 300-3000 MHz."
+      },
+      {
+        "text": "What does the prefix 'kilo' mean?",
+        "options": [
+          {"id": "a", "text": "One thousandth (0.001)"},
+          {"id": "b", "text": "One thousand (1000)"},
+          {"id": "c", "text": "One million (1,000,000)"},
+          {"id": "d", "text": "One hundred (100)"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The prefix 'kilo' means one thousand (1000). 'Milli' means one thousandth (0.001) and 'Mega' means one million (1,000,000)."
+      },
+      {
+        "text": "What is the approximate frequency range of speech audio?",
+        "options": [
+          {"id": "a", "text": "20 to 20,000 Hz"},
+          {"id": "b", "text": "300 to 3000 Hz"},
+          {"id": "c", "text": "50 to 15,000 Hz"},
+          {"id": "d", "text": "1000 to 10,000 Hz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The frequency range of speech audio that is relevant for radio communications is approximately 300 to 3000 Hz."
+      },
+      {
+        "text": "What is the total resistance when two 100-Ohm resistors are connected in parallel?",
+        "options": [
+          {"id": "a", "text": "200 Ohms"},
+          {"id": "b", "text": "100 Ohms"},
+          {"id": "c", "text": "50 Ohms"},
+          {"id": "d", "text": "25 Ohms"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "For two equal resistors in parallel, the total resistance is half the value of one resistor. Using the reciprocal formula: 1/R = 1/100 + 1/100 = 2/100, so R = 50 Ohms."
+      },
+      {
+        "text": "A gain of +6 dB represents what change in power?",
+        "options": [
+          {"id": "a", "text": "Two times the power"},
+          {"id": "b", "text": "Four times the power"},
+          {"id": "c", "text": "Six times the power"},
+          {"id": "d", "text": "Ten times the power"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "+6 dB represents four times the power. This is because +3 dB doubles the power, and +6 dB is two steps of +3 dB, so the power is doubled twice: 2 x 2 = 4."
+      },
+      {
+        "text": "What is the wavelength of a signal at 7 MHz?",
+        "options": [
+          {"id": "a", "text": "Approximately 7 metres"},
+          {"id": "b", "text": "Approximately 21 metres"},
+          {"id": "c", "text": "Approximately 43 metres"},
+          {"id": "d", "text": "Approximately 70 metres"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Wavelength in metres = 300 / frequency in MHz. So 300 / 7 = approximately 43 metres. This is the 40-metre amateur band."
+      },
+      {
+        "text": "How do inductors combine in series?",
+        "options": [
+          {"id": "a", "text": "They add together, like capacitors in parallel"},
+          {"id": "b", "text": "They follow the reciprocal rule, like resistors in parallel"},
+          {"id": "c", "text": "They add together, like resistors in series"},
+          {"id": "d", "text": "They follow the reciprocal rule, like capacitors in series"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Inductors combine in the same way as resistors. In series they add together, and in parallel they follow the reciprocal rule."
+      },
+      {
+        "text": "What is 4700 Ohms expressed using the correct prefix?",
+        "options": [
+          {"id": "a", "text": "4.7 Megaohms"},
+          {"id": "b", "text": "47 kilohms"},
+          {"id": "c", "text": "4.7 kilohms"},
+          {"id": "d", "text": "0.47 kilohms"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The prefix 'kilo' means 1000. So 4700 Ohms = 4.7 kilohms (4.7 x 1000 = 4700)."
+      },
+      {
+        "text": "What current flows through a 50-Ohm resistor with 10 Volts across it?",
+        "options": [
+          {"id": "a", "text": "500 Amps"},
+          {"id": "b", "text": "5 Amps"},
+          {"id": "c", "text": "0.2 Amps"},
+          {"id": "d", "text": "0.5 Amps"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Using Ohm's Law, I = V/R = 10/50 = 0.2 Amps (200 mA)."
+      },
+      {
+        "text": "What frequency band does the 70 cm amateur allocation fall within?",
+        "options": [
+          {"id": "a", "text": "HF"},
+          {"id": "b", "text": "VHF"},
+          {"id": "c", "text": "UHF"},
+          {"id": "d", "text": "MF"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "70 cm corresponds to approximately 430 MHz (300/0.7 = 429 MHz), which falls within the UHF band (300-3000 MHz)."
+      },
+      {
+        "text": "What power is dissipated by a 100-Ohm resistor carrying 0.5 Amps?",
+        "options": [
+          {"id": "a", "text": "50 Watts"},
+          {"id": "b", "text": "25 Watts"},
+          {"id": "c", "text": "200 Watts"},
+          {"id": "d", "text": "12.5 Watts"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Using P = I squared x R: P = 0.5 x 0.5 x 100 = 25 Watts."
+      }
+    ]
+  },
+  {
+    "topic_slug": "transmitters-receivers",
+    "questions": [
+      {
+        "text": "What is the correct order of stages in a simple transmitter?",
+        "options": [
+          {"id": "a", "text": "Oscillator, Audio stage, Modulator, RF Power Amplifier"},
+          {"id": "b", "text": "Audio stage, Modulator, Oscillator, RF Power Amplifier"},
+          {"id": "c", "text": "RF Power Amplifier, Modulator, Oscillator, Audio stage"},
+          {"id": "d", "text": "Modulator, Audio stage, RF Power Amplifier, Oscillator"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "In a simple transmitter, the audio signal passes through the audio stage, then to the modulator where it is combined with the signal from the oscillator, and finally to the RF power amplifier for transmission."
+      },
+      {
+        "text": "In FM (Frequency Modulation), what property of the signal varies with the audio input?",
+        "options": [
+          {"id": "a", "text": "The amplitude of the carrier"},
+          {"id": "b", "text": "The frequency of the carrier"},
+          {"id": "c", "text": "The phase of the carrier"},
+          {"id": "d", "text": "The wavelength of the carrier only"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "In FM, the frequency of the carrier varies in accordance with the audio signal, while the amplitude remains constant. This is the opposite of AM where the amplitude varies."
+      },
+      {
+        "text": "What does a squelch control do on a receiver?",
+        "options": [
+          {"id": "a", "text": "Adjusts the receiver frequency slightly"},
+          {"id": "b", "text": "Reduces the audio bandwidth"},
+          {"id": "c", "text": "Silences the receiver when no signal is present"},
+          {"id": "d", "text": "Increases the sensitivity of the receiver"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The squelch control sets a threshold level. When no signal is present (or the signal is too weak), the audio output is muted, eliminating the unpleasant background noise."
+      },
+      {
+        "text": "What does a RIT (Receiver Incremental Tuning) control do?",
+        "options": [
+          {"id": "a", "text": "Adjusts both the transmit and receive frequencies together"},
+          {"id": "b", "text": "Adjusts the receive frequency without changing the transmit frequency"},
+          {"id": "c", "text": "Adjusts the transmit frequency without changing the receive frequency"},
+          {"id": "d", "text": "Switches between AM and FM modes"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "RIT allows you to adjust the receive frequency slightly without changing your transmit frequency. This is useful when the other station is slightly off frequency."
+      },
+      {
+        "text": "Which sideband is conventionally used for SSB voice communication above 10 MHz?",
+        "options": [
+          {"id": "a", "text": "Lower Sideband (LSB)"},
+          {"id": "b", "text": "Upper Sideband (USB)"},
+          {"id": "c", "text": "Either sideband may be used"},
+          {"id": "d", "text": "Double Sideband (DSB)"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "By convention, Upper Sideband (USB) is used above 10 MHz and Lower Sideband (LSB) is used below 10 MHz for SSB voice communication."
+      },
+      {
+        "text": "What is the correct order of stages in a simple receiver?",
+        "options": [
+          {"id": "a", "text": "Audio amplifier, Detector, RF amplifier, Speaker"},
+          {"id": "b", "text": "RF amplifier/tuning, Detector/demodulator, Audio amplifier, Speaker"},
+          {"id": "c", "text": "Speaker, Audio amplifier, Detector, RF amplifier"},
+          {"id": "d", "text": "Detector, RF amplifier, Speaker, Audio amplifier"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "In a simple receiver, the signal passes through the RF amplifier and tuning stage, then through the detector or demodulator, followed by the audio amplifier, and finally to the speaker."
+      },
+      {
+        "text": "In AM (Amplitude Modulation), what property of the carrier signal varies?",
+        "options": [
+          {"id": "a", "text": "The frequency"},
+          {"id": "b", "text": "The amplitude"},
+          {"id": "c", "text": "The phase"},
+          {"id": "d", "text": "The polarisation"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "In AM, the amplitude (strength) of the carrier varies in accordance with the audio signal while the frequency remains constant."
+      },
+      {
+        "text": "What type of modulation is CW (Continuous Wave)?",
+        "options": [
+          {"id": "a", "text": "The carrier frequency is varied by Morse code"},
+          {"id": "b", "text": "The carrier amplitude is varied by Morse code"},
+          {"id": "c", "text": "The carrier is switched on and off to form Morse code characters"},
+          {"id": "d", "text": "The carrier phase is shifted by Morse code"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "CW (Continuous Wave) is the simplest form of modulation where the carrier is simply switched on and off to form Morse code characters (dots and dashes)."
+      },
+      {
+        "text": "Which mode of transmission has the highest risk of causing electromagnetic compatibility (EMC) problems?",
+        "options": [
+          {"id": "a", "text": "FM"},
+          {"id": "b", "text": "CW"},
+          {"id": "c", "text": "AM"},
+          {"id": "d", "text": "SSB"}
+        ],
+        "correct_option_id": "d",
+        "explanation": "SSB has the highest risk of causing EMC problems because the transmitted power varies greatly with speech. The order from lowest to highest EMC risk is: FM, Data, CW, AM, SSB."
+      },
+      {
+        "text": "What happens if the mode switch on a receiver does not match the mode of the incoming transmission?",
+        "options": [
+          {"id": "a", "text": "The signal will be received normally"},
+          {"id": "b", "text": "The signal will be distorted or unintelligible"},
+          {"id": "c", "text": "The receiver will be damaged"},
+          {"id": "d", "text": "The signal strength will increase"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "If the receiver mode does not match the transmission mode, the signal will be distorted or unintelligible. For example, an FM signal received in SSB mode will sound garbled."
+      },
+      {
+        "text": "Which mode of transmission has the lowest risk of causing EMC problems?",
+        "options": [
+          {"id": "a", "text": "AM"},
+          {"id": "b", "text": "SSB"},
+          {"id": "c", "text": "CW"},
+          {"id": "d", "text": "FM"}
+        ],
+        "correct_option_id": "d",
+        "explanation": "FM has the lowest risk of causing EMC problems because it transmits at a constant power level. The order from lowest to highest EMC risk is: FM, Data, CW, AM, SSB."
+      },
+      {
+        "text": "What is Single Sideband (SSB)?",
+        "options": [
+          {"id": "a", "text": "An FM signal with reduced bandwidth"},
+          {"id": "b", "text": "A form of AM where only one sideband is transmitted"},
+          {"id": "c", "text": "A digital mode using phase modulation"},
+          {"id": "d", "text": "A type of CW transmission"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "SSB is a form of amplitude modulation where only one sideband (either upper or lower) is transmitted, with the carrier and other sideband suppressed. This is more efficient than full AM."
+      },
+      {
+        "text": "Which sideband is conventionally used for SSB voice communication below 10 MHz?",
+        "options": [
+          {"id": "a", "text": "Upper Sideband (USB)"},
+          {"id": "b", "text": "Lower Sideband (LSB)"},
+          {"id": "c", "text": "Both sidebands simultaneously"},
+          {"id": "d", "text": "Neither, FM is used below 10 MHz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "By convention, Lower Sideband (LSB) is used below 10 MHz and Upper Sideband (USB) is used above 10 MHz for SSB voice communication."
+      },
+      {
+        "text": "What is the function of the RF power amplifier in a transmitter?",
+        "options": [
+          {"id": "a", "text": "To generate the carrier frequency"},
+          {"id": "b", "text": "To amplify the modulated signal to the desired output power"},
+          {"id": "c", "text": "To filter out unwanted frequencies"},
+          {"id": "d", "text": "To convert audio to digital data"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The RF power amplifier (PA) is the final stage in the transmitter chain. Its purpose is to amplify the modulated RF signal to the desired output power level before it is fed to the antenna."
+      },
+      {
+        "text": "What characteristic of FM makes it particularly suitable for VHF communications?",
+        "options": [
+          {"id": "a", "text": "It uses less bandwidth than AM"},
+          {"id": "b", "text": "It provides constant amplitude, giving better audio quality and lower EMC risk"},
+          {"id": "c", "text": "It can only work at VHF frequencies"},
+          {"id": "d", "text": "It requires less transmitter power than AM"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "FM transmits at constant amplitude regardless of audio input, which provides good audio quality and the lowest EMC risk of the voice modes. It is commonly used on VHF and UHF."
+      }
+    ]
+  },
+  {
+    "topic_slug": "feeders-antennas",
+    "questions": [
+      {
+        "text": "What type of connector is commonly used at HF frequencies with coaxial cable?",
+        "options": [
+          {"id": "a", "text": "BNC"},
+          {"id": "b", "text": "PL259 / SO239"},
+          {"id": "c", "text": "SMA"},
+          {"id": "d", "text": "RJ45"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "PL259 (plug) and SO239 (socket) connectors are commonly used at HF frequencies. BNC connectors are more commonly used at VHF and above due to their smaller size."
+      },
+      {
+        "text": "What is the radiation pattern of a half-wave dipole antenna?",
+        "options": [
+          {"id": "a", "text": "Omnidirectional in all planes"},
+          {"id": "b", "text": "Bidirectional, with maximum radiation broadside to the antenna"},
+          {"id": "c", "text": "Unidirectional, with a single main lobe"},
+          {"id": "d", "text": "Directional towards one end only"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A half-wave dipole has a bidirectional radiation pattern, with maximum radiation at right angles (broadside) to the wire and minimum radiation off the ends."
+      },
+      {
+        "text": "What is the purpose of a balun?",
+        "options": [
+          {"id": "a", "text": "To amplify the signal"},
+          {"id": "b", "text": "To convert between balanced and unbalanced connections"},
+          {"id": "c", "text": "To filter out harmonics"},
+          {"id": "d", "text": "To match any two impedances"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A balun (balanced-to-unbalanced) converts between a balanced feed (such as a dipole) and an unbalanced feed (such as coaxial cable). It prevents unwanted RF currents flowing on the outside of the coax screen."
+      },
+      {
+        "text": "What is an ideal SWR (Standing Wave Ratio) reading?",
+        "options": [
+          {"id": "a", "text": "0:1"},
+          {"id": "b", "text": "1:1"},
+          {"id": "c", "text": "2:1"},
+          {"id": "d", "text": "infinity:1"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "An ideal SWR is 1:1, meaning all the power from the transmitter is being radiated by the antenna with no power reflected back. Higher SWR values indicate a mismatch."
+      },
+      {
+        "text": "What type of antenna is a Yagi?",
+        "options": [
+          {"id": "a", "text": "Omnidirectional"},
+          {"id": "b", "text": "Bidirectional"},
+          {"id": "c", "text": "Directional"},
+          {"id": "d", "text": "Isotropic"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "A Yagi is a directional antenna that focuses its radiation pattern in the direction of the director elements. It needs a balun when fed with coaxial cable."
+      },
+      {
+        "text": "What is the purpose of a dummy load?",
+        "options": [
+          {"id": "a", "text": "To increase the power output of a transmitter"},
+          {"id": "b", "text": "To absorb transmitter power without radiating a signal, for testing purposes"},
+          {"id": "c", "text": "To match any antenna to any transmitter"},
+          {"id": "d", "text": "To protect the antenna from lightning"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A dummy load is a non-radiating resistive load that absorbs the transmitter's power as heat. It is used for testing and adjusting a transmitter without sending a signal on air."
+      },
+      {
+        "text": "What polarisation is normally used for FM voice communications on VHF?",
+        "options": [
+          {"id": "a", "text": "Horizontal"},
+          {"id": "b", "text": "Vertical"},
+          {"id": "c", "text": "Circular"},
+          {"id": "d", "text": "Elliptical"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Vertical polarisation is normally used for FM communications on VHF. Horizontal polarisation is used for SSB on VHF. For best results, both stations should use the same polarisation."
+      },
+      {
+        "text": "What type of connector is commonly used at VHF frequencies?",
+        "options": [
+          {"id": "a", "text": "PL259 / SO239"},
+          {"id": "b", "text": "BNC"},
+          {"id": "c", "text": "RCA phono"},
+          {"id": "d", "text": "XLR"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "BNC connectors are commonly used at VHF frequencies due to their small size and good performance at higher frequencies. PL259/SO239 connectors are more common at HF."
+      },
+      {
+        "text": "How many radials does a typical quarter-wave ground plane antenna have?",
+        "options": [
+          {"id": "a", "text": "1"},
+          {"id": "b", "text": "2"},
+          {"id": "c", "text": "4"},
+          {"id": "d", "text": "8"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "A typical quarter-wave ground plane antenna has 4 radials arranged symmetrically around the base of the vertical element. It produces an omnidirectional radiation pattern and does not require a balun."
+      },
+      {
+        "text": "Where should you feed an end-fed wire antenna to reduce EMC problems in the home?",
+        "options": [
+          {"id": "a", "text": "From the shack window"},
+          {"id": "b", "text": "From the centre of the garden"},
+          {"id": "c", "text": "From the far end of the garden"},
+          {"id": "d", "text": "From the roof of the house"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "An end-fed wire antenna should be fed from the far end of the garden, away from the house. This ensures the high-current part of the antenna is furthest from household electronics, reducing EMC problems."
+      },
+      {
+        "text": "What does a 5/8-wave vertical antenna offer compared to a quarter-wave vertical?",
+        "options": [
+          {"id": "a", "text": "Higher radiation at steep angles"},
+          {"id": "b", "text": "Better radiation toward the horizon"},
+          {"id": "c", "text": "A narrower directional beam"},
+          {"id": "d", "text": "Lower SWR without a ground plane"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A 5/8-wave vertical antenna concentrates more of its radiation toward the horizon compared to a quarter-wave vertical, making it better for longer-distance VHF/UHF communications. It is still omnidirectional."
+      },
+      {
+        "text": "In which direction does a Yagi antenna radiate most strongly?",
+        "options": [
+          {"id": "a", "text": "Towards the reflector element"},
+          {"id": "b", "text": "Towards the director elements"},
+          {"id": "c", "text": "Broadside to the boom"},
+          {"id": "d", "text": "Equally in all directions"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A Yagi antenna radiates most strongly in the direction of the director elements (the shorter elements). The reflector (the longer element) is at the back."
+      },
+      {
+        "text": "What polarisation is normally used for SSB communications on VHF?",
+        "options": [
+          {"id": "a", "text": "Vertical"},
+          {"id": "b", "text": "Horizontal"},
+          {"id": "c", "text": "Circular"},
+          {"id": "d", "text": "Random"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Horizontal polarisation is normally used for SSB communications on VHF. Vertical polarisation is used for FM on VHF. Both stations should use the same polarisation for best signal."
+      },
+      {
+        "text": "What is ERP (Effective Radiated Power)?",
+        "options": [
+          {"id": "a", "text": "The power output of the transmitter only"},
+          {"id": "b", "text": "The antenna gain multiplied by the transmitter power"},
+          {"id": "c", "text": "The power lost in the feeder cable"},
+          {"id": "d", "text": "The maximum power the antenna can handle"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "ERP is the effective radiated power, calculated by multiplying the antenna gain by the transmitter power fed to the antenna. A directional antenna with gain can produce a higher ERP than the transmitter power alone."
+      },
+      {
+        "text": "Does a half-wave dipole antenna need a balun?",
+        "options": [
+          {"id": "a", "text": "No, a dipole is naturally unbalanced"},
+          {"id": "b", "text": "Yes, because a dipole is a balanced antenna and coax is unbalanced"},
+          {"id": "c", "text": "Only if used above 30 MHz"},
+          {"id": "d", "text": "Only if the dipole is mounted vertically"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A half-wave dipole is a balanced antenna. When fed with coaxial cable (which is unbalanced), a balun should be used to prevent RF currents from flowing on the outside of the coax screen."
+      }
+    ]
+  },
+  {
+    "topic_slug": "propagation",
+    "questions": [
+      {
+        "text": "Which propagation mode is primarily responsible for long-distance HF communications?",
+        "options": [
+          {"id": "a", "text": "Ground wave"},
+          {"id": "b", "text": "Line of sight"},
+          {"id": "c", "text": "Sky wave (ionospheric)"},
+          {"id": "d", "text": "Tropospheric ducting"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Sky wave propagation, where radio waves are refracted back to Earth by the ionosphere, is the primary mode for long-distance HF (3-30 MHz) communications. A single hop can reach up to 4000 km."
+      },
+      {
+        "text": "Which layer of the ionosphere is most important for long-distance HF communication?",
+        "options": [
+          {"id": "a", "text": "The D layer"},
+          {"id": "b", "text": "The E layer"},
+          {"id": "c", "text": "The F layer"},
+          {"id": "d", "text": "The troposphere"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The F layer is the most important layer for long-distance (DX) HF communication. It exists both day and night, and is the highest ionospheric layer, enabling the longest skip distances."
+      },
+      {
+        "text": "What is the primary propagation mode at VHF and UHF frequencies?",
+        "options": [
+          {"id": "a", "text": "Ground wave"},
+          {"id": "b", "text": "Sky wave"},
+          {"id": "c", "text": "Line of sight"},
+          {"id": "d", "text": "Ionospheric refraction"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "VHF and UHF signals primarily travel by line of sight, typically covering distances of 10 to 80 km depending on antenna height and terrain."
+      },
+      {
+        "text": "What effect does the D layer of the ionosphere have on radio signals?",
+        "options": [
+          {"id": "a", "text": "It refracts signals back to Earth enabling DX"},
+          {"id": "b", "text": "It absorbs lower HF signals during the daytime"},
+          {"id": "c", "text": "It amplifies signals"},
+          {"id": "d", "text": "It has no effect on radio signals"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The D layer exists only during the daytime and absorbs lower HF signals rather than refracting them. This is why lower HF bands (such as 80 metres) often work better at night when the D layer disappears."
+      },
+      {
+        "text": "What is the MUF (Maximum Usable Frequency)?",
+        "options": [
+          {"id": "a", "text": "The maximum frequency that can be generated by a transmitter"},
+          {"id": "b", "text": "The highest frequency that will be refracted back to Earth by the ionosphere"},
+          {"id": "c", "text": "The maximum frequency allowed under the licence"},
+          {"id": "d", "text": "The frequency above which no radio equipment can operate"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The MUF is the highest frequency that will be refracted back to Earth by the ionosphere for a given path at a given time. It is generally higher during the day than at night."
+      },
+      {
+        "text": "What is the most important factor for increasing the range of a VHF or UHF station?",
+        "options": [
+          {"id": "a", "text": "Using a higher power transmitter"},
+          {"id": "b", "text": "Using a more sensitive receiver"},
+          {"id": "c", "text": "Increasing the antenna height"},
+          {"id": "d", "text": "Using a different mode of modulation"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "At VHF and UHF, signals travel by line of sight. The most effective way to increase range is to increase antenna height, which extends the radio horizon."
+      },
+      {
+        "text": "What happens to the MUF during the day compared to night?",
+        "options": [
+          {"id": "a", "text": "It is lower during the day"},
+          {"id": "b", "text": "It stays the same"},
+          {"id": "c", "text": "It is higher during the day"},
+          {"id": "d", "text": "It varies randomly"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The MUF is generally higher during the day when solar radiation increases the ionisation of the upper atmosphere. This allows higher frequencies to be refracted back to Earth."
+      },
+      {
+        "text": "Does doubling the transmitter power double the communication range?",
+        "options": [
+          {"id": "a", "text": "Yes, range is directly proportional to power"},
+          {"id": "b", "text": "Yes, but only on HF"},
+          {"id": "c", "text": "No, doubling power has relatively little effect on range"},
+          {"id": "d", "text": "No, doubling power actually reduces range due to interference"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Doubling the transmitter power does NOT double the range. Doubling power only adds 3 dB, which is a barely noticeable increase. Antenna height and gain have a much greater effect on range."
+      },
+      {
+        "text": "Which propagation mode is used at MF and lower HF frequencies for relatively short distances?",
+        "options": [
+          {"id": "a", "text": "Sky wave"},
+          {"id": "b", "text": "Line of sight"},
+          {"id": "c", "text": "Ground wave"},
+          {"id": "d", "text": "Satellite relay"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Ground wave propagation follows the surface of the Earth and is the primary mode at MF and lower HF frequencies. It provides reliable communication over relatively short distances."
+      },
+      {
+        "text": "What approximate maximum distance can a single sky wave hop cover?",
+        "options": [
+          {"id": "a", "text": "Up to 100 km"},
+          {"id": "b", "text": "Up to 500 km"},
+          {"id": "c", "text": "Up to 4000 km"},
+          {"id": "d", "text": "Up to 40,000 km"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "A single sky wave hop can cover up to approximately 4000 km. Greater distances can be achieved through multiple hops where the signal bounces between the ionosphere and the Earth's surface."
+      },
+      {
+        "text": "When does the E layer of the ionosphere exist?",
+        "options": [
+          {"id": "a", "text": "Only at night"},
+          {"id": "b", "text": "Mainly during the daytime"},
+          {"id": "c", "text": "Both day and night equally"},
+          {"id": "d", "text": "Only during winter"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The E layer exists mainly during the daytime. The D layer is also daytime only. The F layer persists both day and night, which is why it is the most important layer for HF DX."
+      },
+      {
+        "text": "What is the typical line-of-sight range at VHF/UHF frequencies?",
+        "options": [
+          {"id": "a", "text": "1 to 5 km"},
+          {"id": "b", "text": "10 to 80 km"},
+          {"id": "c", "text": "100 to 500 km"},
+          {"id": "d", "text": "1000 to 4000 km"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "At VHF and UHF frequencies, line-of-sight propagation typically allows communication over distances of 10 to 80 km, depending on antenna height, terrain, and conditions."
+      }
+    ]
+  },
+  {
+    "topic_slug": "emc",
+    "questions": [
+      {
+        "text": "What is the first thing you should do if a neighbour reports interference from your transmissions?",
+        "options": [
+          {"id": "a", "text": "Increase your transmitter power to overcome the interference"},
+          {"id": "b", "text": "Stop transmitting and investigate the problem"},
+          {"id": "c", "text": "Tell the neighbour to buy better equipment"},
+          {"id": "d", "text": "Ignore the complaint and continue operating"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "If a neighbour complains of interference, you should stop transmitting immediately and investigate the problem before continuing to operate."
+      },
+      {
+        "text": "Which mode of transmission is LEAST likely to cause EMC problems?",
+        "options": [
+          {"id": "a", "text": "AM"},
+          {"id": "b", "text": "SSB"},
+          {"id": "c", "text": "FM"},
+          {"id": "d", "text": "CW"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "FM is least likely to cause EMC problems because it transmits at a constant power level. The order from best to worst for EMC is: FM, Data, CW, AM, SSB."
+      },
+      {
+        "text": "How should ferrite rings be used on cables to help suppress EMC problems?",
+        "options": [
+          {"id": "a", "text": "One ring with a single pass-through"},
+          {"id": "b", "text": "Approximately 20 turns on a single ring, or 4 rings with about 5 turns each"},
+          {"id": "c", "text": "100 turns on a large ring"},
+          {"id": "d", "text": "A single ring at each end of the cable"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "For effective EMC suppression, use approximately 20 turns of cable on a single ferrite ring, or about 4 rings with 5 turns on each. A single pass-through provides very little filtering."
+      },
+      {
+        "text": "What is the purpose of an RF earth in an amateur radio station?",
+        "options": [
+          {"id": "a", "text": "To increase the transmitter power"},
+          {"id": "b", "text": "To provide a ground reference and reduce unwanted RF in the shack"},
+          {"id": "c", "text": "To replace the mains earth connection"},
+          {"id": "d", "text": "To protect against lightning strikes only"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "An RF earth, typically a metal spike driven into the ground near the shack, provides a ground reference for the antenna system and helps reduce unwanted RF currents in the shack. If the property uses a PME mains supply, an electrician should be consulted before connecting an RF earth."
+      },
+      {
+        "text": "Should a Foundation licence holder fit home-made mains filters to reduce EMC problems?",
+        "options": [
+          {"id": "a", "text": "Yes, it is the most effective solution"},
+          {"id": "b", "text": "Yes, but only with commercially available components"},
+          {"id": "c", "text": "No, Foundation licence holders should not fit home-made mains filters"},
+          {"id": "d", "text": "Only if supervised by a Full licence holder"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Foundation licence holders should not fit home-made mains filters. Mains wiring can be dangerous and incorrect filters could pose a safety hazard. Commercially made, properly rated filters may be used instead."
+      },
+      {
+        "text": "Where should an end-fed wire antenna be fed from to reduce EMC problems at the house?",
+        "options": [
+          {"id": "a", "text": "From the shack window, closest to the equipment"},
+          {"id": "b", "text": "From the centre of the antenna"},
+          {"id": "c", "text": "From the far end of the garden, away from the house"},
+          {"id": "d", "text": "From the chimney of the house"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "An end-fed wire antenna should be fed from the far end of the garden, away from the house. This ensures the high-current part of the antenna (and therefore the strongest RF fields) is as far as possible from household electronic equipment."
+      },
+      {
+        "text": "Which mode of transmission is MOST likely to cause EMC problems?",
+        "options": [
+          {"id": "a", "text": "FM"},
+          {"id": "b", "text": "CW"},
+          {"id": "c", "text": "SSB"},
+          {"id": "d", "text": "Data"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "SSB is the most likely mode to cause EMC problems because the power level varies greatly with speech. The order from best to worst for EMC is: FM, Data, CW, AM, SSB."
+      },
+      {
+        "text": "What should you do before connecting an RF earth to your station if your property has a PME mains supply?",
+        "options": [
+          {"id": "a", "text": "Nothing special is needed"},
+          {"id": "b", "text": "Consult a qualified electrician"},
+          {"id": "c", "text": "Use a longer earth spike"},
+          {"id": "d", "text": "Connect through a capacitor"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "If your property has a PME (Protective Multiple Earthing) mains supply, you must consult a qualified electrician before fitting an independent RF earth. An incorrectly installed earth on a PME system can create a serious safety hazard."
+      },
+      {
+        "text": "What type of RF earth is typically used in an amateur radio station?",
+        "options": [
+          {"id": "a", "text": "A copper wire connected to a radiator"},
+          {"id": "b", "text": "A metal spike driven into the ground near the shack"},
+          {"id": "c", "text": "A wire attached to the mains earth pin"},
+          {"id": "d", "text": "A connection to the water supply pipe"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "An RF earth typically consists of a metal spike (such as a copper rod) driven into the ground close to the shack, with a short, heavy-gauge connection to the station equipment."
+      },
+      {
+        "text": "Why does AM transmission carry a higher EMC risk than FM?",
+        "options": [
+          {"id": "a", "text": "AM uses more bandwidth"},
+          {"id": "b", "text": "AM power varies with speech, while FM transmits at constant power"},
+          {"id": "c", "text": "AM operates on higher frequencies"},
+          {"id": "d", "text": "AM requires a larger antenna"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "AM carries a higher EMC risk than FM because the transmitted power varies with the audio signal. FM maintains a constant power level, which makes it less likely to cause interference to nearby electronic equipment."
+      },
+      {
+        "text": "If you suspect your transmissions are causing interference to a neighbour's television, which of these is the best first step?",
+        "options": [
+          {"id": "a", "text": "Increase power to get a cleaner signal"},
+          {"id": "b", "text": "Stop transmitting and try to confirm it is your station causing the problem"},
+          {"id": "c", "text": "Change to SSB mode which has better EMC performance"},
+          {"id": "d", "text": "Report the neighbour to Ofcom for using poor equipment"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The first step is always to stop transmitting and investigate. You should work cooperatively with your neighbour to confirm the interference is indeed caused by your station, and then take steps to reduce it."
+      },
+      {
+        "text": "What is the correct EMC risk order for transmission modes, from lowest to highest risk?",
+        "options": [
+          {"id": "a", "text": "CW, FM, AM, Data, SSB"},
+          {"id": "b", "text": "SSB, AM, CW, Data, FM"},
+          {"id": "c", "text": "FM, Data, CW, AM, SSB"},
+          {"id": "d", "text": "AM, FM, SSB, CW, Data"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The correct order from lowest to highest EMC risk is: FM (constant power), Data, CW, AM, SSB (most variable power). FM is best for EMC because it transmits at constant power."
+      }
+    ]
+  },
+  {
+    "topic_slug": "operating-practices",
+    "questions": [
+      {
+        "text": "What does the Q-code QTH mean?",
+        "options": [
+          {"id": "a", "text": "What is your location?"},
+          {"id": "b", "text": "Are you receiving interference?"},
+          {"id": "c", "text": "Shall I change frequency?"},
+          {"id": "d", "text": "Can you confirm receipt?"}
+        ],
+        "correct_option_id": "a",
+        "explanation": "QTH means 'What is your location?' or is used to state your location, for example 'My QTH is London.'"
+      },
+      {
+        "text": "What is the 2-metre FM calling frequency?",
+        "options": [
+          {"id": "a", "text": "144.300 MHz"},
+          {"id": "b", "text": "145.500 MHz"},
+          {"id": "c", "text": "433.500 MHz"},
+          {"id": "d", "text": "146.000 MHz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The 2-metre FM calling frequency is 145.500 MHz. 144.300 MHz is the 2-metre SSB calling frequency, and 433.500 MHz is the 70 cm FM calling frequency."
+      },
+      {
+        "text": "What does the RST reporting system measure?",
+        "options": [
+          {"id": "a", "text": "Range, Speed, and Timing"},
+          {"id": "b", "text": "Readability, Signal strength, and Tone"},
+          {"id": "c", "text": "Reception, Sensitivity, and Transmission"},
+          {"id": "d", "text": "Radio, Station, and Transmitter quality"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "RST stands for Readability (1-5), Signal strength (1-9), and Tone (1-9, used only for CW). A typical SSB report would be 59, and a typical CW report would be 599."
+      },
+      {
+        "text": "What is the repeater frequency offset on the 2-metre band?",
+        "options": [
+          {"id": "a", "text": "+600 kHz"},
+          {"id": "b", "text": "-600 kHz"},
+          {"id": "c", "text": "+1.6 MHz"},
+          {"id": "d", "text": "-1.6 MHz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "On the 2-metre band, the repeater offset is -600 kHz, meaning you transmit 600 kHz below the repeater's output frequency. On 70 cm, the offset is +1.6 MHz."
+      },
+      {
+        "text": "What does the Q-code QRM mean?",
+        "options": [
+          {"id": "a", "text": "I am experiencing natural interference (static)"},
+          {"id": "b", "text": "I am experiencing man-made interference"},
+          {"id": "c", "text": "Who is calling me?"},
+          {"id": "d", "text": "Please change frequency"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "QRM refers to man-made interference. QRN refers to natural interference (such as static from thunderstorms)."
+      },
+      {
+        "text": "What is CTCSS used for?",
+        "options": [
+          {"id": "a", "text": "To encrypt transmissions"},
+          {"id": "b", "text": "To send a sub-audible tone (70-250 Hz) to open a repeater"},
+          {"id": "c", "text": "To increase transmitter power"},
+          {"id": "d", "text": "To identify the station automatically"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "CTCSS (Continuous Tone-Coded Squelch System) sends a sub-audible tone in the range of 70-250 Hz that is used to access (open) certain repeaters."
+      },
+      {
+        "text": "What does the number 73 mean in amateur radio?",
+        "options": [
+          {"id": "a", "text": "Emergency"},
+          {"id": "b", "text": "Best regards"},
+          {"id": "c", "text": "End of contact"},
+          {"id": "d", "text": "Signal report"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "73 is a traditional amateur radio shorthand meaning 'best regards.' It is used as a farewell at the end of a contact."
+      },
+      {
+        "text": "What is the phonetic alphabet representation of the letter 'M'?",
+        "options": [
+          {"id": "a", "text": "Metro"},
+          {"id": "b", "text": "Michael"},
+          {"id": "c", "text": "Mike"},
+          {"id": "d", "text": "Mango"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "In the NATO/ICAO phonetic alphabet used in amateur radio, the letter M is represented as 'Mike.'"
+      },
+      {
+        "text": "What does the Q-code QSY mean?",
+        "options": [
+          {"id": "a", "text": "I confirm receipt of your message"},
+          {"id": "b", "text": "What is your location?"},
+          {"id": "c", "text": "Change frequency"},
+          {"id": "d", "text": "Stop transmitting"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "QSY means 'change frequency' or 'shall I change frequency?' It is used to request or inform another station that you are moving to a different frequency."
+      },
+      {
+        "text": "What is the 70 cm FM calling frequency?",
+        "options": [
+          {"id": "a", "text": "145.500 MHz"},
+          {"id": "b", "text": "433.500 MHz"},
+          {"id": "c", "text": "434.000 MHz"},
+          {"id": "d", "text": "144.300 MHz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "The 70 cm FM calling frequency is 433.500 MHz. 145.500 MHz is the 2-metre FM calling frequency."
+      },
+      {
+        "text": "Is keeping a station log book a legal requirement for UK amateur radio operators?",
+        "options": [
+          {"id": "a", "text": "Yes, it is a strict legal requirement"},
+          {"id": "b", "text": "It is recommended but not a legal requirement"},
+          {"id": "c", "text": "Only for Full licence holders"},
+          {"id": "d", "text": "Only when operating above 30 MHz"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Keeping a log book is recommended good practice but is not a legal requirement under the current UK amateur radio licence."
+      },
+      {
+        "text": "What does QRZ mean?",
+        "options": [
+          {"id": "a", "text": "Please change frequency"},
+          {"id": "b", "text": "Who is calling me?"},
+          {"id": "c", "text": "I am closing down"},
+          {"id": "d", "text": "The signal is fading"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "QRZ means 'Who is calling me?' It is used to ask for the identity of a station that has called you."
+      },
+      {
+        "text": "What is a 1750 Hz tone burst used for?",
+        "options": [
+          {"id": "a", "text": "To send Morse code"},
+          {"id": "b", "text": "To open (access) certain repeaters"},
+          {"id": "c", "text": "To test the audio quality of a receiver"},
+          {"id": "d", "text": "To calibrate an SWR meter"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A 1750 Hz tone burst, typically lasting 0.5 seconds, is used to access certain repeaters. It is an older method being replaced by CTCSS on many repeaters."
+      },
+      {
+        "text": "What is the repeater offset on the 70 cm band?",
+        "options": [
+          {"id": "a", "text": "-600 kHz"},
+          {"id": "b", "text": "+600 kHz"},
+          {"id": "c", "text": "+1.6 MHz"},
+          {"id": "d", "text": "-1.6 MHz"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "On the 70 cm band, the repeater offset is +1.6 MHz, meaning you transmit 1.6 MHz above the repeater's output frequency. On 2 metres, the offset is -600 kHz."
+      },
+      {
+        "text": "What does the Q-code QRT mean?",
+        "options": [
+          {"id": "a", "text": "Increase power"},
+          {"id": "b", "text": "Change frequency"},
+          {"id": "c", "text": "Stop transmitting / I am closing my station"},
+          {"id": "d", "text": "Send more slowly"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "QRT means 'stop transmitting' or 'I am closing my station.' It is used to indicate that you are going off the air."
+      }
+    ]
+  },
+  {
+    "topic_slug": "safety",
+    "questions": [
+      {
+        "text": "What is the FIRST action you should take if someone receives an electric shock from mains equipment?",
+        "options": [
+          {"id": "a", "text": "Pull the person away from the equipment"},
+          {"id": "b", "text": "Call an ambulance immediately"},
+          {"id": "c", "text": "Cut off the power supply before touching the casualty"},
+          {"id": "d", "text": "Throw water on the equipment to short it out"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "The first action is always to cut off the power supply before touching the casualty. If you touch someone who is still in contact with live mains, you could also receive a fatal electric shock."
+      },
+      {
+        "text": "What colour is the LIVE wire in a UK mains plug?",
+        "options": [
+          {"id": "a", "text": "Blue"},
+          {"id": "b", "text": "Brown"},
+          {"id": "c", "text": "Yellow and green"},
+          {"id": "d", "text": "Black"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "In a UK mains plug, Brown is the Live wire, Blue is the Neutral wire, and Yellow/Green is the Earth wire."
+      },
+      {
+        "text": "Why should you never fit a fuse of a higher rating than specified?",
+        "options": [
+          {"id": "a", "text": "A higher rated fuse costs more"},
+          {"id": "b", "text": "The equipment may draw too much current and overheat or catch fire without the fuse blowing"},
+          {"id": "c", "text": "A higher rated fuse will blow too easily"},
+          {"id": "d", "text": "It will reduce the power output of the equipment"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A fuse is a safety device designed to blow and cut off power if too much current flows. Fitting a higher value fuse means a fault could cause excessive current without the fuse blowing, leading to overheating, fire, or further damage."
+      },
+      {
+        "text": "What is particularly dangerous about RF burns?",
+        "options": [
+          {"id": "a", "text": "They only affect the surface of the skin"},
+          {"id": "b", "text": "They are deep burns that may not be immediately painful"},
+          {"id": "c", "text": "They always cause electrocution"},
+          {"id": "d", "text": "They are only possible above 1000 Watts"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "RF burns are particularly dangerous because they cause deep tissue damage that may not be immediately painful. The damage can extend well below the skin surface."
+      },
+      {
+        "text": "Why is it extremely dangerous to erect antennas near overhead power lines?",
+        "options": [
+          {"id": "a", "text": "Power lines cause interference to radio signals"},
+          {"id": "b", "text": "Contact or close proximity could cause fatal electrocution"},
+          {"id": "c", "text": "It is only dangerous in wet weather"},
+          {"id": "d", "text": "Power lines affect the SWR of the antenna"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Erecting antennas near overhead power lines is extremely dangerous because contact or even close proximity could cause fatal electrocution. Always keep antennas and their supports well away from power lines."
+      },
+      {
+        "text": "What precaution should be taken when working near high-current sources such as car batteries?",
+        "options": [
+          {"id": "a", "text": "Wear rubber boots"},
+          {"id": "b", "text": "Remove metal jewellery such as rings and watches"},
+          {"id": "c", "text": "Wear a face shield only"},
+          {"id": "d", "text": "Work only in dry conditions"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Metal jewellery such as rings, watches, and bracelets should be removed when working near high-current sources. If metal jewellery shorts across battery terminals, the extremely high current can cause severe burns."
+      },
+      {
+        "text": "What is the correct procedure for setting the volume when using headphones?",
+        "options": [
+          {"id": "a", "text": "Start at maximum volume and reduce if too loud"},
+          {"id": "b", "text": "Start at minimum volume and gradually increase to a comfortable level"},
+          {"id": "c", "text": "Set volume to the mid-point"},
+          {"id": "d", "text": "Use the same volume level as the speaker"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "When using headphones, always start with the volume turned right down, then gradually increase it to a comfortable level. Starting at high volume could cause hearing damage."
+      },
+      {
+        "text": "What colour is the NEUTRAL wire in a UK mains plug?",
+        "options": [
+          {"id": "a", "text": "Brown"},
+          {"id": "b", "text": "Yellow and green"},
+          {"id": "c", "text": "Blue"},
+          {"id": "d", "text": "Red"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "In a UK mains plug, Blue is the Neutral wire, Brown is the Live wire, and Yellow/Green is the Earth wire."
+      },
+      {
+        "text": "What hazards are associated with car batteries?",
+        "options": [
+          {"id": "a", "text": "High voltage only"},
+          {"id": "b", "text": "High current capability, hydrogen gas production, and corrosive acid"},
+          {"id": "c", "text": "Radiation hazard only"},
+          {"id": "d", "text": "No significant hazards for short exposures"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Car batteries present multiple hazards: they can deliver extremely high currents (hundreds of amps) which can cause burns and fire, they produce explosive hydrogen gas when charging, and they contain corrosive sulphuric acid."
+      },
+      {
+        "text": "What colour is the EARTH wire in a UK mains plug?",
+        "options": [
+          {"id": "a", "text": "Brown"},
+          {"id": "b", "text": "Blue"},
+          {"id": "c", "text": "Black"},
+          {"id": "d", "text": "Yellow and green"}
+        ],
+        "correct_option_id": "d",
+        "explanation": "In a UK mains plug, the Earth wire is Yellow and Green striped, the Live wire is Brown, and the Neutral wire is Blue."
+      },
+      {
+        "text": "What should you do before fitting an RF earth if your property has a PME mains supply?",
+        "options": [
+          {"id": "a", "text": "Use a longer copper rod"},
+          {"id": "b", "text": "Connect to the mains earth instead"},
+          {"id": "c", "text": "Consult a qualified electrician"},
+          {"id": "d", "text": "No special precautions are needed"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "If your property has a PME (Protective Multiple Earthing) mains supply, you must consult a qualified electrician before installing an independent RF earth. Incorrect earthing on a PME system can create dangerous voltages on exposed metalwork."
+      },
+      {
+        "text": "Why is it important to ensure that all equipment is properly fused?",
+        "options": [
+          {"id": "a", "text": "To improve the audio quality"},
+          {"id": "b", "text": "To protect against excessive current that could cause fire or equipment damage"},
+          {"id": "c", "text": "To reduce interference to other stations"},
+          {"id": "d", "text": "To comply with EMC regulations only"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Fuses are critical safety devices that protect against excessive current flow. Without proper fusing, a fault could cause wiring to overheat, potentially leading to fire or serious equipment damage."
+      }
+    ]
+  }
+]
