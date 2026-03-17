@@ -262,5 +262,141 @@ describe('quizSlice', () => {
       await store.dispatch(fetchQuizResults('quiz-1'));
       expect(store.getState().quiz.error).toBe('Failed to fetch quiz results');
     });
+
+    // Branch coverage: startQuiz with camelCase keys (lines 19-20, 24)
+    it('startQuiz maps camelCase response keys', async () => {
+      mockedQuizzesApi.start.mockResolvedValue({
+        data: {
+          quizId: 'quiz-camel',
+          questions: mockActiveQuiz.questions,
+          timeLimit: 1800,
+        },
+      });
+      const store = createTestStore();
+      await store.dispatch(startQuiz({ type: 'mock' }));
+      const state = store.getState().quiz;
+      expect(state.activeQuiz?.quizId).toBe('quiz-camel');
+      expect(state.activeQuiz?.timeLimit).toBe(1800);
+    });
+
+    // Branch coverage: startQuiz with missing keys defaults (lines 19-20, 24)
+    it('startQuiz defaults missing keys', async () => {
+      mockedQuizzesApi.start.mockResolvedValue({
+        data: {},
+      });
+      const store = createTestStore();
+      await store.dispatch(startQuiz({ type: 'mock' }));
+      const state = store.getState().quiz;
+      expect(state.activeQuiz?.quizId).toBe('');
+      expect(state.activeQuiz?.questions).toEqual([]);
+      expect(state.activeQuiz?.timeLimit).toBeNull();
+      expect(state.activeQuiz?.currentIndex).toBe(0);
+      expect(state.activeQuiz?.answers).toEqual({});
+    });
+
+    // Branch coverage: submitQuiz maps camelCase response (lines 43-46)
+    it('submitQuiz maps camelCase response keys', async () => {
+      mockedQuizzesApi.submit.mockResolvedValue({
+        data: {
+          quizId: 'quiz-camel',
+          score: 5,
+          total: 10,
+          passed: true,
+        },
+      });
+      const store = createTestStore();
+      await store.dispatch(submitQuiz({ quizId: 'quiz-camel', answers: { q1: 'a' } }));
+      const state = store.getState().quiz;
+      expect(state.activeQuiz).toBeNull();
+      expect(state.loading).toBe(false);
+    });
+
+    // Branch coverage: submitQuiz with missing keys defaults (lines 43-46)
+    it('submitQuiz defaults missing keys', async () => {
+      mockedQuizzesApi.submit.mockResolvedValue({
+        data: {},
+      });
+      const store = createTestStore();
+      await store.dispatch(submitQuiz({ quizId: 'quiz-1', answers: {} }));
+      const state = store.getState().quiz;
+      expect(state.activeQuiz).toBeNull();
+      expect(state.loading).toBe(false);
+    });
+
+    // Branch coverage: fetchQuizResults with camelCase result keys (lines 61-74, 79-82)
+    it('fetchQuizResults maps camelCase result keys', async () => {
+      mockedQuizzesApi.getResult.mockResolvedValue({
+        data: {
+          quiz: { id: 'quiz-2', score: 3, total: 5, passed: true },
+          results: [
+            {
+              id: 'q1',
+              text: 'Question 1',
+              options: [{ id: 'a', text: 'A' }],
+              correctOptionId: 'a',
+              explanation: 'Because A',
+              user_answer: 'a',
+            },
+            {
+              id: 'q2',
+              text: 'Question 2',
+              options: [{ id: 'b', text: 'B' }],
+              correctOptionId: 'b',
+              explanation: 'Because B',
+            },
+          ],
+        },
+      });
+      const store = createTestStore();
+      await store.dispatch(fetchQuizResults('quiz-2'));
+      const state = store.getState().quiz;
+      expect(state.result?.quizId).toBe('quiz-2');
+      expect(state.result?.score).toBe(3);
+      expect(state.result?.total).toBe(5);
+      expect(state.result?.passed).toBe(true);
+      expect(state.result?.questions).toHaveLength(2);
+      expect(state.result?.questions[0].correctOptionId).toBe('a');
+      expect(state.result?.answers['q1']).toBe('a');
+      // q2 has no user_answer, so it should not be in answers
+      expect(state.result?.answers['q2']).toBeUndefined();
+    });
+
+    // Branch coverage: fetchQuizResults with missing quiz/results keys (lines 61-74, 79-82)
+    it('fetchQuizResults defaults missing keys', async () => {
+      mockedQuizzesApi.getResult.mockResolvedValue({
+        data: {},
+      });
+      const store = createTestStore();
+      await store.dispatch(fetchQuizResults('quiz-fallback'));
+      const state = store.getState().quiz;
+      expect(state.result?.quizId).toBe('quiz-fallback');
+      expect(state.result?.score).toBe(0);
+      expect(state.result?.total).toBe(0);
+      expect(state.result?.passed).toBe(false);
+      expect(state.result?.questions).toEqual([]);
+      expect(state.result?.answers).toEqual({});
+    });
+
+    // Branch coverage: fetchQuizResults with results missing individual fields
+    it('fetchQuizResults defaults missing result item fields', async () => {
+      mockedQuizzesApi.getResult.mockResolvedValue({
+        data: {
+          quiz: {},
+          results: [{}],
+        },
+      });
+      const store = createTestStore();
+      await store.dispatch(fetchQuizResults('quiz-3'));
+      const state = store.getState().quiz;
+      expect(state.result?.questions[0]).toEqual({
+        id: '',
+        text: '',
+        options: [],
+        correctOptionId: '',
+        explanation: '',
+      });
+      // Empty id maps to '' key, but no user_answer so answers should be empty
+      expect(state.result?.answers).toEqual({});
+    });
   });
 });
