@@ -56,7 +56,9 @@ def test_update():
             {"id": "1", "status": "active"},
             {"id": "2", "status": "active"},
         ])
-        count = db.update("test", lambda r: r["id"] == "1", {"status": "inactive"})
+        count = db.update(
+            "test", lambda r: r["id"] == "1",
+            {"status": "inactive"})
         assert count == 1
         r = db.find_one("test", lambda r: r["id"] == "1")
         assert r["status"] == "inactive"

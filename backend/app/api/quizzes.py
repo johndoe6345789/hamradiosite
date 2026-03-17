@@ -1,7 +1,9 @@
 from flask import Blueprint, jsonify, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
-from app.services.quiz_service import start_quiz, get_quiz, submit_quiz, get_quiz_results
+from app.services.quiz_service import (
+    start_quiz, get_quiz, submit_quiz, get_quiz_results,
+)
 
 quizzes_bp = Blueprint('quizzes', __name__, url_prefix='/api/quizzes')
 

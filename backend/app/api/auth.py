@@ -7,7 +7,9 @@ from flask_jwt_extended import (
 )
 
 from app.utils.validators import validate_register, validate_login
-from app.services.auth_service import register_user, authenticate_user, get_user_by_id
+from app.services.auth_service import (
+    register_user, authenticate_user, get_user_by_id,
+)
 
 auth_bp = Blueprint('auth', __name__, url_prefix='/api/auth')
 
@@ -18,7 +20,9 @@ def register():
     if errors:
         return jsonify({'errors': errors}), 400
 
-    user, error = register_user(data['username'], data['email'], data['password'])
+    user, error = register_user(
+        data['username'], data['email'], data['password']
+    )
     if error:
         return jsonify({'error': error}), 409
 

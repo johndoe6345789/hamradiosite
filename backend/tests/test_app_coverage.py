@@ -1,12 +1,12 @@
 import os
-import json
 import tempfile
-import pytest
 from unittest.mock import patch
 
 from app import create_app
-from app.config import config_by_name, BaseConfig, DevelopmentConfig, TestingConfig, ProductionConfig
-from app.utils.db import init_db
+from app.config import (
+    config_by_name, BaseConfig, DevelopmentConfig,
+    TestingConfig, ProductionConfig,
+)
 
 
 def test_create_app_default_config():

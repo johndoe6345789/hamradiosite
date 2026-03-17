@@ -29,12 +29,24 @@ def update_user(user_id, data):
     if 'role' in data and data['role'] in ('admin', 'user'):
         user['role'] = data['role']
     if 'username' in data:
-        existing = db.find_one('users', lambda u: u['username'] == data['username'] and u['id'] != user_id)
+        existing = db.find_one(
+            'users',
+            lambda u: (
+                u['username'] == data['username']
+                and u['id'] != user_id
+            )
+        )
         if existing:
             return None, 'Username already taken'
         user['username'] = data['username']
     if 'email' in data:
-        existing = db.find_one('users', lambda u: u['email'] == data['email'] and u['id'] != user_id)
+        existing = db.find_one(
+            'users',
+            lambda u: (
+                u['email'] == data['email']
+                and u['id'] != user_id
+            )
+        )
         if existing:
             return None, 'Email already in use'
         user['email'] = data['email']
@@ -86,7 +98,8 @@ def update_question(question_id, data):
     if not question:
         return None
 
-    for field in ('text', 'options', 'correct_option_id', 'explanation', 'topic_slug', 'topic_id'):
+    for field in ('text', 'options', 'correct_option_id',
+                  'explanation', 'topic_slug', 'topic_id'):
         if field in data:
             question[field] = data[field]
 
@@ -167,7 +180,11 @@ def update_translations(locale, messages):
     existing = db.find_one('translations', lambda t: t['locale'] == locale)
     if existing:
         existing['messages'] = messages
-        db.update('translations', lambda t: t['id'] == existing['id'], existing)
+        db.update(
+            'translations',
+            lambda t: t['id'] == existing['id'],
+            existing
+        )
         return existing
     else:
         record = {

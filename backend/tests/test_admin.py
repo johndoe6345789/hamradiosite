@@ -114,25 +114,32 @@ def test_update_user_duplicate_username(client, admin_user, db):
 def test_update_user_email(client, admin_user, db):
     from app.utils.auth_helpers import hash_password
     db.insert('users', {
-        'id': 'target-email', 'username': 'emailuser', 'email': 'oldemail@example.com',
-        'password_hash': hash_password('Pass1234'), 'role': 'user',
+        'id': 'target-email', 'username': 'emailuser',
+        'email': 'oldemail@example.com',
+        'password_hash': hash_password('Pass1234'),
+        'role': 'user',
         'created_at': '2024-01-01T00:00:00Z',
     })
-    response = client.put('/api/admin/users/target-email', headers=admin_user,
-                          json={'email': 'newemail@example.com'})
+    response = client.put(
+        '/api/admin/users/target-email', headers=admin_user,
+        json={'email': 'newemail@example.com'})
     assert response.status_code == 200
-    assert response.get_json()['user']['email'] == 'newemail@example.com'
+    user_email = response.get_json()['user']['email']
+    assert user_email == 'newemail@example.com'
 
 
 def test_update_user_duplicate_email(client, admin_user, db):
     from app.utils.auth_helpers import hash_password
     db.insert('users', {
-        'id': 'target-4', 'username': 'emaildup', 'email': 'emaildup@example.com',
-        'password_hash': hash_password('Pass1234'), 'role': 'user',
+        'id': 'target-4', 'username': 'emaildup',
+        'email': 'emaildup@example.com',
+        'password_hash': hash_password('Pass1234'),
+        'role': 'user',
         'created_at': '2024-01-01T00:00:00Z',
     })
-    response = client.put('/api/admin/users/target-4', headers=admin_user,
-                          json={'email': 'admin@example.com'})
+    response = client.put(
+        '/api/admin/users/target-4', headers=admin_user,
+        json={'email': 'admin@example.com'})
     assert response.status_code == 400
     assert 'already in use' in response.get_json()['error']
 
@@ -150,15 +157,16 @@ def test_update_user_password(client, admin_user, db):
 
 
 def test_update_user_not_found(client, admin_user):
-    response = client.put('/api/admin/users/nonexistent', headers=admin_user,
-                          json={'role': 'admin'})
+    response = client.put(
+        '/api/admin/users/nonexistent', headers=admin_user,
+        json={'role': 'admin'})
     assert response.status_code == 400
 
 
 def test_update_user_no_data(client, admin_user):
-    response = client.put('/api/admin/users/admin-1',
-                          headers={**admin_user, 'Content-Type': 'application/json'},
-                          data='')
+    hdrs = {**admin_user, 'Content-Type': 'application/json'}
+    response = client.put(
+        '/api/admin/users/admin-1', headers=hdrs, data='')
     assert response.status_code == 400
 
 
@@ -174,7 +182,8 @@ def test_delete_user(client, admin_user, db):
 
 
 def test_delete_user_not_found(client, admin_user):
-    response = client.delete('/api/admin/users/nonexistent', headers=admin_user)
+    response = client.delete(
+        '/api/admin/users/nonexistent', headers=admin_user)
     assert response.status_code == 404
 
 
@@ -187,7 +196,9 @@ def test_list_questions(client, admin_user):
 
 
 def test_list_questions_by_topic(client, admin_user):
-    response = client.get('/api/admin/questions?topic=licensing', headers=admin_user)
+    response = client.get(
+        '/api/admin/questions?topic=licensing',
+        headers=admin_user)
     assert response.status_code == 200
 
 
@@ -212,9 +223,9 @@ def test_create_question_missing_fields(client, admin_user):
 
 
 def test_create_question_no_data(client, admin_user):
-    response = client.post('/api/admin/questions',
-                           headers={**admin_user, 'Content-Type': 'application/json'},
-                           data='')
+    hdrs = {**admin_user, 'Content-Type': 'application/json'}
+    response = client.post(
+        '/api/admin/questions', headers=hdrs, data='')
     assert response.status_code == 400
 
 
@@ -223,12 +234,14 @@ def test_get_question(client, admin_user, db):
         'id': 'q-test-1', 'text': 'Test?', 'options': [],
         'correct_option_id': 'a', 'topic_slug': 'licensing',
     })
-    response = client.get('/api/admin/questions/q-test-1', headers=admin_user)
+    response = client.get(
+        '/api/admin/questions/q-test-1', headers=admin_user)
     assert response.status_code == 200
 
 
 def test_get_question_not_found(client, admin_user):
-    response = client.get('/api/admin/questions/nonexistent', headers=admin_user)
+    response = client.get(
+        '/api/admin/questions/nonexistent', headers=admin_user)
     assert response.status_code == 404
 
 
@@ -237,22 +250,24 @@ def test_update_question(client, admin_user, db):
         'id': 'q-upd-1', 'text': 'Old?', 'options': [],
         'correct_option_id': 'a', 'topic_slug': 'licensing',
     })
-    response = client.put('/api/admin/questions/q-upd-1', headers=admin_user,
-                          json={'text': 'Updated?'})
+    response = client.put(
+        '/api/admin/questions/q-upd-1', headers=admin_user,
+        json={'text': 'Updated?'})
     assert response.status_code == 200
     assert response.get_json()['question']['text'] == 'Updated?'
 
 
 def test_update_question_not_found(client, admin_user):
-    response = client.put('/api/admin/questions/nonexistent', headers=admin_user,
-                          json={'text': 'Nope'})
+    response = client.put(
+        '/api/admin/questions/nonexistent', headers=admin_user,
+        json={'text': 'Nope'})
     assert response.status_code == 404
 
 
 def test_update_question_no_data(client, admin_user):
-    response = client.put('/api/admin/questions/q-upd-1',
-                          headers={**admin_user, 'Content-Type': 'application/json'},
-                          data='')
+    hdrs = {**admin_user, 'Content-Type': 'application/json'}
+    response = client.put(
+        '/api/admin/questions/q-upd-1', headers=hdrs, data='')
     assert response.status_code == 400
 
 
@@ -261,12 +276,15 @@ def test_delete_question(client, admin_user, db):
         'id': 'q-del-1', 'text': 'Delete me?', 'options': [],
         'correct_option_id': 'a', 'topic_slug': 'licensing',
     })
-    response = client.delete('/api/admin/questions/q-del-1', headers=admin_user)
+    response = client.delete(
+        '/api/admin/questions/q-del-1', headers=admin_user)
     assert response.status_code == 200
 
 
 def test_delete_question_not_found(client, admin_user):
-    response = client.delete('/api/admin/questions/nonexistent', headers=admin_user)
+    response = client.delete(
+        '/api/admin/questions/nonexistent',
+        headers=admin_user)
     assert response.status_code == 404
 
 
@@ -296,9 +314,9 @@ def test_create_topic_missing_fields(client, admin_user):
 
 
 def test_create_topic_no_data(client, admin_user):
-    response = client.post('/api/admin/topics',
-                           headers={**admin_user, 'Content-Type': 'application/json'},
-                           data='')
+    hdrs = {**admin_user, 'Content-Type': 'application/json'}
+    response = client.post(
+        '/api/admin/topics', headers=hdrs, data='')
     assert response.status_code == 400
 
 
@@ -334,9 +352,9 @@ def test_update_topic_not_found(client, admin_user):
 
 
 def test_update_topic_no_data(client, admin_user):
-    response = client.put('/api/admin/topics/t-upd-1',
-                          headers={**admin_user, 'Content-Type': 'application/json'},
-                          data='')
+    hdrs = {**admin_user, 'Content-Type': 'application/json'}
+    response = client.put(
+        '/api/admin/topics/t-upd-1', headers=hdrs, data='')
     assert response.status_code == 400
 
 
@@ -350,7 +368,8 @@ def test_delete_topic(client, admin_user, db):
 
 
 def test_delete_topic_not_found(client, admin_user):
-    response = client.delete('/api/admin/topics/nonexistent', headers=admin_user)
+    response = client.delete(
+        '/api/admin/topics/nonexistent', headers=admin_user)
     assert response.status_code == 404
 
 
@@ -363,22 +382,24 @@ def test_get_translations_empty(client, admin_user):
 
 
 def test_update_translations(client, admin_user):
-    response = client.put('/api/admin/translations/en', headers=admin_user, json={
-        'messages': {'common': {'appName': 'HamPrep'}},
-    })
+    response = client.put(
+        '/api/admin/translations/en', headers=admin_user,
+        json={'messages': {'common': {'appName': 'HamPrep'}}})
     assert response.status_code == 200
     assert response.get_json()['translation']['locale'] == 'en'
 
 
 def test_update_translations_overwrite(client, admin_user):
-    client.put('/api/admin/translations/cy', headers=admin_user, json={
-        'messages': {'common': {'appName': 'HamPrep CY'}},
-    })
-    response = client.put('/api/admin/translations/cy', headers=admin_user, json={
-        'messages': {'common': {'appName': 'HamPrep Cymraeg'}},
-    })
+    client.put(
+        '/api/admin/translations/cy', headers=admin_user,
+        json={'messages': {'common': {'appName': 'HamPrep CY'}}})
+    response = client.put(
+        '/api/admin/translations/cy', headers=admin_user,
+        json={'messages': {'common': {'appName': 'HamPrep Cymraeg'}}})
     assert response.status_code == 200
-    assert response.get_json()['translation']['messages']['common']['appName'] == 'HamPrep Cymraeg'
+    data = response.get_json()
+    app_name = data['translation']['messages']['common']['appName']
+    assert app_name == 'HamPrep Cymraeg'
 
 
 def test_get_translations_after_insert(client, admin_user):
@@ -391,9 +412,9 @@ def test_get_translations_after_insert(client, admin_user):
 
 
 def test_update_translations_no_data(client, admin_user):
-    response = client.put('/api/admin/translations/en',
-                          headers={**admin_user, 'Content-Type': 'application/json'},
-                          data='')
+    hdrs = {**admin_user, 'Content-Type': 'application/json'}
+    response = client.put(
+        '/api/admin/translations/en', headers=hdrs, data='')
     assert response.status_code == 400
 
 

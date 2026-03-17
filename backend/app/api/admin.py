@@ -3,8 +3,10 @@ from flask import Blueprint, jsonify, request
 from app.utils.decorators import admin_required
 from app.services.admin_service import (
     list_users, get_user, update_user, delete_user,
-    list_questions, get_question, create_question, update_question, delete_question,
-    list_topics, get_topic, create_topic, update_topic, delete_topic,
+    list_questions, get_question, create_question,
+    update_question, delete_question,
+    list_topics, get_topic, create_topic,
+    update_topic, delete_topic,
     get_translations, update_translations,
 )
 

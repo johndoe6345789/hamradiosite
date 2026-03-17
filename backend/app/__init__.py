@@ -42,7 +42,10 @@ def create_app(config_name=None):
     @app.cli.command("seed-db")
     def seed_db():
         """Seed the database with topics and questions from JSON files."""
-        seeds_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "seeds", "data")
+        seeds_dir = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)),
+            "seeds", "data"
+        )
 
         topics_path = os.path.join(seeds_dir, "topics.json")
         with open(topics_path, "r", encoding="utf-8") as f:

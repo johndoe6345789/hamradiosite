@@ -27,7 +27,10 @@ def get_overall_progress(user_id):
         'total_quizzes': len(attempts),
         'total_questions_answered': total_questions,
         'correct_answers': correct,
-        'overall_percentage': round((correct / total_questions * 100), 1) if total_questions > 0 else 0.0,
+        'overall_percentage': (
+            round((correct / total_questions * 100), 1)
+            if total_questions > 0 else 0.0
+        ),
         'mock_exams_taken': len(mock_attempts),
         'mock_exams_passed': sum(1 for a in mock_attempts if a['passed']),
     }
@@ -60,7 +63,10 @@ def get_topic_breakdown(user_id):
             'quizzes_taken': len(attempts),
             'questions_answered': total_questions,
             'correct_answers': correct,
-            'percentage': round((correct / total_questions * 100), 1) if total_questions > 0 else 0.0,
+            'percentage': (
+                round((correct / total_questions * 100), 1)
+                if total_questions > 0 else 0.0
+            ),
         })
 
     return breakdown
@@ -98,7 +104,10 @@ def get_history(user_id, limit=10):
             'score': a['score'],
             'total': a['total'],
             'passed': a['passed'],
-            'percentage': round((a['score'] / a['total'] * 100), 1) if a['total'] > 0 else 0,
+            'percentage': (
+                round((a['score'] / a['total'] * 100), 1)
+                if a['total'] > 0 else 0
+            ),
             'completed_at': a['completed_at'],
         })
 

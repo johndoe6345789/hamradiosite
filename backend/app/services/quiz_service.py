@@ -26,7 +26,10 @@ def start_quiz(user_id, quiz_type, topic_slug=None):
         topic = db.find_one('topics', lambda t: t['slug'] == topic_slug)
         if not topic:
             return None, 'Topic not found'
-        questions = db.find('questions', lambda q: q['topic_slug'] == topic_slug)
+        questions = db.find(
+            'questions',
+            lambda q: q['topic_slug'] == topic_slug
+        )
         random.shuffle(questions)
         selected = questions[:TOPIC_QUIZ_QUESTION_COUNT]
         topic_id = topic['id']
