@@ -15,6 +15,9 @@ COPY . .
 
 RUN mkdir -p /app/data && chmod +x /app/entrypoint.sh
 
+ENV FLASK_ENV=production \
+    DATA_DIR=/app/data
+
 EXPOSE 5000
 
 ENTRYPOINT ["/app/entrypoint.sh"]

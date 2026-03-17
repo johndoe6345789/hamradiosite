@@ -317,5 +317,36 @@ describe('authSlice', () => {
       expect(state.isAuthenticated).toBe(false);
       expect(state.user).toBeNull();
     });
+
+    // mapAuthResponse branch coverage: snake_case keys (access_token, refresh_token)
+    it('loginUser success with snake_case response keys', async () => {
+      mockedAuthApi.login.mockResolvedValue({
+        data: {
+          user: mockAuthResponse.user,
+          access_token: 'snake-access',
+          refresh_token: 'snake-refresh',
+        },
+      });
+      const store = createTestStore();
+      await store.dispatch(loginUser({ email: 'test@test.com', password: 'pass' }));
+      const state = store.getState().auth;
+      expect(state.accessToken).toBe('snake-access');
+      expect(state.refreshToken).toBe('snake-refresh');
+      expect(state.isAuthenticated).toBe(true);
+    });
+
+    // mapAuthResponse branch coverage: missing user and token keys fallback to defaults
+    it('loginUser success with missing keys uses defaults', async () => {
+      mockedAuthApi.login.mockResolvedValue({
+        data: {},
+      });
+      const store = createTestStore();
+      await store.dispatch(loginUser({ email: 'test@test.com', password: 'pass' }));
+      const state = store.getState().auth;
+      expect(state.user).toEqual({});
+      expect(state.accessToken).toBe('');
+      expect(state.refreshToken).toBe('');
+      expect(state.isAuthenticated).toBe(true);
+    });
   });
 });

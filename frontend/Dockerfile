@@ -8,8 +8,8 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ARG NEXT_PUBLIC_API_URL=http://localhost:5000/api
-ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+# Use a placeholder that gets replaced at runtime via entrypoint.sh sed
+ENV NEXT_PUBLIC_API_URL=__NEXT_PUBLIC_API_URL__
 RUN npm run build
 
 FROM node:20-alpine AS runner
@@ -20,8 +20,10 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-USER nextjs
+COPY --chmod=755 entrypoint.sh /app/entrypoint.sh
+# entrypoint runs as root to do sed, then drops to nextjs user via exec
 EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["node", "server.js"]
