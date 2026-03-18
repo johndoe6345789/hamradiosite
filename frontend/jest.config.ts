@@ -12,6 +12,8 @@ const config: Config = {
   roots: ['<rootDir>/src'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^react-markdown$': '<rootDir>/src/test/__mocks__/react-markdown.tsx',
+    '^remark-gfm$': '<rootDir>/src/test/__mocks__/remark-gfm.ts',
   },
   coverageThreshold: {
     global: {
