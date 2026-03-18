@@ -13,11 +13,13 @@ import { Link } from '@/i18n/navigation';
 import ContentRenderer from '@/components/learn/ContentRenderer';
 import Sidebar from '@/components/layout/Sidebar';
 import useTopicContent from '@/hooks/useTopicContent';
+import useGlossary from '@/hooks/useGlossary';
 
 export default function TopicDetailPage() {
   const t = useTranslations('learn');
   const params = useParams<{ topicSlug: string }>();
   const { topic, loading } = useTopicContent(params.topicSlug);
+  const glossary = useGlossary();
 
   if (loading || !topic) {
     return <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh"><CircularProgress /></Box>;
@@ -30,7 +32,7 @@ export default function TopicDetailPage() {
         <Grid size={{ xs: 12, md: 3 }}><Sidebar /></Grid>
         <Grid size={{ xs: 12, md: 9 }}>
           <Typography variant="h3" component="h1" fontWeight={700} gutterBottom>{topic.title}</Typography>
-          <Box sx={{ mt: 3 }}><ContentRenderer content={topic.content} /></Box>
+          <Box sx={{ mt: 3 }}><ContentRenderer content={topic.content} glossary={glossary} /></Box>
         </Grid>
       </Grid>
     </Container>

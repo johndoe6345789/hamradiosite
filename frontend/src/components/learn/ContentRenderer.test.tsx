@@ -31,4 +31,15 @@ describe('ContentRenderer', () => {
     );
     expect(screen.getByText(/Text with \*\*bold\*\* words/)).toBeInTheDocument();
   });
+
+  it('renders without glossary by default', () => {
+    renderWithProviders(<ContentRenderer content="Some content about Ofcom" />);
+    expect(screen.getByText(/Ofcom/)).toBeInTheDocument();
+  });
+
+  it('accepts glossary prop', () => {
+    const glossary = [{ id: '1', term: 'Ofcom', definition: 'The UK regulator' }];
+    renderWithProviders(<ContentRenderer content="Regulated by Ofcom" glossary={glossary} />);
+    expect(screen.getByText(/Ofcom/)).toBeInTheDocument();
+  });
 });

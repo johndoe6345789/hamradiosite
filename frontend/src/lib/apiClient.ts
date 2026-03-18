@@ -1,6 +1,7 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
 import type { AuthResponse, LoginCredentials, RegisterCredentials, User } from '@/types/auth';
 import type { Topic, TopicWithContent } from '@/types/topic';
+import type { GlossaryEntry } from '@/types/glossary';
 import type { ActiveQuiz, QuizConfig, QuizQuestion, QuizResult } from '@/types/quiz';
 import type {
   OverallProgress,
@@ -135,6 +136,10 @@ export const topicsApi = {
 
   getBySlug: (slug: string) =>
     apiClient.get<TopicWithContent>(`/topics/${slug}`),
+};
+
+export const glossaryApi = {
+  getAll: () => apiClient.get<{ glossary: GlossaryEntry[] }>('/glossary/'),
 };
 
 export const questionsApi = {

@@ -27,6 +27,7 @@ def create_app(config_name=None):
     from app.api.quizzes import quizzes_bp
     from app.api.progress import progress_bp
     from app.api.admin import admin_bp
+    from app.api.glossary import glossary_bp
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(topics_bp)
@@ -34,6 +35,7 @@ def create_app(config_name=None):
     app.register_blueprint(quizzes_bp)
     app.register_blueprint(progress_bp)
     app.register_blueprint(admin_bp)
+    app.register_blueprint(glossary_bp)
 
     @app.route("/api/health")
     def health():
@@ -74,5 +76,13 @@ def create_app(config_name=None):
 
         database.write("questions", all_questions)
         click.echo("Seeded " + str(len(all_questions)) + " questions.")
+
+        glossary_path = os.path.join(seeds_dir, "glossary.json")
+        with open(glossary_path, "r", encoding="utf-8") as f:
+            glossary = json.load(f)
+        for i, entry in enumerate(glossary):
+            entry["id"] = str(i + 1)
+        database.write("glossary", glossary)
+        click.echo("Seeded " + str(len(glossary)) + " glossary terms.")
 
     return app
