@@ -133,7 +133,7 @@ export default function ContentRenderer({ content, glossary = [] }: ContentRende
 
   return (
     <Box sx={sx} data-testid="content-renderer">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+      <ReactMarkdown key={glossary.length} remarkPlugins={[remarkGfm]} components={components}>
         {content}
       </ReactMarkdown>
     </Box>
