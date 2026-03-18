@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+import React from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const messages = require('./src/messages/en.json');
@@ -19,6 +20,20 @@ jest.mock('next-intl', () => ({
   useLocale: () => 'en',
   useMessages: () => messages,
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => children,
+}));
+
+jest.mock('@/i18n/navigation', () => ({
+  Link: ({ children, href, ...props }: { children: React.ReactNode; href: string; [key: string]: unknown }) => (
+    React.createElement('a', { href, ...props }, children)
+  ),
+  useRouter: () => ({
+    push: jest.fn(),
+    replace: jest.fn(),
+    back: jest.fn(),
+  }),
+  usePathname: () => '/',
+  redirect: jest.fn(),
+  getPathname: jest.fn(),
 }));
 
 jest.mock('next/navigation', () => ({

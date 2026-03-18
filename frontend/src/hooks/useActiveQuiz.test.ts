@@ -3,6 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { createTestStore } from '@/test/test-utils';
 import useActiveQuiz from './useActiveQuiz';
+import { quizzesApi } from '@/lib/apiClient';
 
 const mockPush = jest.fn();
 const mockParams = { quizId: 'topic-basics' };
@@ -60,7 +61,6 @@ describe('useActiveQuiz', () => {
       result.current.handleStartQuiz();
     });
 
-    const actions = store.getState();
     // startQuiz is an async thunk, so the dispatch happened
     expect(result.current.handleStartQuiz).toBeDefined();
   });
@@ -133,8 +133,7 @@ describe('useActiveQuiz', () => {
   });
 
   it('handleSubmit dispatches submitQuiz and navigates when activeQuiz exists', async () => {
-    const { quizzesApi } = require('@/lib/apiClient');
-    quizzesApi.submit.mockResolvedValue({ data: { score: 5, total: 10, passed: true } });
+    (quizzesApi.submit as jest.Mock).mockResolvedValue({ data: { score: 5, total: 10, passed: true } });
 
     const store = createTestStore({
       quiz: {
@@ -169,8 +168,7 @@ describe('useActiveQuiz', () => {
   });
 
   it('handleTimeUp dispatches submitQuiz and navigates when activeQuiz exists', async () => {
-    const { quizzesApi } = require('@/lib/apiClient');
-    quizzesApi.submit.mockResolvedValue({ data: { score: 3, total: 10, passed: false } });
+    (quizzesApi.submit as jest.Mock).mockResolvedValue({ data: { score: 3, total: 10, passed: false } });
 
     const store = createTestStore({
       quiz: {

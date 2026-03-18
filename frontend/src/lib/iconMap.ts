@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import SchoolIcon from '@mui/icons-material/School';
 import GavelIcon from '@mui/icons-material/Gavel';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
@@ -21,6 +22,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 export function getIcon(name: string): React.ElementType {
   return ICON_MAP[name] || SchoolIcon;
+}
+
+export function renderIcon(name: string): React.ReactNode {
+  const Icon = ICON_MAP[name] || SchoolIcon;
+  return createElement(Icon);
 }
 
 export default ICON_MAP;

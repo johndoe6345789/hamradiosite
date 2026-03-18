@@ -124,4 +124,16 @@ describe('UserRow', () => {
     // MUI Select renders the selected value as text
     expect(screen.getByText('user')).toBeInTheDocument();
   });
+
+  it('calls onFormChange when role select is changed', () => {
+    renderUserRow({ ...defaultProps, isEditing: true });
+    // Open the MUI Select dropdown
+    fireEvent.mouseDown(screen.getByText('user'));
+    // Click on "admin" option
+    fireEvent.click(screen.getByRole('option', { name: 'admin' }));
+    expect(defaultProps.onFormChange).toHaveBeenCalledWith({
+      ...defaultEditForm,
+      role: 'admin',
+    });
+  });
 });

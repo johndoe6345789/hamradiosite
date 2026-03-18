@@ -386,24 +386,44 @@ describe('progressSlice', () => {
       ]);
     });
 
-    // Branch coverage: fetchTopicBreakdown when data is an array directly (line 55)
+    // Branch coverage: fetchTopicBreakdown when response.data is an array directly (line 55)
     it('fetchTopicBreakdown handles direct array response', async () => {
+      const directArray = [
+        {
+          topic_id: 't2',
+          topic_title: 'Safety',
+          topic_slug: 'safety',
+          quizzes_taken: 3,
+          percentage: 60,
+          last_attempt_date: null,
+        },
+      ];
       mockedProgressApi.getTopicBreakdown.mockResolvedValue({
-        data: [
-          {
-            topicId: 't2',
-            topicTitle: 'Safety',
-            topicSlug: 'safety',
-            totalAttempts: 3,
-            averageScore: 60,
-            lastAttemptDate: null,
-          },
-        ],
+        data: directArray,
       });
       const store = createTestStore();
       await store.dispatch(fetchTopicBreakdown());
       const state = store.getState().progress;
-      expect(state.topicBreakdown[0].topicId).toBe('t2');
+      expect(state.topicBreakdown).toEqual([
+        {
+          topicId: 't2',
+          topicTitle: 'Safety',
+          topicSlug: 'safety',
+          totalAttempts: 3,
+          averageScore: 60,
+          lastAttemptDate: null,
+        },
+      ]);
+    });
+
+    // Branch coverage: fetchTopicBreakdown when data is an object without topics key (line 55 ?? fallback)
+    it('fetchTopicBreakdown handles object without topics key', async () => {
+      mockedProgressApi.getTopicBreakdown.mockResolvedValue({
+        data: { something_else: 'irrelevant' },
+      });
+      const store = createTestStore();
+      await store.dispatch(fetchTopicBreakdown());
+      expect(store.getState().progress.topicBreakdown).toEqual([]);
     });
 
     // Branch coverage: fetchWeakAreas with non-array wrapper using weak_areas key (line 70)
@@ -454,6 +474,16 @@ describe('progressSlice', () => {
       const store = createTestStore();
       await store.dispatch(fetchWeakAreas());
       expect(store.getState().progress.weakAreas[0].topicId).toBe('t3');
+    });
+
+    // Branch coverage: fetchWeakAreas when data is an object without weak_areas key (line 70 ?? fallback)
+    it('fetchWeakAreas handles object without weak_areas key', async () => {
+      mockedProgressApi.getWeakAreas.mockResolvedValue({
+        data: { something_else: 'irrelevant' },
+      });
+      const store = createTestStore();
+      await store.dispatch(fetchWeakAreas());
+      expect(store.getState().progress.weakAreas).toEqual([]);
     });
 
     // Branch coverage: fetchHistory with snake_case keys (lines 85-93)
@@ -508,6 +538,16 @@ describe('progressSlice', () => {
           completedAt: '',
         },
       ]);
+    });
+
+    // Branch coverage: fetchHistory when data is an object without history key (line 85 ?? fallback)
+    it('fetchHistory handles object without history key', async () => {
+      mockedProgressApi.getHistory.mockResolvedValue({
+        data: { something_else: 'irrelevant' },
+      });
+      const store = createTestStore();
+      await store.dispatch(fetchHistory());
+      expect(store.getState().progress.history).toEqual([]);
     });
 
     // Branch coverage: fetchHistory when data is a direct array (line 85)

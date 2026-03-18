@@ -1,4 +1,4 @@
-import ICON_MAP, { getIcon } from './iconMap';
+import ICON_MAP, { getIcon, renderIcon } from './iconMap';
 import SchoolIcon from '@mui/icons-material/School';
 import GavelIcon from '@mui/icons-material/Gavel';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
@@ -47,6 +47,18 @@ describe('iconMap', () => {
 
     it('should return SchoolIcon for empty string', () => {
       expect(getIcon('')).toBe(SchoolIcon);
+    });
+  });
+
+  describe('renderIcon', () => {
+    it('should return a React element for a known icon', () => {
+      const element = renderIcon('Gavel');
+      expect(element).toBeTruthy();
+    });
+
+    it('should return a React element for an unknown icon (fallback)', () => {
+      const element = renderIcon('UnknownIcon');
+      expect(element).toBeTruthy();
     });
   });
 });

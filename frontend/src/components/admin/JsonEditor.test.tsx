@@ -51,9 +51,10 @@ describe('JsonEditor', () => {
 
     // Click to collapse
     fireEvent.click(screen.getByText('nav'));
-    // After collapse, the text field should be hidden (MUI Collapse)
-    // The field might still be in DOM but hidden; just verify the toggle worked
-    expect(screen.getByText('nav')).toBeInTheDocument();
+
+    // Click again to re-expand (exercises the collapsed -> expanded branch)
+    fireEvent.click(screen.getByText('nav'));
+    expect(screen.getByDisplayValue('Home')).toBeInTheDocument();
   });
 
   it('handles null-ish leaf values by converting to empty string', () => {
