@@ -14,6 +14,18 @@ interface ContentRendererProps {
   glossary?: GlossaryEntry[];
 }
 
+function extractText(node: ReactNode): string {
+  if (typeof node === 'string') return node;
+  if (typeof node === 'number') return String(node);
+  if (!node) return '';
+  if (Array.isArray(node)) return node.map(extractText).join('');
+  if (React.isValidElement(node)) {
+    const props = node.props as Record<string, unknown>;
+    return extractText(props.children as ReactNode);
+  }
+  return '';
+}
+
 function annotateText(text: string, glossary: GlossaryEntry[]): ReactNode[] {
   if (glossary.length === 0) return [text];
 
@@ -98,7 +110,7 @@ export default function ContentRenderer({ content, glossary = [] }: ContentRende
 
   const components = useMemo<Components>(() => ({
     a: ({ href, children }) => {
-      const text = typeof children === 'string' ? children : Array.isArray(children) ? children.filter(c => typeof c === 'string').join('') : '';
+      const text = extractText(children);
       const entry = text ? glossaryMap.get(text.toLowerCase()) : undefined;
       const link = (
         <MuiLink href={href} target="_blank" rel="noopener noreferrer">
