@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   description:
     'Interactive preparation for the UK Foundation Amateur Radio Examination',
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
   },
 };
 
