@@ -1,5 +1,6 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import MuiLink from '@mui/material/Link';
@@ -11,7 +12,7 @@ interface GlossaryTooltipProps {
   definition: string;
   detail?: string;
   url?: string;
-  children: string;
+  children: ReactNode;
 }
 
 export default function GlossaryTooltip({ term, definition, detail, url, children }: GlossaryTooltipProps) {

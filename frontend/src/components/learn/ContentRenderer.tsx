@@ -90,16 +90,34 @@ function annotateElement(el: ReactElement, glossary: GlossaryEntry[], key?: numb
 export default function ContentRenderer({ content, glossary = [] }: ContentRendererProps) {
   const sx = useContentStyles();
 
+  const glossaryMap = useMemo(() => {
+    const map = new Map<string, GlossaryEntry>();
+    glossary.forEach(g => map.set(g.term.toLowerCase(), g));
+    return map;
+  }, [glossary]);
+
   const components = useMemo<Components>(() => ({
-    a: ({ href, children }) => (
-      <MuiLink href={href} target="_blank" rel="noopener noreferrer">
-        {children}
-      </MuiLink>
-    ),
+    a: ({ href, children }) => {
+      const text = typeof children === 'string' ? children : Array.isArray(children) ? children.filter(c => typeof c === 'string').join('') : '';
+      const entry = text ? glossaryMap.get(text.toLowerCase()) : undefined;
+      const link = (
+        <MuiLink href={href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </MuiLink>
+      );
+      if (entry) {
+        return (
+          <GlossaryTooltip term={entry.term} definition={entry.definition} detail={entry.detail} url={entry.url}>
+            {link}
+          </GlossaryTooltip>
+        );
+      }
+      return link;
+    },
     p: ({ children }) => <p>{annotateChildren(children, glossary)}</p>,
     li: ({ children }) => <li>{annotateChildren(children, glossary)}</li>,
     td: ({ children }) => <td>{annotateChildren(children, glossary)}</td>,
-  }), [glossary]);
+  }), [glossary, glossaryMap]);
 
   return (
     <Box sx={sx} data-testid="content-renderer">
