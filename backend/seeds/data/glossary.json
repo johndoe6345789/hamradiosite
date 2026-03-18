@@ -1,135 +1,800 @@
 [
-  { "term": "Ofcom", "definition": "The Office of Communications — the UK regulator for radio spectrum, broadcasting, and telecommunications." },
-  { "term": "RSGB", "definition": "Radio Society of Great Britain — the national amateur radio society, responsible for examinations and training." },
-  { "term": "Callsign", "definition": "A unique identifier assigned to a licensed radio operator, used to identify transmissions on air." },
-  { "term": "Foundation licence", "definition": "The entry-level UK amateur radio licence, allowing operation at up to 10 watts with a M6 prefix callsign." },
-  { "term": "Ohm's Law", "definition": "V = I × R — the fundamental relationship between voltage (V), current (I), and resistance (R)." },
-  { "term": "Voltage", "definition": "Electrical potential difference measured in volts (V). It is the 'pressure' that pushes current through a circuit." },
-  { "term": "Current", "definition": "The flow of electric charge measured in amperes (A)." },
-  { "term": "Resistance", "definition": "Opposition to current flow measured in ohms (Ω)." },
-  { "term": "Capacitor", "definition": "A component that stores energy in an electric field. Blocks DC and passes AC. Measured in farads (F)." },
-  { "term": "Inductor", "definition": "A component that stores energy in a magnetic field. Opposes changes in current. Measured in henrys (H)." },
-  { "term": "Resistor", "definition": "A component that limits current flow. Measured in ohms (Ω)." },
-  { "term": "Diode", "definition": "A semiconductor that allows current to flow in one direction only. Used in rectification (AC to DC conversion)." },
-  { "term": "Transistor", "definition": "A semiconductor device used as a switch or amplifier in electronic circuits." },
-  { "term": "Transformer", "definition": "A device that changes AC voltage and current levels using mutual inductance between coils. Only works with AC." },
-  { "term": "AM", "definition": "Amplitude Modulation — a modulation method where the amplitude of the carrier wave varies with the audio signal." },
-  { "term": "FM", "definition": "Frequency Modulation — a modulation method where the frequency of the carrier wave varies with the audio signal." },
-  { "term": "SSB", "definition": "Single Sideband — a power-efficient voice mode that transmits only one sideband. USB above 10 MHz, LSB below." },
-  { "term": "CW", "definition": "Continuous Wave — Morse code transmission where the carrier is switched on and off. The narrowest bandwidth mode." },
-  { "term": "Dipole", "definition": "A half-wavelength antenna split into two quarter-wave elements, fed at the centre. Impedance approximately 75 Ω." },
-  { "term": "Yagi", "definition": "A directional antenna with a driven element, reflector, and one or more directors. Higher gain than a dipole." },
-  { "term": "SWR", "definition": "Standing Wave Ratio — a measure of impedance matching between transmitter and antenna. Ideal is 1:1." },
-  { "term": "Balun", "definition": "Balanced-to-Unbalanced transformer — connects balanced antennas (e.g. dipole) to unbalanced feeders (e.g. coax)." },
-  { "term": "Coaxial cable", "definition": "A shielded feeder cable with a centre conductor surrounded by insulation and a braided outer screen. Common types: RG58, RG213." },
-  { "term": "Propagation", "definition": "The way radio waves travel from transmitter to receiver, including ground wave, sky wave, and line of sight." },
-  { "term": "Ionosphere", "definition": "Layers of ionised gas in the upper atmosphere (D, E, F layers) that can refract HF radio waves back to Earth." },
-  { "term": "MUF", "definition": "Maximum Usable Frequency — the highest frequency that will be reflected by the ionosphere for a given path." },
-  { "term": "Ground wave", "definition": "Radio waves that follow the Earth's surface. Used at MF and lower HF frequencies. Range up to ~100 km." },
-  { "term": "Sky wave", "definition": "Radio waves refracted by the ionosphere back to Earth. Enables long-distance HF communication." },
-  { "term": "Line of sight", "definition": "Direct wave propagation used at VHF and above. Range limited by antenna height and terrain." },
-  { "term": "EMC", "definition": "Electromagnetic Compatibility — ensuring electronic equipment does not cause or suffer from radio interference." },
-  { "term": "CTCSS", "definition": "Continuous Tone-Coded Squelch System — a sub-audible tone sent to activate a repeater or filter unwanted signals." },
-  { "term": "Repeater", "definition": "An automated relay station that receives on one frequency and retransmits on another, extending communication range." },
-  { "term": "Squelch", "definition": "A circuit that silences the receiver audio output when no signal is present, suppressing background noise." },
-  { "term": "RIT", "definition": "Receiver Incremental Tuning — allows fine adjustment of receive frequency without changing the transmit frequency." },
-  { "term": "RST", "definition": "Readability, Signal strength, Tone — the standard reporting system for signal quality. R1–5, S1–9, T1–9." },
-  { "term": "Q-code", "definition": "Standardised three-letter codes beginning with Q, used as shorthand in radio communication (e.g. QTH = location, QRZ = who is calling)." },
-  { "term": "Phonetic alphabet", "definition": "The NATO/ICAO alphabet used to spell out callsigns clearly on air (Alpha, Bravo, Charlie, etc.)." },
-  { "term": "ATU", "definition": "Antenna Tuning Unit — a device that matches the impedance of the antenna system to the transmitter for efficient power transfer." },
-  { "term": "Dummy load", "definition": "A non-radiating resistive load used for testing transmitters without transmitting a signal on air." },
-  { "term": "Decibel", "definition": "A logarithmic unit for expressing power ratios. +3 dB = double power, +10 dB = ten times power, −3 dB = half power." },
-  { "term": "HF", "definition": "High Frequency — the 3–30 MHz band, used for long-distance communication via sky wave propagation." },
-  { "term": "VHF", "definition": "Very High Frequency — the 30–300 MHz band, used for line-of-sight communication. Includes the 2m amateur band." },
-  { "term": "UHF", "definition": "Ultra High Frequency — the 300–3000 MHz band. Includes the 70cm amateur band." },
-  { "term": "Wavelength", "definition": "The distance a radio wave travels in one complete cycle. Related to frequency by λ(m) = 300 / f(MHz)." },
-  { "term": "Frequency", "definition": "The number of complete cycles of a wave per second, measured in hertz (Hz)." },
-  { "term": "Ferrite", "definition": "A magnetic ceramic material used in chokes and filters to suppress radio frequency interference." },
-  { "term": "RF earth", "definition": "A connection to ground at radio frequencies, used to reduce EMC problems and improve antenna performance." },
-  { "term": "CQ", "definition": "A general call to all stations, inviting any listener to respond. Used at the start of a contact on both HF and VHF." },
-  { "term": "Band plan", "definition": "A frequency allocation chart showing how each amateur band is divided into segments for different modes and activities." },
-  { "term": "Simplex", "definition": "Direct station-to-station communication on a single frequency, without using a repeater." },
-  { "term": "Duplex", "definition": "Transmitting and receiving on different frequencies, as used when operating through a repeater with a frequency offset." },
-  { "term": "Watt", "definition": "The unit of electrical power. P = V × I. Foundation licence holders are limited to 10 watts." },
-  { "term": "Antenna", "definition": "A device for transmitting or receiving radio waves. The type and height of antenna greatly affect signal strength and range." },
-  { "term": "Modulation", "definition": "The process of encoding information (voice, data, or Morse) onto a carrier wave. Common types include AM, FM, and SSB." },
-  { "term": "Carrier", "definition": "An unmodulated radio frequency signal generated by an oscillator, onto which information is imposed by modulation." },
-  { "term": "Amplifier", "definition": "A circuit or device that increases the strength of a signal. Used in both transmitter (RF power) and receiver (audio) stages." },
-  { "term": "Oscillator", "definition": "A circuit that generates a continuous repeating signal at a specific frequency. Used to produce the carrier in a transmitter." },
-  { "term": "Detector", "definition": "A circuit in a receiver that extracts the original audio or data from a modulated signal. Also called a demodulator." },
-  { "term": "Microphone gain", "definition": "The audio input level control on a transmitter. Setting it too high causes over-modulation and interference on adjacent channels." },
-  { "term": "Ground plane antenna", "definition": "A quarter-wave vertical antenna with radial elements that act as an artificial ground, providing an omnidirectional radiation pattern." },
-  { "term": "End-fed antenna", "definition": "A wire antenna fed at one end, often used on HF. Requires an ATU for matching and can pose a high EMC risk at the feed point." },
-  { "term": "Polarisation", "definition": "The orientation of a radio wave — horizontal or vertical. Transmitting and receiving antennas should use the same polarisation." },
-  { "term": "Impedance", "definition": "Opposition to alternating current flow in a circuit, measured in ohms (Ω). Matching impedance between transmitter and antenna is essential for efficient power transfer." },
-  { "term": "D layer", "definition": "The lowest layer of the ionosphere, present during daytime only. It absorbs and attenuates lower HF signals." },
-  { "term": "E layer", "definition": "The middle layer of the ionosphere, mainly present during daytime. It can reflect MF and lower HF signals." },
-  { "term": "F layer", "definition": "The highest ionospheric layer (70–400 km), present day and night. Responsible for long-distance HF propagation." },
-  { "term": "QTH", "definition": "Q-code meaning 'my location' or 'my address'. Used to share or ask for a station's geographical position." },
-  { "term": "QRZ", "definition": "Q-code meaning 'who is calling me?' Used to ask an unidentified station to identify itself." },
-  { "term": "QSL", "definition": "Q-code meaning 'I confirm receipt'. Also refers to a QSL card — a written confirmation of a contact between two stations." },
-  { "term": "QSO", "definition": "Q-code meaning a two-way contact or conversation between amateur radio stations." },
-  { "term": "Rectification", "definition": "The process of converting alternating current (AC) into direct current (DC), typically using one or more diodes." },
-  { "term": "LED", "definition": "Light Emitting Diode — a semiconductor component that emits light when forward biased. Used as an indicator in many circuits." },
-  { "term": "Fuse", "definition": "A safety device that melts and breaks the circuit if current exceeds its rated value. Must always be replaced with the correct rating." },
-  { "term": "RF burn", "definition": "A deep tissue burn caused by touching an antenna or feeder carrying RF energy. May not be immediately painful and the full extent can be delayed." },
-  { "term": "Earth connection", "definition": "A connection to ground used to provide safety earthing or an RF return path. An RF earth spike near the shack helps reduce EMC problems." },
-  { "term": "Splatter", "definition": "Interference on adjacent channels caused by over-modulation of an AM or SSB transmitter." },
-  { "term": "Bandwidth", "definition": "The range of frequencies occupied by a transmitted signal. CW has the narrowest bandwidth; FM occupies a wider bandwidth than SSB." },
-  { "term": "USB", "definition": "Upper Sideband — the sideband above the carrier frequency. By convention, used for SSB voice communication above 10 MHz." },
-  { "term": "LSB", "definition": "Lower Sideband — the sideband below the carrier frequency. By convention, used for SSB voice communication below 10 MHz." },
-  { "term": "Intermediate licence", "definition": "The second-tier UK amateur radio licence, allowing up to 50 watts and the ability to build equipment from published designs." },
-  { "term": "Full licence", "definition": "The highest-tier UK amateur radio licence, allowing up to 400 watts and full freedom to design, build, and modify equipment." },
-  { "term": "Encryption", "definition": "Encoding messages so that only intended recipients can read them. Encryption is not permitted under the UK amateur radio licence." },
-  { "term": "Broadcasting", "definition": "One-way transmission intended for reception by a general audience. Broadcasting is not permitted in amateur radio (CQ calls excepted)." },
-  { "term": "Secondary locator", "definition": "A letter inserted into your callsign to show which part of the UK you are operating from (e.g. W for Wales, M for Scotland). Required when transmitting outside England." },
-  { "term": "Wales", "definition": "Secondary locator W. Insert after the prefix number (e.g. MW6ABC). Wales has its own amateur radio community and is part of RSGB Region 4." },
-  { "term": "Scotland", "definition": "Secondary locator M. Insert after the prefix number (e.g. MM6ABC). The M stands for 'Modified' — a legacy convention from early UK callsign allocation." },
-  { "term": "Northern Ireland", "definition": "Secondary locator I. Insert after the prefix number (e.g. MI6ABC). The I reflects Ireland, as Northern Ireland shares the island of Ireland." },
-  { "term": "Isle of Man", "definition": "Secondary locator D. Insert after the prefix number (e.g. MD6ABC). The D derives from the island's Manx name and its distinct Crown Dependency status." },
-  { "term": "Jersey", "definition": "Secondary locator J. Insert after the prefix number (e.g. MJ6ABC). Jersey is a Crown Dependency in the Channel Islands with its own licensing administration." },
-  { "term": "Guernsey", "definition": "Secondary locator U. Insert after the prefix number (e.g. MU6ABC). Guernsey is a Crown Dependency in the Channel Islands, separate from Jersey." },
-  { "term": "England", "definition": "No secondary locator is needed when operating from England — use your callsign as issued (e.g. M6ABC). England is the default region in the UK callsign system." },
-  { "term": "BNC", "definition": "Bayonet Neill-Concelman connector — a small, quick-connect RF connector commonly used on test equipment and some VHF radios." },
-  { "term": "PL259", "definition": "A large screw-on RF connector (also called a UHF connector) widely used on HF amateur radio equipment. It mates with the SO239 socket." },
-  { "term": "SO239", "definition": "The panel-mount socket that mates with the PL259 plug. Found on the antenna connection of most HF transceivers and antenna tuning units." },
-  { "term": "BS 1363", "definition": "The British Standard for 13-amp mains plugs and sockets used in the UK. Knowing the correct wire colours (Brown=Live, Blue=Neutral, Yellow-Green=Earth) is tested in the Foundation exam." },
-  { "term": "PME", "definition": "Protective Multiple Earthing — a mains electricity supply system. You must consult a qualified electrician before connecting an RF earth to a PME supply, as it can create dangerous currents." },
-  { "term": "ERP", "definition": "Effective Radiated Power — the product of transmitter power and antenna gain. It represents the actual power radiated in a given direction." },
-  { "term": "Transceiver", "definition": "A single unit combining both a radio transmitter and receiver. Most amateur radio stations use a transceiver rather than separate units." },
-  { "term": "PTT", "definition": "Push-To-Talk — a button that switches between receive and transmit. Press to talk, release to listen." },
-  { "term": "Tone burst", "definition": "A short burst of 1750 Hz audio tone transmitted to activate older-style amateur repeaters. Newer repeaters typically use CTCSS instead." },
-  { "term": "UTC", "definition": "Coordinated Universal Time — the global time standard used by amateur radio operators to log contacts, avoiding confusion between time zones." },
-  { "term": "RF", "definition": "Radio Frequency — electromagnetic energy in the frequency range used for radio communications, typically from about 3 kHz to 300 GHz." },
-  { "term": "MF", "definition": "Medium Frequency — the 0.3 to 3 MHz frequency band. Ground wave propagation works well at MF, and the band includes the 160-metre amateur allocation." },
-  { "term": "AC", "definition": "Alternating Current — electric current that periodically reverses direction. UK mains electricity is 230V AC at 50 Hz, and radio signals are a form of AC." },
-  { "term": "DC", "definition": "Direct Current — electric current that flows in one direction only. Batteries produce DC, and most amateur radio equipment runs on DC internally." },
-  { "term": "Semiconductor", "definition": "A material (such as silicon) whose electrical conductivity is between that of a conductor and an insulator. Diodes, transistors, and LEDs are all semiconductor devices." },
-  { "term": "RTTY", "definition": "Radio Teletype — a digital communication mode that sends text characters using frequency-shift keying. One of the oldest digital modes still used on amateur radio." },
-  { "term": "PSK31", "definition": "Phase Shift Keying at 31 baud — a popular digital mode for keyboard-to-keyboard text communication on HF using very narrow bandwidth." },
-  { "term": "FT8", "definition": "A digital communication mode designed for making contacts under weak-signal conditions. Transmissions last 15 seconds and are decoded by computer." },
-  { "term": "DX", "definition": "Long-distance communication, or a distant station. 'Working DX' means making contacts with stations in faraway countries." },
-  { "term": "Sideband", "definition": "The portion of a modulated signal above or below the carrier frequency that carries the actual information. In SSB, only one sideband is transmitted." },
-  { "term": "Over-modulation", "definition": "Driving the modulator with too much audio, causing the transmitted signal to spread beyond its intended bandwidth and interfere with adjacent channels." },
-  { "term": "Radials", "definition": "Wire elements extending from the base of a vertical antenna to form an artificial ground plane. A quarter-wave ground plane typically uses four radials." },
-  { "term": "Director", "definition": "A parasitic element on a Yagi antenna, slightly shorter than the driven element, positioned in front to focus the radiation pattern forward." },
-  { "term": "Reflector", "definition": "A parasitic element on a Yagi antenna, slightly longer than the driven element, positioned behind it to reflect energy forward and increase gain." },
-  { "term": "Radiation pattern", "definition": "A diagram showing how an antenna radiates energy in different directions. Helps you choose the right antenna for your operating needs." },
-  { "term": "Field strength", "definition": "The intensity of an electromagnetic field at a given point. High field strength near your antenna is a common cause of EMC interference." },
-  { "term": "QRM", "definition": "Q-code meaning man-made interference on a frequency — disruption from other radio transmissions or electronic equipment." },
-  { "term": "QRN", "definition": "Q-code meaning natural interference or atmospheric noise (static), typically from thunderstorms." },
-  { "term": "QRP", "definition": "Q-code meaning low-power operation, typically 5 watts or less. QRP operating is a popular amateur radio activity that tests operator skill." },
-  { "term": "QRT", "definition": "Q-code meaning 'stop transmitting' or 'I am closing my station'. Used to indicate you are going off the air." },
-  { "term": "QSY", "definition": "Q-code meaning 'change frequency'. Used to suggest moving the conversation to a different frequency." },
-  { "term": "QSL card", "definition": "A printed postcard-sized confirmation exchanged between amateur operators to verify a contact. Collecting QSL cards is a long-standing tradition." },
-  { "term": "Calling channel", "definition": "A designated frequency for making initial contact. After contact, operators move to a working frequency. Examples: 145.500 MHz (2m FM), 433.500 MHz (70cm FM)." },
-  { "term": "Repeater offset", "definition": "The difference between transmit and receive frequencies when using a repeater. On 2m the offset is −600 kHz; on 70cm it is +1.6 MHz." },
-  { "term": "2m", "definition": "The 2-metre amateur band (144–146 MHz in the UK), one of the most popular VHF bands for local FM communication and repeater use." },
-  { "term": "70cm", "definition": "The 70-centimetre amateur band (430–440 MHz in the UK), a popular UHF band for local FM communication, repeaters, and data modes." },
-  { "term": "Mutual inductance", "definition": "The property by which a changing current in one coil induces a voltage in a nearby coil. This is the operating principle behind transformers." },
-  { "term": "Omnidirectional", "definition": "Radiating equally in all horizontal directions. Vertical antennas such as ground planes have omnidirectional radiation patterns." },
-  { "term": "Antenna gain", "definition": "A measure of how effectively an antenna focuses radio energy in a particular direction compared to a reference, expressed in decibels (dB)." },
-  { "term": "Short circuit", "definition": "An unintended low-resistance path that allows excessive current to flow. Can cause overheating, fires, or equipment damage." },
-  { "term": "Power amplifier", "definition": "The final stage of a transmitter that boosts the modulated RF signal to the required output power level before it reaches the antenna." },
-  { "term": "Audio amplifier", "definition": "A circuit in a receiver that increases the demodulated audio signal to a level sufficient to drive a loudspeaker or headphones." }
+  {
+    "term": "Ofcom",
+    "definition": "The Office of Communications — the UK regulator for radio spectrum, broadcasting, and telecommunications.",
+    "detail": "Ofcom replaced the Radiocommunications Agency in 2003. If you move house, you must update your address with Ofcom — failure to do so is a licence breach. Ofcom also has the power to inspect your station at any reasonable time and can require you to modify or shut down your equipment if it causes interference.",
+    "url": "https://www.ofcom.org.uk/"
+  },
+  {
+    "term": "RSGB",
+    "definition": "Radio Society of Great Britain — the national amateur radio society, responsible for examinations and training.",
+    "detail": "The RSGB was founded in 1913, making it one of the oldest national radio societies in the world. They administer all three levels of UK amateur radio exam (Foundation, Intermediate, and Full) and provide study materials, club listings, and contest calendars. Membership isn’t compulsory but gives you access to RadCom magazine and the QSL bureau service.",
+    "url": "https://rsgb.org/"
+  },
+  {
+    "term": "Callsign",
+    "definition": "A unique identifier assigned to a licensed radio operator, used to identify transmissions on air.",
+    "detail": "In the UK, Foundation callsigns start with M7 (or M6 for older licences), Intermediate with 2E0, and Full with M0. You must give your callsign at the start of a contact, at regular intervals, and at the end. When operating away from your registered address in a different UK nation, you add a secondary locator — for example MW7ABC in Wales.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "Foundation licence",
+    "definition": "The entry-level UK amateur radio licence, allowing operation at up to 10 watts with a M6 prefix callsign.",
+    "detail": "The Foundation licence is designed to get you on the air quickly — the course typically takes a weekend or a few evening sessions. You can operate on most amateur bands from HF through to microwave, but you must use commercially made or kit-built equipment (no home-designed transmitters). Newer Foundation callsigns use the M7 prefix rather than M6.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_licensing_in_the_United_Kingdom"
+  },
+  {
+    "term": "Ohm's Law",
+    "definition": "V = I × R — the fundamental relationship between voltage (V), current (I), and resistance (R).",
+    "detail": "This is probably the single most important formula for the Foundation exam. Remember the triangle: V on top, I and R on the bottom. Cover the quantity you want to find and the remaining two show you the calculation. For example, if V = 12 V and R = 4 Ω, then I = 12 ÷ 4 = 3 A. Practice rearranging this until it becomes second nature.",
+    "url": "https://en.wikipedia.org/wiki/Ohm%27s_law"
+  },
+  {
+    "term": "Voltage",
+    "definition": "Electrical potential difference measured in volts (V). It is the 'pressure' that pushes current through a circuit.",
+    "detail": "Think of voltage like water pressure in a pipe — higher voltage means more force pushing electrons through the circuit. UK mains voltage is nominally 230 V AC, while most amateur radio equipment runs on 13.8 V DC (a car battery voltage). The exam often tests whether you can identify voltage as the ‘pressure’ or ‘electromotive force’ in a circuit.",
+    "url": "https://en.wikipedia.org/wiki/Voltage"
+  },
+  {
+    "term": "Current",
+    "definition": "The flow of electric charge measured in amperes (A).",
+    "detail": "Current is like the flow rate of water through a pipe. In the Foundation exam, you need to know that conventional current flows from positive to negative, even though electrons actually move the other way. A typical handheld radio draws about 1–2 A on transmit, while an HF transceiver at full power might draw 20 A or more from a 13.8 V supply.",
+    "url": "https://en.wikipedia.org/wiki/Electric_current"
+  },
+  {
+    "term": "Resistance",
+    "definition": "Opposition to current flow measured in ohms (Ω).",
+    "detail": "Resistance converts electrical energy into heat — that’s how a kettle or electric heater works. In radio circuits, unwanted resistance wastes power. For the exam, remember that resistors in series add up (R_total = R1 + R2), while resistors in parallel give a lower total resistance. A common exam question gives you two equal resistors in parallel, and the answer is half the value of one.",
+    "url": "https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance"
+  },
+  {
+    "term": "Capacitor",
+    "definition": "A component that stores energy in an electric field. Blocks DC and passes AC. Measured in farads (F).",
+    "detail": "Capacitors are everywhere in radio — they’re used in filters, tuning circuits, and power supplies. The key exam fact is that a capacitor blocks DC but passes AC. In a tuning circuit, a variable capacitor lets you select different frequencies. Real-world values are usually in microfarads (µF), nanofarads (nF), or picofarads (pF) because one farad is enormous.",
+    "url": "https://en.wikipedia.org/wiki/Capacitor"
+  },
+  {
+    "term": "Inductor",
+    "definition": "A component that stores energy in a magnetic field. Opposes changes in current. Measured in henrys (H).",
+    "detail": "An inductor is essentially a coil of wire. It does the opposite of a capacitor: it passes DC freely but opposes AC, especially at higher frequencies. Inductors are used with capacitors to make tuned circuits that select a specific frequency. In the exam, remember that an inductor’s opposition to AC is called reactance, and it increases as frequency goes up.",
+    "url": "https://en.wikipedia.org/wiki/Inductor"
+  },
+  {
+    "term": "Resistor",
+    "definition": "A component that limits current flow. Measured in ohms (Ω).",
+    "detail": "Resistors are the most basic passive component. They use colour-coded bands to indicate their value — for Foundation level you don’t need to memorise the colour code, but knowing it exists is useful. A resistor turns excess electrical energy into heat, which is why dummy loads (big resistors used to test transmitters) need cooling. Power resistors can get very hot in use.",
+    "url": "https://en.wikipedia.org/wiki/Resistor"
+  },
+  {
+    "term": "Diode",
+    "definition": "A semiconductor that allows current to flow in one direction only. Used in rectification (AC to DC conversion).",
+    "detail": "A diode is like a one-way valve for electricity. The most common use in radio is rectification — turning AC from a transformer into DC for powering equipment. A diode has two terminals: the anode (positive side) and cathode (negative side, usually marked with a band). LEDs are a special type of diode that emit light when current flows through them.",
+    "url": "https://en.wikipedia.org/wiki/Diode"
+  },
+  {
+    "term": "Transistor",
+    "definition": "A semiconductor device used as a switch or amplifier in electronic circuits.",
+    "detail": "Transistors are the building blocks of modern electronics. In amateur radio, they’re used in power amplifiers, oscillators, and switching circuits. A small current or voltage at the input controls a much larger current at the output — that’s amplification. For the exam, you just need to know that a transistor can act as a switch (on/off) or an amplifier (making signals bigger).",
+    "url": "https://en.wikipedia.org/wiki/Transistor"
+  },
+  {
+    "term": "Transformer",
+    "definition": "A device that changes AC voltage and current levels using mutual inductance between coils. Only works with AC.",
+    "detail": "A transformer has two windings (primary and secondary) wound on an iron core. If the secondary has more turns than the primary, the voltage goes up (step-up); fewer turns means the voltage goes down (step-down). The key exam fact is that transformers only work with AC — they cannot change DC voltage. Most mains power supplies use a transformer as the first stage.",
+    "url": "https://en.wikipedia.org/wiki/Transformer"
+  },
+  {
+    "term": "AM",
+    "definition": "Amplitude Modulation — a modulation method where the amplitude of the carrier wave varies with the audio signal.",
+    "detail": "AM was the earliest voice transmission method and is still used on medium wave broadcast radio. It’s simple but inefficient — most of the transmitted power is in the carrier, which carries no information itself. AM is susceptible to interference and noise because any signal that changes the amplitude (like lightning) will be heard. For the exam, know that AM uses more bandwidth than SSB.",
+    "url": "https://en.wikipedia.org/wiki/Amplitude_modulation"
+  },
+  {
+    "term": "FM",
+    "definition": "Frequency Modulation — a modulation method where the frequency of the carrier wave varies with the audio signal.",
+    "detail": "FM is the standard mode for local VHF and UHF amateur communication, especially through repeaters. It gives much better audio quality than AM because it’s less affected by electrical noise. The trade-off is that FM uses more bandwidth — a typical FM signal on 2m is about 12–16 kHz wide. For the exam, remember that FM varies the frequency of the carrier, not its amplitude.",
+    "url": "https://en.wikipedia.org/wiki/Frequency_modulation"
+  },
+  {
+    "term": "SSB",
+    "definition": "Single Sideband — a power-efficient voice mode that transmits only one sideband. USB above 10 MHz, LSB below.",
+    "detail": "SSB is the go-to mode for voice on HF because it uses power and bandwidth much more efficiently than AM. It strips away the carrier and one sideband, so all the transmitted power carries useful information. The convention is to use Upper Sideband (USB) above 10 MHz and Lower Sideband (LSB) below 10 MHz. SSB audio sounds strange if you’re not tuned in precisely — like a ‘Donald Duck’ voice.",
+    "url": "https://en.wikipedia.org/wiki/Single-sideband_modulation"
+  },
+  {
+    "term": "CW",
+    "definition": "Continuous Wave — Morse code transmission where the carrier is switched on and off. The narrowest bandwidth mode.",
+    "detail": "CW stands for Continuous Wave, but in practice it means Morse code. It’s the narrowest mode — just a few hundred hertz of bandwidth — so it can get through when voice modes can’t. You no longer need to pass a Morse test to get a licence, but many amateurs still enjoy CW because it’s effective at low power and great fun. A skilled CW operator can copy signals well below the noise floor.",
+    "url": "https://en.wikipedia.org/wiki/Continuous_wave"
+  },
+  {
+    "term": "Dipole",
+    "definition": "A half-wavelength antenna split into two quarter-wave elements, fed at the centre. Impedance approximately 75 Ω.",
+    "detail": "The classic half-wave dipole is the simplest resonant antenna — just two quarter-wave wires fed in the centre. It has a figure-of-eight radiation pattern (strongest broadside to the wire, weakest off the ends). At Foundation level, most operators use a dipole for their first HF antenna because it’s cheap, effective, and easy to build from wire and coax. The feed-point impedance is roughly 75 Ω, which is a reasonable match to 50 Ω coax.",
+    "url": "https://en.wikipedia.org/wiki/Dipole_antenna"
+  },
+  {
+    "term": "Yagi",
+    "definition": "A directional antenna with a driven element, reflector, and one or more directors. Higher gain than a dipole.",
+    "detail": "The Yagi-Uda antenna (usually just called a Yagi) is the type you see on rooftops for TV reception. In amateur radio, Yagis are popular on VHF and UHF because they focus your signal in one direction, giving you more range. More directors means more gain but a narrower beam. A typical 3-element Yagi gives about 6 dB gain over a dipole — that’s like quadrupling your transmitter power in that direction.",
+    "url": "https://en.wikipedia.org/wiki/Yagi%E2%80%93Uda_antenna"
+  },
+  {
+    "term": "SWR",
+    "definition": "Standing Wave Ratio — a measure of impedance matching between transmitter and antenna. Ideal is 1:1.",
+    "detail": "You measure SWR with a meter placed between the transmitter and antenna. An SWR of 1:1 is perfect but rare in practice — anything under 2:1 is acceptable. High SWR means power is being reflected back into the transmitter, which can cause overheating. Most modern radios have SWR protection that automatically reduces power if the mismatch is too severe. Always check SWR before operating on a new band or with a new antenna.",
+    "url": "https://en.wikipedia.org/wiki/Standing_wave_ratio"
+  },
+  {
+    "term": "Balun",
+    "definition": "Balanced-to-Unbalanced transformer — connects balanced antennas (e.g. dipole) to unbalanced feeders (e.g. coax).",
+    "detail": "A dipole is a balanced antenna (both halves are symmetrical), but coaxial cable is unbalanced (the signal path and shield are different). Without a balun, current can flow on the outside of the coax braid, causing interference and distorting your radiation pattern. A simple 1:1 choke balun made from coax wound on a ferrite ring is cheap and effective. For the exam, just remember: balun = balanced to unbalanced.",
+    "url": "https://en.wikipedia.org/wiki/Balun"
+  },
+  {
+    "term": "Coaxial cable",
+    "definition": "A shielded feeder cable with a centre conductor surrounded by insulation and a braided outer screen. Common types: RG58, RG213.",
+    "detail": "Coax is the standard way to connect your radio to your antenna. RG58 is thin and flexible but loses more signal (higher attenuation); RG213 is thicker and lower loss, making it better for longer runs and higher frequencies. All coax has a characteristic impedance — in amateur radio we almost always use 50 Ω cable. Always use proper connectors (PL259/SO239 for HF, BNC or N-type for VHF/UHF) and keep coax dry to prevent water damage.",
+    "url": "https://en.wikipedia.org/wiki/Coaxial_cable"
+  },
+  {
+    "term": "Propagation",
+    "definition": "The way radio waves travel from transmitter to receiver, including ground wave, sky wave, and line of sight.",
+    "detail": "Understanding propagation is key to knowing when and how far your signal will reach. HF signals can bounce off the ionosphere (sky wave) and travel thousands of miles, while VHF and UHF are mainly line-of-sight. Propagation conditions change with the time of day, season, and solar activity. For the Foundation exam, know the three main types: ground wave (follows the Earth), sky wave (bounces off the ionosphere), and line of sight (straight path).",
+    "url": "https://en.wikipedia.org/wiki/Radio_propagation"
+  },
+  {
+    "term": "Ionosphere",
+    "definition": "Layers of ionised gas in the upper atmosphere (D, E, F layers) that can refract HF radio waves back to Earth.",
+    "detail": "The ionosphere is created by the sun’s ultraviolet radiation stripping electrons from gas molecules high in the atmosphere. It has several layers: the D layer (absorbs HF during daytime), the E layer (reflects lower HF), and the F layer (the main layer for long-distance HF). At night, the D layer disappears and the F layer persists, which is why HF propagation often improves after dark. Solar activity affects ionisation levels and therefore propagation.",
+    "url": "https://en.wikipedia.org/wiki/Ionosphere"
+  },
+  {
+    "term": "MUF",
+    "definition": "Maximum Usable Frequency — the highest frequency that will be reflected by the ionosphere for a given path.",
+    "detail": "If you transmit above the MUF, your signal passes straight through the ionosphere into space instead of being reflected back to Earth. The MUF varies throughout the day and with solar activity — it’s typically higher during the day and during peaks in the 11-year solar cycle. Websites and apps can show real-time MUF estimates to help you choose the right band. For the exam, just remember: above the MUF, no sky wave propagation.",
+    "url": "https://en.wikipedia.org/wiki/Maximum_usable_frequency"
+  },
+  {
+    "term": "Ground wave",
+    "definition": "Radio waves that follow the Earth's surface. Used at MF and lower HF frequencies. Range up to ~100 km.",
+    "detail": "Ground wave propagation works best at lower frequencies (MF and low HF) because higher frequencies are absorbed more quickly by the ground. It provides reliable, consistent coverage out to about 100 km, which is why AM broadcast stations on medium wave can be heard over a wide area during the day. For the Foundation exam, know that ground wave follows the curvature of the Earth and is most effective at lower frequencies.",
+    "url": "https://en.wikipedia.org/wiki/Ground_wave"
+  },
+  {
+    "term": "Sky wave",
+    "definition": "Radio waves refracted by the ionosphere back to Earth. Enables long-distance HF communication.",
+    "detail": "Sky wave is the magic of HF radio — your signal goes up, bounces off the ionosphere, and comes back down hundreds or thousands of miles away. The area between the end of your ground wave coverage and where the sky wave first returns is called the ‘skip zone’ or ‘dead zone’, where you can’t be heard. Multiple hops between the ionosphere and ground can carry signals right around the world.",
+    "url": "https://en.wikipedia.org/wiki/Skywave"
+  },
+  {
+    "term": "Line of sight",
+    "definition": "Direct wave propagation used at VHF and above. Range limited by antenna height and terrain.",
+    "detail": "At VHF and UHF, signals travel in roughly straight lines, so your range is limited by the horizon. Higher antennas see further — this is why hilltop locations and tall masts make such a difference. A rough rule of thumb for the radio horizon in miles is 1.4 times the square root of the antenna height in feet. Repeaters are placed on high ground precisely to extend line-of-sight coverage over a wide area.",
+    "url": "https://en.wikipedia.org/wiki/Line-of-sight_propagation"
+  },
+  {
+    "term": "EMC",
+    "definition": "Electromagnetic Compatibility — ensuring electronic equipment does not cause or suffer from radio interference.",
+    "detail": "EMC is one of the biggest practical issues for amateur operators. Your transmitter can interfere with neighbours’ TVs, hi-fi equipment, or telephones, and their devices can cause noise on your receiver. Good practice includes using proper filtering, ferrite chokes on cables, a good RF earth, and keeping your transmitter power to the minimum needed. If you cause interference, you’re expected to take steps to resolve it — Ofcom can get involved if problems persist.",
+    "url": "https://en.wikipedia.org/wiki/Electromagnetic_compatibility"
+  },
+  {
+    "term": "CTCSS",
+    "definition": "Continuous Tone-Coded Squelch System — a sub-audible tone sent to activate a repeater or filter unwanted signals.",
+    "detail": "CTCSS works by transmitting a continuous low-frequency tone (below the normal audio range, typically between 67 and 254 Hz) alongside your voice. The repeater only opens its squelch when it detects the correct tone, which prevents it from being activated by interference or signals from distant repeaters on the same frequency. You need to know the correct CTCSS tone for your local repeater — check the RSGB repeater list or ukrepeater.net.",
+    "url": "https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System"
+  },
+  {
+    "term": "Repeater",
+    "definition": "An automated relay station that receives on one frequency and retransmits on another, extending communication range.",
+    "detail": "Repeaters are usually sited on hilltops or tall buildings to give wide coverage. They receive on one frequency and simultaneously retransmit on another (the ‘offset’). On 2m, the standard offset is −600 kHz; on 70cm it’s +1.6 MHz. Most UK repeaters need a CTCSS tone to activate them. Repeaters are provided by volunteers and funded by donations — it’s good practice to support your local repeater group.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_repeater"
+  },
+  {
+    "term": "Squelch",
+    "definition": "A circuit that silences the receiver audio output when no signal is present, suppressing background noise.",
+    "detail": "Without squelch, your radio would blast constant static whenever nobody is transmitting — very annoying! Turn the squelch control up just until the noise disappears; this is the threshold. If you set it too high, you’ll miss weak signals. Some radios also have tone squelch (CTCSS), which only opens when a specific sub-audible tone is received, useful for filtering out unwanted signals on busy frequencies.",
+    "url": "https://en.wikipedia.org/wiki/Squelch"
+  },
+  {
+    "term": "RIT",
+    "definition": "Receiver Incremental Tuning — allows fine adjustment of receive frequency without changing the transmit frequency.",
+    "detail": "RIT is really useful on SSB, where the other station might be slightly off frequency or you want to fine-tune their audio for clarity. By adjusting RIT, you shift only your receive frequency — your transmit frequency stays put, so the other station still hears you fine. Most HF transceivers have a dedicated RIT knob. Remember to zero the RIT when you’re done, or your next contact might sound odd.",
+    "url": "https://en.wikipedia.org/wiki/Incremental_tuning"
+  },
+  {
+    "term": "RST",
+    "definition": "Readability, Signal strength, Tone — the standard reporting system for signal quality. R1–5, S1–9, T1–9.",
+    "detail": "RST reports are exchanged during contacts to tell the other station how well you’re receiving them. R (Readability) goes from 1 (unreadable) to 5 (perfectly readable). S (Signal strength) goes from 1 (barely perceptible) to 9 (extremely strong). T (Tone) is only used for CW and goes from 1 (very rough) to 9 (perfect tone). On phone (voice), you just give RS — for example, ‘5 and 9’ means perfect readability and very strong signal.",
+    "url": "https://en.wikipedia.org/wiki/R-S-T_system"
+  },
+  {
+    "term": "Q-code",
+    "definition": "Standardised three-letter codes beginning with Q, used as shorthand in radio communication (e.g. QTH = location, QRZ = who is calling).",
+    "detail": "Q-codes originated in commercial telegraphy and are still widely used in amateur radio, especially on CW where brevity matters. The most common ones for Foundation level are QTH (location), QRZ (who is calling), QSL (I confirm), QSO (a contact), QSY (change frequency), and QRP (low power). Each code can be a statement or a question depending on context — for example, ‘QTH?’ means ‘What is your location?’",
+    "url": "https://en.wikipedia.org/wiki/Q_code"
+  },
+  {
+    "term": "Phonetic alphabet",
+    "definition": "The NATO/ICAO alphabet used to spell out callsigns clearly on air (Alpha, Bravo, Charlie, etc.).",
+    "detail": "Using the NATO phonetic alphabet ensures your callsign is understood clearly, even through noise and interference. For the exam, you should know the whole alphabet — Alpha through Zulu. Common mistakes include using non-standard words (‘Baker’ instead of ‘Bravo’, ‘Sugar’ instead of ‘Sierra’). Always use the standard NATO words on air to avoid confusion, especially with stations whose first language isn’t English.",
+    "url": "https://en.wikipedia.org/wiki/NATO_phonetic_alphabet"
+  },
+  {
+    "term": "ATU",
+    "definition": "Antenna Tuning Unit — a device that matches the impedance of the antenna system to the transmitter for efficient power transfer.",
+    "detail": "An ATU doesn’t actually tune your antenna — it transforms the impedance presented by the antenna and feeder so that the transmitter sees a good match (close to 50 Ω). This reduces SWR on the coax between the radio and the ATU, protecting the radio’s output stage. Some radios have a built-in ATU, but an external one can handle a wider range of mismatches. An ATU won’t fix a fundamentally bad antenna, though — it just makes the radio happy.",
+    "url": "https://en.wikipedia.org/wiki/Antenna_tuner"
+  },
+  {
+    "term": "Dummy load",
+    "definition": "A non-radiating resistive load used for testing transmitters without transmitting a signal on air.",
+    "detail": "A dummy load is simply a 50 Ω non-inductive resistor that can handle your transmitter’s power output, usually immersed in oil for cooling. You connect it in place of your antenna when testing or adjusting your radio, so you don’t transmit a signal and cause interference. It’s a legal requirement to avoid unnecessary transmissions, and a dummy load makes this easy. Every well-equipped shack should have one.",
+    "url": "https://en.wikipedia.org/wiki/Dummy_load"
+  },
+  {
+    "term": "Decibel",
+    "definition": "A logarithmic unit for expressing power ratios. +3 dB = double power, +10 dB = ten times power, −3 dB = half power.",
+    "detail": "Decibels pop up everywhere in amateur radio — antenna gain, cable loss, signal reports. The key numbers for the exam are: +3 dB means power doubles, −3 dB means power halves, and +10 dB means ten times the power. So +6 dB is four times power (double twice), and +20 dB is 100 times power. Because decibels are logarithmic, they make it easy to add up gains and losses in a system.",
+    "url": "https://en.wikipedia.org/wiki/Decibel"
+  },
+  {
+    "term": "HF",
+    "definition": "High Frequency — the 3–30 MHz band, used for long-distance communication via sky wave propagation.",
+    "detail": "HF is where the magic of long-distance amateur radio happens. Thanks to ionospheric propagation, you can talk to stations on the other side of the world with modest equipment. Foundation licence holders can use several HF bands including 80m, 40m, 20m, 15m, and 10m. Each band has different propagation characteristics — lower bands (80m, 40m) work better at night, while higher bands (20m, 15m, 10m) are better during the day when solar activity is sufficient.",
+    "url": "https://en.wikipedia.org/wiki/High_frequency"
+  },
+  {
+    "term": "VHF",
+    "definition": "Very High Frequency — the 30–300 MHz band, used for line-of-sight communication. Includes the 2m amateur band.",
+    "detail": "VHF is where most Foundation operators start, especially on the 2m (144 MHz) band. Communication is mainly line-of-sight, so antenna height matters more than power. The 2m band is popular for local FM voice via repeaters and simplex. Occasionally, VHF propagation can be enhanced by weather conditions (tropospheric ducting) or sporadic E-layer reflection, allowing contacts over hundreds of miles — keep an ear out for these openings!",
+    "url": "https://en.wikipedia.org/wiki/Very_high_frequency"
+  },
+  {
+    "term": "UHF",
+    "definition": "Ultra High Frequency — the 300–3000 MHz band. Includes the 70cm amateur band.",
+    "detail": "The 70cm (430–440 MHz) band is the main UHF amateur allocation in the UK. UHF signals penetrate buildings slightly better than VHF, which makes 70cm handheld radios useful in urban areas. However, UHF suffers more from feeder loss, so good quality coax and connectors are more important. Many amateurs carry a dual-band (2m/70cm) handheld as their first radio — it covers the two most popular local bands.",
+    "url": "https://en.wikipedia.org/wiki/Ultra_high_frequency"
+  },
+  {
+    "term": "Wavelength",
+    "definition": "The distance a radio wave travels in one complete cycle. Related to frequency by λ(m) = 300 / f(MHz).",
+    "detail": "Wavelength and frequency are inversely related — higher frequency means shorter wavelength. The formula λ = 300 / f (where λ is in metres and f is in MHz) is essential for the exam. For example, 145 MHz gives a wavelength of about 2 metres, which is why the 2m band is called that. You also need wavelength to calculate antenna dimensions — a half-wave dipole for 2m is about 1 metre long.",
+    "url": "https://en.wikipedia.org/wiki/Wavelength"
+  },
+  {
+    "term": "Frequency",
+    "definition": "The number of complete cycles of a wave per second, measured in hertz (Hz).",
+    "detail": "Frequency tells you how many times a wave oscillates per second. One hertz (Hz) is one cycle per second. In radio we deal with much higher values: kilohertz (kHz, thousands), megahertz (MHz, millions), and gigahertz (GHz, billions). The Foundation exam expects you to convert between these units — for example, 145 MHz = 145,000 kHz. Each amateur band is identified by either its wavelength (e.g. 2m) or its frequency range (e.g. 144–146 MHz).",
+    "url": "https://en.wikipedia.org/wiki/Frequency"
+  },
+  {
+    "term": "Ferrite",
+    "definition": "A magnetic ceramic material used in chokes and filters to suppress radio frequency interference.",
+    "detail": "Ferrite rings and clamp-on chokes are your best friends for curing interference problems. If your neighbour complains of breakthrough on their TV or phone, try clipping a ferrite choke on the offending cable — it often fixes the issue in seconds. Ferrite works by absorbing RF energy and converting it to a tiny amount of heat. Keep a bag of mixed ferrite chokes in your shack; they are cheap and incredibly useful.",
+    "url": "https://en.wikipedia.org/wiki/Ferrite_(magnet)"
+  },
+  {
+    "term": "RF earth",
+    "definition": "A connection to ground at radio frequencies, used to reduce EMC problems and improve antenna performance.",
+    "detail": "A good RF earth can dramatically reduce interference both to and from your station. Ideally, drive a copper earth rod into the ground near your shack and connect it with thick, short braid. The connection should be as short as possible — a long earth wire can actually make things worse at some frequencies. If you live in a flat or upstairs, a counterpoise wire can serve as a substitute RF earth.",
+    "url": "https://en.wikipedia.org/wiki/Ground_(electricity)"
+  },
+  {
+    "term": "CQ",
+    "definition": "A general call to all stations, inviting any listener to respond. Used at the start of a contact on both HF and VHF.",
+    "detail": "Calling CQ is how you invite anyone listening to have a chat. A typical CQ call sounds like: \"CQ CQ CQ, this is M7ABC, Mike Seven Alpha Bravo Charlie, calling CQ and standing by.\" Keep it short — long CQ calls bore listeners and waste time. On a busy band, you might get a reply within seconds. If nobody comes back after a few tries, move to another frequency or band and try again.",
+    "url": "https://en.wikipedia.org/wiki/CQ_(call)"
+  },
+  {
+    "term": "Band plan",
+    "definition": "A frequency allocation chart showing how each amateur band is divided into segments for different modes and activities.",
+    "detail": "The band plan tells you which modes are expected on which parts of a band — for example, the bottom of an HF band is usually reserved for CW, with SSB higher up and digital modes in between. Following the band plan is not always a legal requirement, but it is strongly encouraged and considered good operating practice. The RSGB publishes the UK band plans, which you should check before transmitting on an unfamiliar frequency.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_frequency_allocations"
+  },
+  {
+    "term": "Simplex",
+    "definition": "Direct station-to-station communication on a single frequency, without using a repeater.",
+    "detail": "Simplex means both stations transmit and receive on the same frequency — you take turns talking, just like using a walkie-talkie. On 2m FM, the national calling frequency for simplex is 145.500 MHz. After making initial contact there, it is good practice to QSY (move) to another simplex frequency so the calling channel stays free for others. Simplex is the simplest way to communicate and needs no repeater infrastructure.",
+    "url": "https://en.wikipedia.org/wiki/Simplex_communication"
+  },
+  {
+    "term": "Duplex",
+    "definition": "Transmitting and receiving on different frequencies, as used when operating through a repeater with a frequency offset.",
+    "detail": "Duplex operation is what happens when you use a repeater — you transmit on one frequency and receive on another. Your radio handles this automatically once you programme the correct offset. On 2m the standard shift is minus 600 kHz, and on 70cm it is plus 1.6 MHz. For the exam, remember that duplex means two different frequencies are in use, unlike simplex where both stations share one frequency.",
+    "url": "https://en.wikipedia.org/wiki/Duplex_(telecommunications)"
+  },
+  {
+    "term": "Watt",
+    "definition": "The unit of electrical power. P = V × I. Foundation licence holders are limited to 10 watts.",
+    "detail": "The watt measures electrical power and is calculated as P = V x I (voltage times current). Foundation licence holders are limited to 10 watts transmitter output, which is enough to make contacts across Europe on HF and to reach local repeaters on VHF/UHF. For the exam, make sure you can rearrange the power formula — if you know any two of P, V, and I, you can calculate the third.",
+    "url": "https://en.wikipedia.org/wiki/Watt"
+  },
+  {
+    "term": "Antenna",
+    "definition": "A device for transmitting or receiving radio waves. The type and height of antenna greatly affect signal strength and range.",
+    "detail": "Your antenna is often the single most important part of your station — upgrading your antenna will usually make more difference than upgrading your radio. A simple wire dipole in the loft or garden can work surprisingly well on HF. For VHF/UHF, getting your antenna as high as possible is the key to extending your range. Always consider safety when installing antennas, especially near power lines.",
+    "url": "https://en.wikipedia.org/wiki/Antenna_(radio)"
+  },
+  {
+    "term": "Modulation",
+    "definition": "The process of encoding information (voice, data, or Morse) onto a carrier wave. Common types include AM, FM, and SSB.",
+    "detail": "Modulation is how you stamp your voice, data, or Morse code onto a radio wave so it can carry information. Without modulation, you would just transmit an empty carrier with no content. The three main types you need to know for the exam are AM (amplitude modulation), FM (frequency modulation), and SSB (single sideband). Each has different bandwidth, efficiency, and sound characteristics.",
+    "url": "https://en.wikipedia.org/wiki/Modulation"
+  },
+  {
+    "term": "Carrier",
+    "definition": "An unmodulated radio frequency signal generated by an oscillator, onto which information is imposed by modulation.",
+    "detail": "Think of the carrier as a blank canvas — it is a pure, steady radio signal at a single frequency, generated by an oscillator. Modulation paints information onto that canvas by varying its amplitude, frequency, or phase. In SSB, the carrier is actually suppressed (removed) before transmission to save power, which is one reason SSB is so efficient. On its own, a carrier contains no information at all.",
+    "url": "https://en.wikipedia.org/wiki/Carrier_wave"
+  },
+  {
+    "term": "Amplifier",
+    "definition": "A circuit or device that increases the strength of a signal. Used in both transmitter (RF power) and receiver (audio) stages.",
+    "detail": "Amplifiers are used in both transmitters and receivers. In a transmitter, the power amplifier (PA) boosts the RF signal to the required output level. In a receiver, amplifiers increase the tiny signal from the antenna so it can be processed, and an audio amplifier at the end drives your speaker. For the exam, just remember that an amplifier makes a signal bigger — it increases its amplitude.",
+    "url": "https://en.wikipedia.org/wiki/Amplifier"
+  },
+  {
+    "term": "Oscillator",
+    "definition": "A circuit that generates a continuous repeating signal at a specific frequency. Used to produce the carrier in a transmitter.",
+    "detail": "An oscillator is the heartbeat of any radio — it generates the carrier frequency that everything else is built upon. Modern radios use frequency synthesisers (a type of oscillator circuit) that can be tuned very precisely across a wide range. If an oscillator is unstable, the transmitted frequency will drift and be hard for other stations to tune in. Crystal oscillators are used where high stability is needed.",
+    "url": "https://en.wikipedia.org/wiki/Electronic_oscillator"
+  },
+  {
+    "term": "Detector",
+    "definition": "A circuit in a receiver that extracts the original audio or data from a modulated signal. Also called a demodulator.",
+    "detail": "The detector (or demodulator) is the stage in a receiver that extracts the original audio from the incoming modulated signal. For AM, this can be as simple as a diode — the same principle as a crystal set. FM and SSB need more complex detector circuits. For the exam, remember that detection is the reverse of modulation: modulation puts information onto the carrier, and detection takes it off again.",
+    "url": "https://en.wikipedia.org/wiki/Detector_(radio)"
+  },
+  {
+    "term": "Microphone gain",
+    "definition": "The audio input level control on a transmitter. Setting it too high causes over-modulation and interference on adjacent channels.",
+    "detail": "Setting your microphone gain correctly is really important. Too low and other stations cannot hear you clearly; too high and you will over-modulate, causing distortion and splatter that interferes with stations on nearby frequencies. Ask a friend for a signal report while you adjust the mic gain — aim for clear, undistorted audio. Speak across the microphone rather than directly into it, and keep a consistent distance.",
+    "url": "https://en.wikipedia.org/wiki/Gain_(electronics)"
+  },
+  {
+    "term": "Ground plane antenna",
+    "definition": "A quarter-wave vertical antenna with radial elements that act as an artificial ground, providing an omnidirectional radiation pattern.",
+    "detail": "A ground plane antenna is a quarter-wave vertical element with radial wires spreading out at the base to simulate a ground surface. It gives an omnidirectional radiation pattern, meaning it transmits equally in all horizontal directions — great for general-purpose VHF/UHF use. Many commercial base station antennas for 2m and 70cm are ground planes. The radials do not need to be horizontal; angling them down at 45 degrees raises the feed impedance closer to 50 ohms.",
+    "url": "https://en.wikipedia.org/wiki/Ground_plane_(antenna)"
+  },
+  {
+    "term": "End-fed antenna",
+    "definition": "A wire antenna fed at one end, often used on HF. Requires an ATU for matching and can pose a high EMC risk at the feed point.",
+    "detail": "An end-fed wire is popular because it is easy to install — you only need one support point at the far end, and the feed point is at the shack. The downside is that the feed point has a very high impedance, so you need a matching unit (or ATU) to connect it to your radio. End-feds can also radiate RF into the shack, causing interference with computers and other equipment. Using a good choke balun at the feed point helps reduce this problem.",
+    "url": "https://en.wikipedia.org/wiki/Random_wire_antenna"
+  },
+  {
+    "term": "Polarisation",
+    "definition": "The orientation of a radio wave — horizontal or vertical. Transmitting and receiving antennas should use the same polarisation.",
+    "detail": "If your antenna is vertical, your signal is vertically polarised; if horizontal, it is horizontally polarised. For the best signal, both stations should use the same polarisation — a mismatch can lose you 20 dB or more (that is a huge drop). On VHF/UHF FM, vertical polarisation is the norm because most people use vertical whip antennas. On HF SSB, horizontal polarisation is more common with dipoles and beams.",
+    "url": "https://en.wikipedia.org/wiki/Polarization_(waves)"
+  },
+  {
+    "term": "Impedance",
+    "definition": "Opposition to alternating current flow in a circuit, measured in ohms (Ω). Matching impedance between transmitter and antenna is essential for efficient power transfer.",
+    "detail": "Impedance is like resistance but for AC circuits — it includes the effects of capacitors and inductors as well as pure resistance. Most amateur radio equipment is designed around a 50-ohm impedance standard. If your antenna system does not present 50 ohms to the radio, some power gets reflected back (high SWR), and you lose efficiency. An ATU can transform the impedance to give a better match.",
+    "url": "https://en.wikipedia.org/wiki/Electrical_impedance"
+  },
+  {
+    "term": "D layer",
+    "definition": "The lowest layer of the ionosphere, present during daytime only. It absorbs and attenuates lower HF signals.",
+    "detail": "The D layer is the lowest part of the ionosphere, at about 60-90 km altitude. It only exists during daylight hours because it needs direct solar radiation. Rather than reflecting HF signals, the D layer absorbs them — especially on lower HF frequencies like 80m and 160m. This is why these bands work much better at night when the D layer has disappeared. For the exam, remember: D layer = daytime absorption.",
+    "url": "https://en.wikipedia.org/wiki/D_region"
+  },
+  {
+    "term": "E layer",
+    "definition": "The middle layer of the ionosphere, mainly present during daytime. It can reflect MF and lower HF signals.",
+    "detail": "The E layer sits at about 100-120 km altitude and is mainly present during the day. It can reflect signals in the MF and lower HF range. Occasionally, patches of intense ionisation form in the E layer (called Sporadic E or Es), which can reflect VHF signals over distances of 1,000-2,000 km — these events are exciting and unpredictable. For the exam, know that the E layer is the middle layer and occasionally supports VHF propagation via Sporadic E.",
+    "url": "https://en.wikipedia.org/wiki/Kennelly%E2%80%93Heaviside_layer"
+  },
+  {
+    "term": "F layer",
+    "definition": "The highest ionospheric layer (70–400 km), present day and night. Responsible for long-distance HF propagation.",
+    "detail": "The F layer is the highest and most important layer for long-distance HF communication, sitting at 150-400 km altitude. During the day it splits into F1 and F2 sub-layers, but at night they merge into a single F layer that persists until morning. The F layer is responsible for most of the long-distance HF contacts you will make. Higher solar activity strengthens the F layer and raises the MUF, opening up higher frequency bands.",
+    "url": "https://en.wikipedia.org/wiki/F_region"
+  },
+  {
+    "term": "QTH",
+    "definition": "Q-code meaning 'my location' or 'my address'. Used to share or ask for a station's geographical position.",
+    "detail": "QTH is one of the most commonly used Q-codes in everyday amateur radio. When someone asks \"What is your QTH?\" they want to know where you are located — usually your town or city. You will hear it in virtually every casual QSO. It is also used as a noun: \"My QTH is Manchester\" is perfectly natural ham radio language. On logs and QSL cards, QTH refers to the station location.",
+    "url": "https://en.wikipedia.org/wiki/Q_code"
+  },
+  {
+    "term": "QRZ",
+    "definition": "Q-code meaning 'who is calling me?' Used to ask an unidentified station to identify itself.",
+    "detail": "QRZ literally means \"Who is calling me?\" and is used when you hear a station but did not catch their callsign. On air, you might say \"QRZ, this is M7ABC\" to invite the unknown caller to try again. QRZ.com is also a popular website where you can look up callsign information and find details about other operators. For the exam, just remember QRZ = who is calling.",
+    "url": "https://en.wikipedia.org/wiki/Q_code"
+  },
+  {
+    "term": "QSL",
+    "definition": "Q-code meaning 'I confirm receipt'. Also refers to a QSL card — a written confirmation of a contact between two stations.",
+    "detail": "QSL means \"I confirm receipt\" or \"I acknowledge.\" After a contact, operators traditionally exchange QSL cards through the post or via a QSL bureau as a written record of the contact. Nowadays, electronic QSL systems like eQSL and Logbook of The World (LoTW) are also popular. Collecting QSL cards from rare countries or special event stations is a hobby within the hobby.",
+    "url": "https://en.wikipedia.org/wiki/QSL_card"
+  },
+  {
+    "term": "QSO",
+    "definition": "Q-code meaning a two-way contact or conversation between amateur radio stations.",
+    "detail": "A QSO is simply a two-way contact between amateur stations. You might hear someone say \"I had a nice QSO with a station in Germany this morning.\" Logging your QSOs is good practice — note the date, time (in UTC), frequency, mode, callsign of the other station, and the signal report exchanged. Many operators use logging software to keep track of their QSOs and track how many countries they have contacted.",
+    "url": "https://en.wikipedia.org/wiki/Contact_(amateur_radio)"
+  },
+  {
+    "term": "Rectification",
+    "definition": "The process of converting alternating current (AC) into direct current (DC), typically using one or more diodes.",
+    "detail": "Rectification is the process of turning AC into DC, and it is how most power supplies work. A single diode gives you half-wave rectification (only one half of the AC cycle gets through), while four diodes arranged in a bridge circuit give full-wave rectification, which is more efficient. After rectification, a smoothing capacitor is used to even out the remaining ripple. For the exam, remember that diodes are the key components in rectification.",
+    "url": "https://en.wikipedia.org/wiki/Rectifier"
+  },
+  {
+    "term": "LED",
+    "definition": "Light Emitting Diode — a semiconductor component that emits light when forward biased. Used as an indicator in many circuits.",
+    "detail": "LEDs are a special type of diode that emit light when current flows through them in the forward direction. They are used as indicator lights on virtually all amateur radio equipment — power on, transmit, signal strength, and so on. Like all diodes, LEDs only conduct in one direction and need a series resistor to limit the current, or they will burn out. LEDs are more efficient and longer-lasting than traditional filament bulbs.",
+    "url": "https://en.wikipedia.org/wiki/Light-emitting_diode"
+  },
+  {
+    "term": "Fuse",
+    "definition": "A safety device that melts and breaks the circuit if current exceeds its rated value. Must always be replaced with the correct rating.",
+    "detail": "A fuse is a simple but critical safety device — a thin wire that melts and breaks the circuit if too much current flows, protecting your equipment and wiring from fire. Always replace a blown fuse with one of the correct rating; never use a higher-rated fuse as this defeats the protection. In-line fuses should be fitted close to the power source on the positive lead. Car-type blade fuses are commonly used in amateur radio DC power leads.",
+    "url": "https://en.wikipedia.org/wiki/Fuse_(electrical)"
+  },
+  {
+    "term": "RF burn",
+    "definition": "A deep tissue burn caused by touching an antenna or feeder carrying RF energy. May not be immediately painful and the full extent can be delayed.",
+    "detail": "RF burns are a serious safety hazard. Unlike a normal burn that you feel immediately on the skin surface, an RF burn damages tissue deep inside before you feel pain, because RF energy heats tissue from the inside out. Never touch an antenna, open feeder, or any conductor that could be carrying RF energy while transmitting. Even at Foundation power levels (10 watts), an RF burn is possible if you make direct contact with a radiating element.",
+    "url": "https://en.wikipedia.org/wiki/Electromagnetic_radiation_and_health"
+  },
+  {
+    "term": "Earth connection",
+    "definition": "A connection to ground used to provide safety earthing or an RF return path. An RF earth spike near the shack helps reduce EMC problems.",
+    "detail": "A proper earth connection serves two purposes: safety earthing (protecting you from electric shock) and RF earthing (providing a return path for RF currents and reducing interference). These are different things and ideally use separate earth points. A short, thick copper strap to an earth rod just outside the shack window is ideal for RF. Be careful if your house has a PME mains supply — consult an electrician before connecting an RF earth in that case.",
+    "url": "https://en.wikipedia.org/wiki/Ground_(electricity)"
+  },
+  {
+    "term": "Splatter",
+    "definition": "Interference on adjacent channels caused by over-modulation of an AM or SSB transmitter.",
+    "detail": "Splatter is the interference you cause on frequencies either side of your own when you over-modulate your transmitter. It is one of the most common complaints in amateur radio and is easily avoided by setting your microphone gain correctly. If stations on adjacent frequencies complain, turn down your mic gain immediately. Splatter is antisocial and can earn you a reputation as a poor operator — always monitor your signal quality.",
+    "url": "https://en.wikipedia.org/wiki/Splatter_(radio)"
+  },
+  {
+    "term": "Bandwidth",
+    "definition": "The range of frequencies occupied by a transmitted signal. CW has the narrowest bandwidth; FM occupies a wider bandwidth than SSB.",
+    "detail": "Different modes occupy different amounts of bandwidth. CW is the narrowest at just a few hundred hertz, SSB uses about 2.4 kHz, AM uses about 6 kHz, and FM on VHF is the widest at 12-16 kHz. For the exam, know the relative order from narrowest to widest: CW, SSB, AM, FM. Using the minimum bandwidth necessary for your communication is good practice and is actually a licence requirement — it leaves more room for other users.",
+    "url": "https://en.wikipedia.org/wiki/Bandwidth_(signal_processing)"
+  },
+  {
+    "term": "USB",
+    "definition": "Upper Sideband — the sideband above the carrier frequency. By convention, used for SSB voice communication above 10 MHz.",
+    "detail": "USB (Upper Sideband) is the convention for SSB voice contacts above 10 MHz. When you select USB on your radio, it transmits only the sideband above the suppressed carrier frequency. Using the wrong sideband will make your audio sound garbled and unintelligible to the receiving station. For the exam, the rule is simple: USB above 10 MHz, LSB below 10 MHz. On VHF and above, USB is also the standard for SSB operation.",
+    "url": "https://en.wikipedia.org/wiki/Single-sideband_modulation"
+  },
+  {
+    "term": "LSB",
+    "definition": "Lower Sideband — the sideband below the carrier frequency. By convention, used for SSB voice communication below 10 MHz.",
+    "detail": "LSB (Lower Sideband) is the convention for SSB voice contacts below 10 MHz — so on bands like 80m (3.5 MHz) and 40m (7 MHz), you would use LSB. The reason for the LSB/USB split is mainly historical convention rather than any technical necessity, but everyone follows it so contacts work smoothly. If you tune into an SSB signal and it sounds like garbled nonsense, try switching to the other sideband.",
+    "url": "https://en.wikipedia.org/wiki/Single-sideband_modulation"
+  },
+  {
+    "term": "Intermediate licence",
+    "definition": "The second-tier UK amateur radio licence, allowing up to 50 watts and the ability to build equipment from published designs.",
+    "detail": "The Intermediate licence is the next step up from Foundation, allowing you to transmit at up to 50 watts — five times the Foundation power limit. You can also build equipment from published designs and kits, giving you more hands-on experience. The exam covers more technical material than Foundation but is very manageable with some study. Many operators find the extra power makes a noticeable difference, especially on HF.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_licensing_in_the_United_Kingdom"
+  },
+  {
+    "term": "Full licence",
+    "definition": "The highest-tier UK amateur radio licence, allowing up to 400 watts and full freedom to design, build, and modify equipment.",
+    "detail": "The Full licence is the top tier, granting up to 400 watts and complete freedom to design, build, and modify your own transmitting equipment. Full licensees get an M0 callsign prefix and can access all amateur bands and modes. The exam covers advanced technical topics, but many Foundation holders go on to achieve it within a year or two. Having the Full licence also opens up reciprocal licensing arrangements for operating abroad.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_licensing_in_the_United_Kingdom"
+  },
+  {
+    "term": "Encryption",
+    "definition": "Encoding messages so that only intended recipients can read them. Encryption is not permitted under the UK amateur radio licence.",
+    "detail": "The UK amateur radio licence strictly prohibits encryption — all transmissions must be capable of being understood by other licensed amateurs. This means you cannot use codes, ciphers, or scrambled voice to hide the meaning of your messages. The reason is that amateur radio spectrum is shared, and the authorities need to be able to monitor what is being transmitted. Standard digital modes like FT8 are fine because they use published protocols that anyone can decode.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_encryption"
+  },
+  {
+    "term": "Broadcasting",
+    "definition": "One-way transmission intended for reception by a general audience. Broadcasting is not permitted in amateur radio (CQ calls excepted).",
+    "detail": "Broadcasting means one-way transmission intended for a general audience, like a radio station — and it is not permitted on amateur radio frequencies. Amateur radio is a two-way communications service, not a broadcast service. However, calling CQ (a general call inviting replies) is perfectly fine because you are inviting a two-way conversation. Similarly, transmitting a net or bulletin is acceptable as long as it involves two-way communication.",
+    "url": "https://en.wikipedia.org/wiki/Broadcasting"
+  },
+  {
+    "term": "Secondary locator",
+    "definition": "A letter inserted into your callsign to show which part of the UK you are operating from (e.g. W for Wales, M for Scotland). Required when transmitting outside England.",
+    "detail": "When you operate from a UK nation other than England, you must add a secondary locator letter to your callsign so that other stations and the authorities know where you are. For example, if your callsign is M7ABC and you go portable in Wales, you become MW7ABC. The locator goes immediately after the initial prefix letter(s). For the exam, learn the locators: W for Wales, M for Scotland, I for Northern Ireland, D for Isle of Man, J for Jersey, U for Guernsey.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "Wales",
+    "definition": "Secondary locator W. Insert after the prefix number (e.g. MW6ABC). Wales has its own amateur radio community and is part of RSGB Region 4.",
+    "detail": "If you take your radio to Wales, insert W after the prefix — so M7ABC becomes MW7ABC. Wales has a thriving amateur radio community and beautiful high ground that is great for portable VHF operation. The RSGB Region 4 covers Wales and has an active events calendar. The secondary locator must be used whenever you transmit from Welsh territory, whether from a fixed location or operating portable on a hillside.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "Scotland",
+    "definition": "Secondary locator M. Insert after the prefix number (e.g. MM6ABC). The M stands for 'Modified' — a legacy convention from early UK callsign allocation.",
+    "detail": "Scotland uses the secondary locator M — so M7ABC becomes MM7ABC when operating north of the border. This double-M can be confusing at first, but it is the correct format. Scotland offers fantastic portable operating locations, especially for VHF and microwave. Many operators travel to Scottish highlands and islands for contests and awards like the WAB (Worked All Britain) scheme.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "Northern Ireland",
+    "definition": "Secondary locator I. Insert after the prefix number (e.g. MI6ABC). The I reflects Ireland, as Northern Ireland shares the island of Ireland.",
+    "detail": "Northern Ireland uses the secondary locator I — so M7ABC becomes MI7ABC. Northern Ireland has its own repeater network and an active amateur radio community. Being on the western edge of the UK, Northern Irish operators sometimes have good propagation paths over the Atlantic and across to the rest of Europe. Remember: the I stands for Ireland, reflecting the geographical location on the island of Ireland.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "Isle of Man",
+    "definition": "Secondary locator D. Insert after the prefix number (e.g. MD6ABC). The D derives from the island's Manx name and its distinct Crown Dependency status.",
+    "detail": "The Isle of Man uses D as its secondary locator — so M7ABC becomes MD7ABC. The Isle of Man is a Crown Dependency in the Irish Sea and counts as a separate \"entity\" for amateur radio award purposes, making it a popular destination for portable operators. Despite its small size, the island has an active amateur radio society and good VHF coverage from its hilltops.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "Jersey",
+    "definition": "Secondary locator J. Insert after the prefix number (e.g. MJ6ABC). Jersey is a Crown Dependency in the Channel Islands with its own licensing administration.",
+    "detail": "Jersey uses the secondary locator J — so M7ABC becomes MJ7ABC. As a Crown Dependency in the Channel Islands, Jersey counts as a separate DXCC entity, making it attractive for operators chasing awards. Jersey has its own amateur radio society and a small but active community. The island's location in the English Channel can provide interesting propagation paths into France and the rest of Europe.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "Guernsey",
+    "definition": "Secondary locator U. Insert after the prefix number (e.g. MU6ABC). Guernsey is a Crown Dependency in the Channel Islands, separate from Jersey.",
+    "detail": "Guernsey uses the secondary locator U — so M7ABC becomes MU7ABC. Like Jersey, Guernsey is a Crown Dependency and a separate DXCC entity, so making a contact with a Guernsey station is a sought-after log entry for award hunters. The Guernsey Amateur Radio Society is active on the island. If you visit and want to operate, remember to use the MU prefix for the duration of your stay.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "England",
+    "definition": "No secondary locator is needed when operating from England — use your callsign as issued (e.g. M6ABC). England is the default region in the UK callsign system.",
+    "detail": "England is the default location in the UK callsign system, so you simply use your callsign as issued — no extra letter needed. If you travel to Wales, Scotland, Northern Ireland, or the Crown Dependencies, you must add the appropriate secondary locator. For the exam, just remember: England = no change to your callsign.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_call_signs"
+  },
+  {
+    "term": "BNC",
+    "definition": "Bayonet Neill-Concelman connector — a small, quick-connect RF connector commonly used on test equipment and some VHF radios.",
+    "detail": "BNC connectors are a favourite in the ham radio world because they snap on and off quickly with a quarter-turn bayonet action — handy when you are swapping antennas in the field. You will commonly see them on handheld radios, VHF/UHF base antennas, and laboratory test equipment like oscilloscopes. They handle frequencies up to several GHz and are more weather-resistant than many other connector types.",
+    "url": "https://en.wikipedia.org/wiki/BNC_connector"
+  },
+  {
+    "term": "PL259",
+    "definition": "A large screw-on RF connector (also called a UHF connector) widely used on HF amateur radio equipment. It mates with the SO239 socket.",
+    "detail": "The PL259 is the chunky screw-on plug you will see on almost every HF coax cable in the shack. It is technically called a UHF connector, though ironically it is not great above about 150 MHz due to its lack of a constant impedance. For Foundation work on HF it is perfectly fine, and you will learn to solder these as part of practical station building. Always pair it with an SO239 socket.",
+    "url": "https://en.wikipedia.org/wiki/UHF_connector"
+  },
+  {
+    "term": "SO239",
+    "definition": "The panel-mount socket that mates with the PL259 plug. Found on the antenna connection of most HF transceivers and antenna tuning units.",
+    "detail": "The SO239 is the female panel-mount socket found on the back of most HF transceivers and antenna tuners. It mates with the PL259 plug. If someone says \"UHF connector\" they usually mean the PL259/SO239 family. For the exam, remember that SO239 is the socket (on the radio) and PL259 is the plug (on the cable).",
+    "url": "https://en.wikipedia.org/wiki/UHF_connector"
+  },
+  {
+    "term": "BS 1363",
+    "definition": "The British Standard for 13-amp mains plugs and sockets used in the UK. Knowing the correct wire colours (Brown=Live, Blue=Neutral, Yellow-Green=Earth) is tested in the Foundation exam.",
+    "detail": "BS 1363 is the standard for those familiar three-pin UK mains plugs. For the Foundation exam you need to know the wire colours: Brown is Live, Blue is Neutral, and Green-and-Yellow striped is Earth. The fuse in the plug should be rated appropriately for the equipment — 3A for most radio gear. Getting these colours wrong in the exam (or in real life!) is a serious safety issue.",
+    "url": "https://en.wikipedia.org/wiki/BS_1363"
+  },
+  {
+    "term": "PME",
+    "definition": "Protective Multiple Earthing — a mains electricity supply system. You must consult a qualified electrician before connecting an RF earth to a PME supply, as it can create dangerous currents.",
+    "detail": "PME (Protective Multiple Earthing) is the most common mains supply arrangement in UK homes. The key exam point is that you must never connect an RF earth directly to a PME earth without consulting a qualified electrician first, because under fault conditions dangerous voltages can appear on the combined neutral-earth conductor. This is a genuine safety hazard, not just exam trivia.",
+    "url": "https://en.wikipedia.org/wiki/Earthing_system#TN-C-S"
+  },
+  {
+    "term": "ERP",
+    "definition": "Effective Radiated Power — the product of transmitter power and antenna gain. It represents the actual power radiated in a given direction.",
+    "detail": "ERP tells you how much power is effectively being radiated in a particular direction once you account for antenna gain. If your transmitter puts out 10 watts and your antenna has 3 dB of gain, your ERP is 20 watts in the favoured direction. Foundation licence holders are limited by transmitter output power, but understanding ERP helps you appreciate why antenna choice matters so much.",
+    "url": "https://en.wikipedia.org/wiki/Effective_radiated_power"
+  },
+  {
+    "term": "Transceiver",
+    "definition": "A single unit combining both a radio transmitter and receiver. Most amateur radio stations use a transceiver rather than separate units.",
+    "detail": "A transceiver combines a transmitter and receiver in one box — it is the heart of almost every amateur station. Modern transceivers range from tiny handhelds to full-featured HF base stations with built-in DSP and antenna tuners. When you key the PTT, the transceiver switches from receive mode to transmit mode automatically. You will sometimes hear them called \"rigs\" in casual conversation.",
+    "url": "https://en.wikipedia.org/wiki/Transceiver"
+  },
+  {
+    "term": "PTT",
+    "definition": "Push-To-Talk — a button that switches between receive and transmit. Press to talk, release to listen.",
+    "detail": "PTT stands for Push-To-Talk, and it is the button (or switch) you press to transmit. On a handheld radio it is usually a large button on the side; on a base station it may be on the microphone. Amateur radio is half-duplex on most modes, meaning you cannot transmit and receive at the same time — so you press PTT to talk, then release it to listen for a reply.",
+    "url": "https://en.wikipedia.org/wiki/Push-to-talk"
+  },
+  {
+    "term": "Tone burst",
+    "definition": "A short burst of 1750 Hz audio tone transmitted to activate older-style amateur repeaters. Newer repeaters typically use CTCSS instead.",
+    "detail": "A 1750 Hz tone burst was the traditional way to open up a repeater — you would press a button on your radio that sends a short beep at that frequency. Most modern repeaters have switched to CTCSS tones instead, but some older repeaters still respond to a tone burst. For the exam, remember the frequency: 1750 Hz. Your radio may have a dedicated button for it.",
+    "url": "https://en.wikipedia.org/wiki/Repeater_(telecommunications)"
+  },
+  {
+    "term": "UTC",
+    "definition": "Coordinated Universal Time — the global time standard used by amateur radio operators to log contacts, avoiding confusion between time zones.",
+    "detail": "UTC is the universal time reference used by amateur radio operators worldwide. It avoids the confusion of local time zones — when you log a contact, you always record the time in UTC. In the UK, UTC is the same as GMT in winter, but during British Summer Time you need to subtract one hour from local time to get UTC. Contest logs and QSL cards always use UTC.",
+    "url": "https://en.wikipedia.org/wiki/Coordinated_Universal_Time"
+  },
+  {
+    "term": "RF",
+    "definition": "Radio Frequency — electromagnetic energy in the frequency range used for radio communications, typically from about 3 kHz to 300 GHz.",
+    "detail": "RF (Radio Frequency) refers to the electromagnetic energy that carries your signal through the air. In amateur radio, we work with RF from the low end of HF (around 1.8 MHz) up to microwaves (several GHz and beyond). RF energy can cause interference to nearby electronics and, at high power levels, can be harmful to the human body — which is why the licence schedule includes power limits and EMF awareness.",
+    "url": "https://en.wikipedia.org/wiki/Radio_frequency"
+  },
+  {
+    "term": "MF",
+    "definition": "Medium Frequency — the 0.3 to 3 MHz frequency band. Ground wave propagation works well at MF, and the band includes the 160-metre amateur allocation.",
+    "detail": "The MF (Medium Frequency) band covers 300 kHz to 3 MHz and includes the amateur 160-metre band (1.8–2.0 MHz). MF signals travel well by ground wave during the day and can propagate via the ionosphere at night, giving surprisingly long-range contacts after dark. The 160-metre band is sometimes called \"top band\" and is popular with operators who enjoy the challenge of low-frequency DXing.",
+    "url": "https://en.wikipedia.org/wiki/Medium_frequency"
+  },
+  {
+    "term": "AC",
+    "definition": "Alternating Current — electric current that periodically reverses direction. UK mains electricity is 230V AC at 50 Hz, and radio signals are a form of AC.",
+    "detail": "AC (Alternating Current) is the type of electricity that comes from your wall sockets — in the UK it is 230 volts at 50 Hz. Radio signals are also a form of alternating current, just at much higher frequencies. For the exam, understand that AC periodically reverses direction, unlike DC which flows one way. Most radio equipment converts mains AC to low-voltage DC internally using a power supply.",
+    "url": "https://en.wikipedia.org/wiki/Alternating_current"
+  },
+  {
+    "term": "DC",
+    "definition": "Direct Current — electric current that flows in one direction only. Batteries produce DC, and most amateur radio equipment runs on DC internally.",
+    "detail": "DC (Direct Current) flows in one direction only and is produced by batteries and power supplies. Most amateur radio equipment runs on 12–13.8 volts DC internally, which is why a 13.8V power supply is one of the most common accessories in a ham shack. For portable operation, you can run your radio directly from a car battery or a LiFePO4 pack. The exam may ask you to distinguish DC from AC.",
+    "url": "https://en.wikipedia.org/wiki/Direct_current"
+  },
+  {
+    "term": "Semiconductor",
+    "definition": "A material (such as silicon) whose electrical conductivity is between that of a conductor and an insulator. Diodes, transistors, and LEDs are all semiconductor devices.",
+    "detail": "Semiconductors are the building blocks of modern electronics. Silicon is the most common semiconductor material, and it is used to make diodes (which allow current to flow in one direction), transistors (which amplify or switch signals), and LEDs (which produce light). For the Foundation exam, know that a semiconductor sits between a conductor and an insulator in terms of electrical conductivity.",
+    "url": "https://en.wikipedia.org/wiki/Semiconductor"
+  },
+  {
+    "term": "RTTY",
+    "definition": "Radio Teletype — a digital communication mode that sends text characters using frequency-shift keying. One of the oldest digital modes still used on amateur radio.",
+    "detail": "RTTY is one of the oldest digital modes, dating back to the 1930s. It uses frequency-shift keying (FSK) to send text characters — the transmitter shifts between two slightly different frequencies to represent 1s and 0s. RTTY is still used on HF today, especially in contests. You will need a computer or dedicated terminal to decode it, though modern software makes this straightforward.",
+    "url": "https://en.wikipedia.org/wiki/Radioteletype"
+  },
+  {
+    "term": "PSK31",
+    "definition": "Phase Shift Keying at 31 baud — a popular digital mode for keyboard-to-keyboard text communication on HF using very narrow bandwidth.",
+    "detail": "PSK31 uses phase-shift keying at a very low baud rate (31.25 baud), giving it an incredibly narrow bandwidth of about 31 Hz. This makes it very efficient for keyboard-to-keyboard chat on HF, even at low power. You can run PSK31 with free software like Fldigi and a simple sound-card interface. It is a great mode for Foundation operators because you can make contacts worldwide with just a few watts.",
+    "url": "https://en.wikipedia.org/wiki/PSK31"
+  },
+  {
+    "term": "FT8",
+    "definition": "A digital communication mode designed for making contacts under weak-signal conditions. Transmissions last 15 seconds and are decoded by computer.",
+    "detail": "FT8 has revolutionised amateur radio since its release in 2017. It uses 15-second transmission periods and computer-decoded signals, allowing contacts to be made with incredibly weak signals — sometimes 20 dB below the noise floor. It is the most popular digital mode on HF today. You need a computer running WSJT-X software and accurate time synchronisation. FT8 is great for Foundation operators wanting to work DX with low power.",
+    "url": "https://en.wikipedia.org/wiki/FT8"
+  },
+  {
+    "term": "DX",
+    "definition": "Long-distance communication, or a distant station. 'Working DX' means making contacts with stations in faraway countries.",
+    "detail": "DX simply means \"distance\" — working DX means making contacts with faraway stations, usually in other countries. Chasing DX is one of the most popular activities in amateur radio, and many operators collect DXCC awards for contacting 100 or more different entities (countries and territories). Even as a Foundation licensee with 10 watts, you can work DX on HF using digital modes or CW.",
+    "url": "https://en.wikipedia.org/wiki/DXing"
+  },
+  {
+    "term": "Sideband",
+    "definition": "The portion of a modulated signal above or below the carrier frequency that carries the actual information. In SSB, only one sideband is transmitted.",
+    "detail": "When you modulate a carrier with audio, you create two sidebands — one above (upper sideband, USB) and one below (lower sideband, LSB) the carrier frequency. In SSB transmission, only one sideband is sent, which saves bandwidth and power. The convention on HF is to use LSB below 10 MHz and USB above 10 MHz, plus USB is always used on VHF and above. This is a common exam question.",
+    "url": "https://en.wikipedia.org/wiki/Single-sideband_modulation"
+  },
+  {
+    "term": "Over-modulation",
+    "definition": "Driving the modulator with too much audio, causing the transmitted signal to spread beyond its intended bandwidth and interfere with adjacent channels.",
+    "detail": "Over-modulation happens when you speak too loudly into the microphone or have the mic gain set too high. The transmitted signal splashes beyond its normal bandwidth and causes interference to stations on adjacent frequencies. On SSB it sounds distorted and harsh. The fix is simple: reduce your mic gain or speak at a normal level. For the exam, understand that over-modulation causes splatter and interference.",
+    "url": "https://en.wikipedia.org/wiki/Overmodulation"
+  },
+  {
+    "term": "Radials",
+    "definition": "Wire elements extending from the base of a vertical antenna to form an artificial ground plane. A quarter-wave ground plane typically uses four radials.",
+    "detail": "Radials are wire elements laid out from the base of a vertical antenna to create an artificial ground plane. A typical quarter-wave vertical uses four radials, each a quarter wavelength long, angled at about 45 degrees below horizontal. More radials generally improve efficiency by reducing ground losses. If you are setting up a portable vertical antenna, laying out a few radials on the ground can make a noticeable difference to your signal.",
+    "url": "https://en.wikipedia.org/wiki/Antenna_(radio)#Ground_plane"
+  },
+  {
+    "term": "Director",
+    "definition": "A parasitic element on a Yagi antenna, slightly shorter than the driven element, positioned in front to focus the radiation pattern forward.",
+    "detail": "A director is a parasitic element on a Yagi antenna that is slightly shorter than the driven element and sits in front of it (towards the target direction). Adding directors increases the antenna's gain and narrows its beam. A typical Yagi might have one reflector behind and several directors in front. For the exam, remember: directors are shorter and in front, reflectors are longer and behind.",
+    "url": "https://en.wikipedia.org/wiki/Yagi%E2%80%93Uda_antenna"
+  },
+  {
+    "term": "Reflector",
+    "definition": "A parasitic element on a Yagi antenna, slightly longer than the driven element, positioned behind it to reflect energy forward and increase gain.",
+    "detail": "The reflector is a parasitic element on a Yagi antenna that is slightly longer than the driven element and sits behind it. It reflects energy forward, increasing the antenna's gain in the forward direction and reducing radiation off the back. A Yagi typically has just one reflector. Exam tip: the reflector is the longest element on the antenna — if you can spot that, you know which way the beam points.",
+    "url": "https://en.wikipedia.org/wiki/Yagi%E2%80%93Uda_antenna"
+  },
+  {
+    "term": "Radiation pattern",
+    "definition": "A diagram showing how an antenna radiates energy in different directions. Helps you choose the right antenna for your operating needs.",
+    "detail": "A radiation pattern is a polar diagram showing how strongly an antenna radiates in each direction. An omnidirectional antenna like a vertical has a circular pattern in the horizontal plane, while a Yagi has a pattern with a clear main lobe pointing forward. Understanding radiation patterns helps you choose the right antenna — a beam for DXing in one direction, or an omni for general local contacts.",
+    "url": "https://en.wikipedia.org/wiki/Radiation_pattern"
+  },
+  {
+    "term": "Field strength",
+    "definition": "The intensity of an electromagnetic field at a given point. High field strength near your antenna is a common cause of EMC interference.",
+    "detail": "Field strength measures how intense the electromagnetic field is at a given point, usually expressed in volts per metre (V/m). Near your antenna, field strength can be high enough to cause interference to nearby electronics (EMC issues) or even exceed safe human exposure limits. This is why the Foundation exam covers EMF safety — you need to ensure people cannot get too close to your antenna while transmitting.",
+    "url": "https://en.wikipedia.org/wiki/Field_strength"
+  },
+  {
+    "term": "QRM",
+    "definition": "Q-code meaning man-made interference on a frequency — disruption from other radio transmissions or electronic equipment.",
+    "detail": "QRM means man-made interference — signals from other radio stations, computers, power supplies, LED lights, or other electronic equipment that disrupt your reception. If someone says they are getting a lot of QRM, they mean electrical noise or other stations are making it hard to hear. You can reduce QRM by using directional antennas, narrower filters, or simply moving to a quieter frequency.",
+    "url": "https://en.wikipedia.org/wiki/Q_code"
+  },
+  {
+    "term": "QRN",
+    "definition": "Q-code meaning natural interference or atmospheric noise (static), typically from thunderstorms.",
+    "detail": "QRN means natural interference — static crashes from thunderstorms, electrical noise from the atmosphere, or other natural sources. QRN tends to be worse on the lower HF bands and during summer thunderstorm season. There is not much you can do about QRN except use noise blankers, narrower bandwidth, or try a different band. For the exam, remember: QRM is man-made, QRN is natural.",
+    "url": "https://en.wikipedia.org/wiki/Q_code"
+  },
+  {
+    "term": "QRP",
+    "definition": "Q-code meaning low-power operation, typically 5 watts or less. QRP operating is a popular amateur radio activity that tests operator skill.",
+    "detail": "QRP means low-power operation, conventionally 5 watts or less on CW and 10 watts or less on SSB. Many amateurs enjoy the challenge of making contacts with minimal power — it really tests your antenna, operating skill, and patience. As a Foundation licensee limited to 10 watts, you are already in QRP territory! QRP operators often build lightweight portable stations for hilltop and outdoor use.",
+    "url": "https://en.wikipedia.org/wiki/QRP_operation"
+  },
+  {
+    "term": "QRT",
+    "definition": "Q-code meaning 'stop transmitting' or 'I am closing my station'. Used to indicate you are going off the air.",
+    "detail": "QRT means \"I am closing down my station\" or \"stop transmitting.\" When you hear someone say they are going QRT, they are signing off and shutting down. It is good practice to announce that you are going QRT at the end of a session so other operators know you are leaving the frequency. In the exam, you may be asked what common Q-codes mean — QRT is one of the most frequently tested.",
+    "url": "https://en.wikipedia.org/wiki/Q_code"
+  },
+  {
+    "term": "QSY",
+    "definition": "Q-code meaning 'change frequency'. Used to suggest moving the conversation to a different frequency.",
+    "detail": "QSY means \"change frequency\" — if someone asks you to QSY, they want you to move to a different frequency, usually to continue the conversation without blocking a calling channel or busy frequency. It is common etiquette: you call CQ or respond on the calling channel, then QSY to a clear working frequency to have your contact. This keeps the calling channel free for others.",
+    "url": "https://en.wikipedia.org/wiki/Q_code"
+  },
+  {
+    "term": "QSL card",
+    "definition": "A printed postcard-sized confirmation exchanged between amateur operators to verify a contact. Collecting QSL cards is a long-standing tradition.",
+    "detail": "QSL cards are postcards exchanged between operators to confirm a contact took place. They typically show your callsign, location, and sometimes a photo of your station or local area. You can send them direct by post or via the RSGB QSL bureau (which is cheaper for bulk exchanges). Many operators collect QSL cards as souvenirs, and they serve as proof of contacts for awards like DXCC.",
+    "url": "https://en.wikipedia.org/wiki/QSL_card"
+  },
+  {
+    "term": "Calling channel",
+    "definition": "A designated frequency for making initial contact. After contact, operators move to a working frequency. Examples: 145.500 MHz (2m FM), 433.500 MHz (70cm FM).",
+    "detail": "The calling channel (or calling frequency) is where you go to make initial contact with other stations. On 2m FM it is 145.500 MHz, and on 70cm FM it is 433.500 MHz. Once you have established contact, good practice is to QSY to a nearby clear frequency so the calling channel stays available for others. Think of it as the meeting point — you say hello there, then move aside to chat.",
+    "url": "https://en.wikipedia.org/wiki/Calling_frequency"
+  },
+  {
+    "term": "Repeater offset",
+    "definition": "The difference between transmit and receive frequencies when using a repeater. On 2m the offset is −600 kHz; on 70cm it is +1.6 MHz.",
+    "detail": "A repeater receives on one frequency and transmits on another so it can do both simultaneously. Your radio must be programmed with the correct offset — on 2m (145 MHz) the standard offset is minus 600 kHz, and on 70cm (433 MHz) it is plus 1.6 MHz. If you cannot hear the repeater's output, check your offset and CTCSS tone settings first — that is the most common mistake for beginners.",
+    "url": "https://en.wikipedia.org/wiki/Amateur_radio_repeater"
+  },
+  {
+    "term": "2m",
+    "definition": "The 2-metre amateur band (144–146 MHz in the UK), one of the most popular VHF bands for local FM communication and repeater use.",
+    "detail": "The 2-metre band (144–146 MHz) is probably the most popular band for local amateur radio communication in the UK. It is ideal for FM voice via repeaters and simplex, and also supports SSB and CW for longer-distance contacts. Most Foundation operators start here with a handheld or mobile radio. The calling frequency is 145.500 MHz FM. A simple vertical antenna on the roof can give you access to repeaters over a wide area.",
+    "url": "https://en.wikipedia.org/wiki/2-meter_band"
+  },
+  {
+    "term": "70cm",
+    "definition": "The 70-centimetre amateur band (430–440 MHz in the UK), a popular UHF band for local FM communication, repeaters, and data modes.",
+    "detail": "The 70cm band (430–440 MHz) is the second most popular VHF/UHF band in the UK. It is widely used for FM repeaters, data modes, and amateur television. Antennas for 70cm are physically smaller than for 2m, which makes them easier to mount. The calling frequency is 433.500 MHz FM, and the repeater offset is +1.6 MHz. Many dual-band handhelds cover both 2m and 70cm, giving you the best of both worlds.",
+    "url": "https://en.wikipedia.org/wiki/70-centimeter_band"
+  },
+  {
+    "term": "Mutual inductance",
+    "definition": "The property by which a changing current in one coil induces a voltage in a nearby coil. This is the operating principle behind transformers.",
+    "detail": "Mutual inductance is what makes transformers work — when a changing current in one coil creates a magnetic field that induces a voltage in a nearby coil. The closer and better-aligned the coils, the stronger the coupling. In amateur radio, transformers are used in power supplies, impedance matching (baluns), and audio circuits. For the exam, just remember: mutual inductance = energy transfer between two coils via a shared magnetic field.",
+    "url": "https://en.wikipedia.org/wiki/Mutual_inductance"
+  },
+  {
+    "term": "Omnidirectional",
+    "definition": "Radiating equally in all horizontal directions. Vertical antennas such as ground planes have omnidirectional radiation patterns.",
+    "detail": "An omnidirectional antenna radiates equally in all horizontal directions, like a lighthouse beam sweeping 360 degrees. Vertical antennas — including ground planes and colinears — are omnidirectional, making them ideal for general-purpose local communication where you do not know which direction contacts will come from. The trade-off is that they have less gain than a directional antenna like a Yagi.",
+    "url": "https://en.wikipedia.org/wiki/Omnidirectional_antenna"
+  },
+  {
+    "term": "Antenna gain",
+    "definition": "A measure of how effectively an antenna focuses radio energy in a particular direction compared to a reference, expressed in decibels (dB).",
+    "detail": "Antenna gain tells you how well an antenna focuses energy in a particular direction compared to a reference antenna, measured in decibels (dBi relative to an isotropic radiator, or dBd relative to a dipole). A higher gain antenna concentrates more energy where you want it but has a narrower beam. For the exam, understand that gain does not create extra power — it simply redirects the power you have into a tighter pattern.",
+    "url": "https://en.wikipedia.org/wiki/Antenna_gain"
+  },
+  {
+    "term": "Short circuit",
+    "definition": "An unintended low-resistance path that allows excessive current to flow. Can cause overheating, fires, or equipment damage.",
+    "detail": "A short circuit occurs when current finds an unintended low-resistance path, bypassing the normal circuit. This causes a surge of current that can blow fuses, trip circuit breakers, damage components, or start fires. In the shack, short circuits can happen from damaged coax, bare wires touching, or faulty connectors. Always use a fuse or circuit breaker in your power supply lines to protect your equipment.",
+    "url": "https://en.wikipedia.org/wiki/Short_circuit"
+  },
+  {
+    "term": "Power amplifier",
+    "definition": "The final stage of a transmitter that boosts the modulated RF signal to the required output power level before it reaches the antenna.",
+    "detail": "The power amplifier (PA) is the final stage of a transmitter — it takes the modulated RF signal and boosts it to the output power level before sending it to the antenna. Foundation operators are limited to 10 watts, so the PA in a typical Foundation setup is modest. Overdriving a PA causes distortion and splatter. In many transceivers, the PA is the component that generates the most heat, which is why good ventilation matters.",
+    "url": "https://en.wikipedia.org/wiki/RF_power_amplifier"
+  },
+  {
+    "term": "Audio amplifier",
+    "definition": "A circuit in a receiver that increases the demodulated audio signal to a level sufficient to drive a loudspeaker or headphones.",
+    "detail": "The audio amplifier is the last stage in the receiver chain — it takes the demodulated audio signal and amplifies it to a level that can drive your speaker or headphones. Without it, the recovered audio would be too quiet to hear. In a transceiver, the audio amplifier works on receive only. If your receive audio sounds distorted, the audio amp may be overloaded — try turning the volume down or adjusting the AF gain.",
+    "url": "https://en.wikipedia.org/wiki/Audio_power_amplifier"
+  }
 ]

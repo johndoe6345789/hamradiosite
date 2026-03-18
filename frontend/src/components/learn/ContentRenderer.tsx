@@ -38,7 +38,7 @@ function annotateText(text: string, glossary: GlossaryEntry[]): ReactNode[] {
 
     const entry = glossary.find(g => g.term.toLowerCase() === termLower)!;
     parts.push(
-      <GlossaryTooltip key={match.index} term={entry.term} definition={entry.definition}>
+      <GlossaryTooltip key={match.index} term={entry.term} definition={entry.definition} detail={entry.detail} url={entry.url}>
         {match[1]}
       </GlossaryTooltip>
     );
