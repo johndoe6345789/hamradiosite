@@ -3,6 +3,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci
+COPY next.config.ts tsconfig.json next-env.d.ts ./
 
 FROM node:20-alpine AS builder
 WORKDIR /app
