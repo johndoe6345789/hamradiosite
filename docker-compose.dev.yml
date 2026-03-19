@@ -8,9 +8,9 @@ services:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:5000/api
+      - NEXT_PUBLIC_API_URL=http://localhost:8317/api
     ports:
-      - "3000:3000"
+      - "7423:3000"
 
   backend:
     build: ./backend
@@ -23,4 +23,4 @@ services:
       - JWT_SECRET_KEY=dev-secret-key
       - DATA_DIR=/app/data
     ports:
-      - "5000:5000"
+      - "8317:5000"
