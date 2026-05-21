@@ -1,11 +1,20 @@
 services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "${FRONTEND_PORT:-7423}:80"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+
   frontend:
     build:
       context: ./frontend
-    ports:
-      - "${FRONTEND_PORT:-7423}:3000"
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:${BACKEND_PORT:-8317}/api
+      - NEXT_PUBLIC_API_URL=/api
     depends_on:
       backend:
         condition: service_healthy

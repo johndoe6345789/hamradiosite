@@ -11,6 +11,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 # Use a placeholder that gets replaced at runtime via entrypoint.sh sed
 ENV NEXT_PUBLIC_API_URL=__NEXT_PUBLIC_API_URL__
+# Cap build heap: constrained 3.8 GB host runs metabuilder stack concurrently
+ENV NODE_OPTIONS=--max-old-space-size=1024
 RUN npm run build
 
 FROM node:20-alpine AS runner
