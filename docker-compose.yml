@@ -21,8 +21,9 @@ services:
     build: ./backend
     ports:
       - "${BACKEND_PORT:-8317}:5000"
+    env_file:
+      - ../jenkins/secrets/hamradio.env
     environment:
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-dev-secret-key-change-in-production}
       - FLASK_ENV=production
       - DATA_DIR=/app/data
     volumes:
