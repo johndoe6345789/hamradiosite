@@ -22,7 +22,8 @@ services:
     ports:
       - "${BACKEND_PORT:-8317}:5000"
     env_file:
-      - ../jenkins/secrets/hamradio.env
+      - path: ../jenkins/secrets/hamradio.env
+        required: false
     environment:
       - FLASK_ENV=production
       - DATA_DIR=/app/data
