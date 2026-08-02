@@ -108,3 +108,21 @@ def test_start_quiz_no_questions(client, auth_headers, db):
                            headers=auth_headers)
     assert response.status_code == 400
     assert "No questions" in response.get_json()["error"]
+
+
+def test_list_glossary_returns_terms_sorted_case_insensitively(client, db):
+    """Test the glossary endpoint and its user-facing alphabetical ordering."""
+    db.write("glossary", [
+        {"term": "Zulu", "definition": "Last"},
+        {"term": "alpha", "definition": "First"},
+        {"definition": "Unnamed"},
+    ])
+
+    response = client.get("/api/glossary/")
+
+    assert response.status_code == 200
+    assert response.get_json()["glossary"] == [
+        {"definition": "Unnamed"},
+        {"term": "alpha", "definition": "First"},
+        {"term": "Zulu", "definition": "Last"},
+    ]

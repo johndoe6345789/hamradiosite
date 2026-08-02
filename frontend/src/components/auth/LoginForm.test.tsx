@@ -20,6 +20,13 @@ jest.mock('@/lib/apiClient', () => ({
 }));
 
 describe('LoginForm', () => {
+  const setClipboard = (readText: jest.Mock) => {
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { readText },
+    });
+  };
+
   it('renders email and password fields', () => {
     renderWithProviders(<LoginForm />);
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
@@ -86,7 +93,7 @@ describe('LoginForm', () => {
         auth: { loading: true },
       },
     });
-    const submitButton = screen.getByRole('button');
+    const submitButton = screen.getByRole('button', { name: /log in/i });
     expect(submitButton).toBeDisabled();
     expect(screen.getByRole('progressbar')).toBeInTheDocument();
   });
@@ -131,5 +138,54 @@ describe('LoginForm', () => {
       expect(screen.getByText('Invalid credentials')).toBeInTheDocument();
     });
     expect(mockPush).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ['', /clipboard is empty/i],
+    ['not-json', /valid turbologin json/i],
+    [JSON.stringify({ user: 'user@example.com' }), /missing required fields/i],
+  ])('rejects invalid Turbologin clipboard data', async (clipboard, message) => {
+    const user = userEvent.setup();
+    setClipboard(jest.fn().mockResolvedValue(clipboard));
+    renderWithProviders(<LoginForm />);
+
+    await user.click(screen.getByTestId('turbo-login-button'));
+
+    expect(await screen.findByText(message)).toBeInTheDocument();
+  });
+
+  it('logs in with valid Turbologin clipboard data', async () => {
+    const mockAuthApi = authApi as jest.Mocked<typeof authApi>;
+    mockAuthApi.login.mockResolvedValueOnce({
+      data: {
+        user: { id: '1', username: 'turbo', email: 'turbo@example.com', createdAt: '2024-01-01' },
+        accessToken: 'access-token',
+        refreshToken: 'refresh-token',
+      },
+    } as never);
+    const user = userEvent.setup();
+    setClipboard(jest.fn().mockResolvedValue(JSON.stringify({
+      user: 'turbo@example.com',
+      pass: 'Password123',
+    })));
+    renderWithProviders(<LoginForm />);
+
+    await user.click(screen.getByTestId('turbo-login-button'));
+
+    await waitFor(() => expect(mockPush).toHaveBeenCalledWith('/'));
+  });
+
+  it('reports clipboard permission failures', async () => {
+    const user = userEvent.setup();
+    setClipboard(jest.fn().mockRejectedValue(new Error('denied')));
+    renderWithProviders(<LoginForm />);
+
+    await user.click(screen.getByTestId('turbo-login-button'));
+
+    expect(await screen.findByText(/could not read clipboard/i)).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /close/i }));
+    await waitFor(() => {
+      expect(screen.queryByText(/could not read clipboard/i)).not.toBeInTheDocument();
+    });
   });
 });

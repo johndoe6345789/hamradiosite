@@ -82,6 +82,7 @@ export default function LoginForm() {
         />
         <Button
           type="submit" fullWidth variant="contained"
+          aria-label={t('loginButton')}
           size="large" disabled={loading} sx={{ mt: 3, mb: 2 }}
         >
           {loading ? <CircularProgress size={24} color="inherit" /> : t('loginButton')}

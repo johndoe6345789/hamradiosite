@@ -14,7 +14,7 @@ interface ContentRendererProps {
   glossary?: GlossaryEntry[];
 }
 
-function extractText(node: ReactNode): string {
+export function extractText(node: ReactNode): string {
   if (typeof node === 'string') return node;
   if (typeof node === 'number') return String(node);
   if (!node) return '';
@@ -26,7 +26,7 @@ function extractText(node: ReactNode): string {
   return '';
 }
 
-function annotateText(text: string, glossary: GlossaryEntry[]): ReactNode[] {
+export function annotateText(text: string, glossary: GlossaryEntry[]): ReactNode[] {
   if (glossary.length === 0) return [text];
 
   const pattern = new RegExp(
@@ -64,7 +64,7 @@ function annotateText(text: string, glossary: GlossaryEntry[]): ReactNode[] {
   return parts.length > 0 ? parts : [text];
 }
 
-function annotateChildren(children: ReactNode, glossary: GlossaryEntry[]): ReactNode {
+export function annotateChildren(children: ReactNode, glossary: GlossaryEntry[]): ReactNode {
   if (glossary.length === 0) return children;
 
   if (!Array.isArray(children)) {
@@ -90,7 +90,7 @@ function annotateChildren(children: ReactNode, glossary: GlossaryEntry[]): React
   });
 }
 
-function annotateElement(el: ReactElement, glossary: GlossaryEntry[], key?: number): ReactNode {
+export function annotateElement(el: ReactElement, glossary: GlossaryEntry[], key?: number): ReactNode {
   const props = el.props as Record<string, unknown>;
   const elChildren = props.children as ReactNode | undefined;
   if (!elChildren) return key !== undefined ? React.cloneElement(el, { key }) : el;
@@ -108,7 +108,22 @@ export default function ContentRenderer({ content, glossary = [] }: ContentRende
     return map;
   }, [glossary]);
 
-  const components = useMemo<Components>(() => ({
+  const components = useMemo<Components>(() => createComponents(glossary, glossaryMap), [glossary, glossaryMap]);
+
+  return (
+    <Box sx={sx} data-testid="content-renderer">
+      <ReactMarkdown key={glossary.length} remarkPlugins={[remarkGfm]} components={components}>
+        {content}
+      </ReactMarkdown>
+    </Box>
+  );
+}
+
+export function createComponents(
+  glossary: GlossaryEntry[],
+  glossaryMap: Map<string, GlossaryEntry>
+): Components {
+  return {
     a: ({ href, children }) => {
       const text = extractText(children);
       const entry = text ? glossaryMap.get(text.toLowerCase()) : undefined;
@@ -129,13 +144,5 @@ export default function ContentRenderer({ content, glossary = [] }: ContentRende
     p: ({ children }) => <p>{annotateChildren(children, glossary)}</p>,
     li: ({ children }) => <li>{annotateChildren(children, glossary)}</li>,
     td: ({ children }) => <td>{annotateChildren(children, glossary)}</td>,
-  }), [glossary, glossaryMap]);
-
-  return (
-    <Box sx={sx} data-testid="content-renderer">
-      <ReactMarkdown key={glossary.length} remarkPlugins={[remarkGfm]} components={components}>
-        {content}
-      </ReactMarkdown>
-    </Box>
-  );
+  };
 }
